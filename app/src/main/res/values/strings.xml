@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ChallengeYourKnowledges</string>
+    <string name="butonJoaca"> TESTEAZĂ-ȚI CUNOȘTINȚELE </string>
+    <string name="butonIncercari"> CÂȘTIGĂ\n ÎNCERCĂRI </string>
+    <string name="butonReguli">REGULI</string>
+    <string name="title">Învață. Repetă. Câștigă.</string>
+    <string name="retry">Încearcă din nou</string>
+    <string name="cancel">Renunță</string>
+    <string name="castigaJocuri">Câștigă jocuri</string>
+    <string name="meniu"> Înapoi la meniu </string>
+    <string name="retryMessage2"> puncte.\nPoți mai mult, mai încercăm o dată?</string>
+    <string name="retryMessage1">Bravo! Ai acumulat </string>
+    <string name="castigaJocuriMessage"> puncte.\nCâștigă jocuri pentru a putea încerca din nou.</string>
+</resources>
