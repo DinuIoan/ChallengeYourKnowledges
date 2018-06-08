@@ -10,4 +10,22 @@
 
     <color name="correctColorEnd">#00E676</color>
     <color name="correctColorStart">#A5D6A7</color>
+
+    <color name="backgroundColorStart">#B2EBF2</color>
+    <color name="backgroundColorEnd">#006064</color>
+
+    <color name="orangeThemeColor">#EF6C00</color>
+
+    <color name="answearColorStart">#FFE0B2</color>
+    <color name="answearColorEnd">#FFA726</color>
+
+    <color name="lineColor">#EF6C00</color>
+
+    <color name="menuColorStart">#42A5F5</color>
+    <color name="menuColorEnd">#455A64</color>
+
+    <color name="boltColorStart">#F9FBE7</color>
+    <color name="boltColorEnd">#CDDC39</color>
+
+    <color name="boltQuestionColor">#CDDC39</color>
 </resources>

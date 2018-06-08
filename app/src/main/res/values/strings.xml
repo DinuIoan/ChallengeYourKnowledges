@@ -11,4 +11,22 @@
     <string name="retryMessage2"> puncte.\nPoți mai mult, mai încercăm o dată?</string>
     <string name="retryMessage1">Bravo! Ai acumulat </string>
     <string name="castigaJocuriMessage"> puncte.\nCâștigă jocuri pentru a putea încerca din nou.</string>
+
+    <string-array name="numarIntrebari">
+        <item>10</item>
+        <item>25</item>
+        <item>50</item>
+    </string-array>
+
+    <string-array name="materii">
+        <item>Limba romana</item>
+        <item>Logica</item>
+        <item>Istorie</item>
+        <item>Geografie</item>
+        <item>Fizica</item>
+    </string-array>
+
+    <string name="materieNeselectata">Trebuie selectata materia!</string>
+    <string name="numarIntrebariNeselectat">Trebuie selectat numarul de intrebari dorit!</string>
+    <string name="ok">OK</string>
 </resources>

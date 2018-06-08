@@ -190,48 +190,36 @@
             app:layout_constraintVertical_bias="1.0" />
 
         <ImageView
-            android:id="@+id/heart3"
-            android:layout_width="40dp"
-            android:layout_height="match_parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/heart2"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            android:src="@drawable/heart"/>
-
-        <ImageView
-            android:id="@+id/heart2"
-            android:layout_width="40dp"
-            android:layout_height="match_parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/heart1"
-            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/bolt_image_view"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:stateListAnimator="@animator/bolt_image_animator"
+            app:layout_constraintBottom_toBottomOf="@+id/timer"
+            app:layout_constraintEnd_toStartOf="@+id/timer"
+            app:layout_constraintHorizontal_bias="0.07"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/timer"
             app:layout_constraintVertical_bias="1.0"
-            android:src="@drawable/heart"/>
-
-        <ImageView
-            android:id="@+id/heart1"
-            android:layout_width="40dp"
-            android:layout_height="match_parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            android:src="@drawable/heart"/>
+            app:srcCompat="@drawable/bolt" />
 
         <TextView
-            android:id="@+id/score_text_view"
+            android:id="@+id/numar_intrebari_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="124dp"
-            android:layout_marginLeft="2dp"
-            android:layout_marginRight="124dp"
-            android:layout_marginStart="2dp"
-            android:textSize="35sp"
+            android:layout_marginBottom="22dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="10dp"
+            android:text="Numar de\n intrebari: 10"
+            android:textColor="@color/black"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/timer"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/timer"
             app:layout_constraintTop_toTopOf="parent" />
     </android.support.constraint.ConstraintLayout>
     <android.support.constraint.Guideline
