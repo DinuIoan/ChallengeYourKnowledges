@@ -8,11 +8,14 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.PopupMenu;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -21,14 +24,15 @@ import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.R;
 
 public class CountdownActivity extends AppCompatActivity {
     private CountDownTimer countDownTimer;
-    private Spinner numarIntrebariSpinner;
-    private Spinner materieSpinner;
     private int numarIntrebari;
     private String materieSelectata;
     private Button incepeButton;
     private boolean materiaafostSelectata;
     private boolean numarulDeIntrebariAFostSelectat;
     private TextView countdownTextView;
+    private Spinner numarIntrebariSpinner;
+    private Spinner materieSpinner;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,16 +40,18 @@ public class CountdownActivity extends AppCompatActivity {
         setContentView(R.layout.activity_countdown);
         incepeButton = (Button) findViewById(R.id.incepe_button);
         countdownTextView = (TextView) findViewById(R.id.countdown_timer_text);
+        numarIntrebariSpinner = (Spinner) findViewById(R.id.spinnerNumarDeIntrebari);
+        materieSpinner = (Spinner)findViewById(R.id.spinnerMaterie);
 
         numarulDeIntrebariAFostSelectat = false;
         materiaafostSelectata = false;
 
-        numarIntrebariSpinner = (Spinner) findViewById(R.id.static_spinner_nr_intrebari);
-        materieSpinner = (Spinner) findViewById(R.id.static_spinner_materie);
 
-        /*ArrayAdapter<CharSequence> staticAdapterMaterii = ArrayAdapter.createFromResource(this,
+
+        ArrayAdapter<CharSequence> staticAdapterMaterii = ArrayAdapter.createFromResource(this,
                 R.array.materii, android.R.layout.simple_spinner_item);
         staticAdapterMaterii.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        materieSpinner.setAdapter(staticAdapterMaterii);
         materieSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -83,9 +89,9 @@ public class CountdownActivity extends AppCompatActivity {
                 if (position == 0) {
                     numarIntrebari = 10;
                 } else if (position == 1) {
-                    numarIntrebari = 25;
+                    numarIntrebari = 20;
                 } else if (position == 2) {
-                    numarIntrebari = 50;
+                    numarIntrebari = 30;
                 }
             }
 
@@ -94,12 +100,6 @@ public class CountdownActivity extends AppCompatActivity {
 
             }
         });
-        */
-
-        materiaafostSelectata = true;
-        numarulDeIntrebariAFostSelectat = true;
-        materieSelectata = "Limba romana";
-        numarIntrebari = 10;
 
         this.countDownTimer = new CountDownTimer(4 * 1000, 1000) {
             public void onTick(long millisUntilFinished) {
@@ -164,4 +164,6 @@ public class CountdownActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+
 }

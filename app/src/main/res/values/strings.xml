@@ -14,11 +14,12 @@
 
     <string-array name="numarIntrebari">
         <item>10</item>
-        <item>25</item>
-        <item>50</item>
+        <item>20</item>
+        <item>30</item>
     </string-array>
 
     <string-array name="materii">
+        <item>Limba romana</item>
         <item>Logica</item>
         <item>Istorie</item>
         <item>Geografie</item>
