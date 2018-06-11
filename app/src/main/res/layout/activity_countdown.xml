@@ -20,6 +20,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_above="@+id/lineImageView"
+            android:layout_margin="5dp"
+            android:background="@drawable/ic_reply_all" />
+
         <ImageView
             android:id="@+id/lineImageView"
             android:layout_width="match_parent"
@@ -33,8 +41,8 @@
             android:id="@+id/logoImageView"
             android:layout_width="90dp"
             android:layout_height="70dp"
-            android:layout_alignParentStart="true"
-            android:layout_marginLeft="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
             android:src="@drawable/graphic_book" />
     </RelativeLayout>
 

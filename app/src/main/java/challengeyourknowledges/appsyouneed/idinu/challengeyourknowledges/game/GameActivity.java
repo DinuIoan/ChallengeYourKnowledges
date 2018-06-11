@@ -32,7 +32,6 @@ import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.Q
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.Rankings;
 
 public class GameActivity extends AppCompatActivity {
-    private Button back_button;
     private Button answear1;
     private Button answear2;
     private Button answear3;
@@ -43,17 +42,13 @@ public class GameActivity extends AppCompatActivity {
     private AnimationDrawable boltAnimationButton3;
     private AnimationDrawable boltAnimationButton4;
     private AnimationDrawable boltQuestionBoxAnim;
-    private ImageView heart1;
-    private ImageView heart2;
-    private ImageView heart3;
     private ImageView boltImage;
     private TextView question;
     private TextView timer;
     private ConstraintLayout constraintLayoutQuestionBox;
-    private ValueAnimator boltValueAnimator;
-    private ValueAnimator boltQuestionAnimator;
     private int numarDeIntrebari;
     private String materie;
+    private Button backButton;
 
     private List<Question> questions;
     private List<Question> questionsAnsweared;
@@ -106,6 +101,17 @@ public class GameActivity extends AppCompatActivity {
         question = (TextView) findViewById(R.id.question_text_view);
         timer = (TextView) findViewById(R.id.timer);
         constraintLayoutQuestionBox = (ConstraintLayout) findViewById(R.id.constraint_layout_question);
+        backButton = (Button) findViewById(R.id.back_button);
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                countDownTimer.cancel();
+                Intent intent = new Intent(GameActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
 //        DatabaseData.getGame().setGames_number(DatabaseData.getGame().getGames_number() - 1);
 //        databaseHandler.modifyGameObject( DatabaseData.getGame().getGames_number(), DatabaseData.getGame().getPlayer_state_id());

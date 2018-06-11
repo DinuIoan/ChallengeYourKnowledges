@@ -32,6 +32,7 @@ public class CountdownActivity extends AppCompatActivity {
     private TextView countdownTextView;
     private Spinner numarIntrebariSpinner;
     private Spinner materieSpinner;
+    private Button backButton;
 
 
     @Override
@@ -42,6 +43,7 @@ public class CountdownActivity extends AppCompatActivity {
         countdownTextView = (TextView) findViewById(R.id.countdown_timer_text);
         numarIntrebariSpinner = (Spinner) findViewById(R.id.spinnerNumarDeIntrebari);
         materieSpinner = (Spinner)findViewById(R.id.spinnerMaterie);
+        backButton = (Button) findViewById(R.id.back_button);
 
         numarulDeIntrebariAFostSelectat = false;
         materiaafostSelectata = false;
@@ -125,6 +127,16 @@ public class CountdownActivity extends AppCompatActivity {
                 } else if (!numarulDeIntrebariAFostSelectat) {
                     createAlertDialog("numar");
                 }
+            }
+        });
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                countDownTimer.cancel();
+                Intent intent = new Intent(CountdownActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
 
