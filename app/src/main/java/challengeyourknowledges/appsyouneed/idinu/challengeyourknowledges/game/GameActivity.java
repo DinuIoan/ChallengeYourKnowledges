@@ -49,11 +49,10 @@ public class GameActivity extends AppCompatActivity {
     private int numarDeIntrebari;
     private String materie;
     private Button backButton;
+    private TextView numarIntrebariTextView;
 
     private List<Question> questions;
     private List<Question> questionsAnsweared;
-    private Timer t;
-    private TimerTask task;
     private int time;
     private int points;
     private String correctAnswear;
@@ -64,6 +63,8 @@ public class GameActivity extends AppCompatActivity {
     private boolean isBoltQuestion;
     private int boltQuestionsCorrect = 0;
     private int boltQuestions = 0;
+    private int normalQuestions = 0;
+    private int normalQuestionsCorrect = 0;
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
@@ -92,6 +93,9 @@ public class GameActivity extends AppCompatActivity {
 
         numarDeIntrebari = getIntent().getIntExtra("numarIntrebari", 0);
         materie = getIntent().getStringExtra("materie");
+        if (numarDeIntrebari == 0) {
+            numarDeIntrebari = 10;
+        }
 
         answear1 = (Button) findViewById(R.id.button_answear1);
         answear2 = (Button) findViewById(R.id.button_answear2);
@@ -102,6 +106,7 @@ public class GameActivity extends AppCompatActivity {
         timer = (TextView) findViewById(R.id.timer);
         constraintLayoutQuestionBox = (ConstraintLayout) findViewById(R.id.constraint_layout_question);
         backButton = (Button) findViewById(R.id.back_button);
+        numarIntrebariTextView = (TextView) findViewById(R.id.numar_intrebari_textview);
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -117,6 +122,7 @@ public class GameActivity extends AppCompatActivity {
 //        databaseHandler.modifyGameObject( DatabaseData.getGame().getGames_number(), DatabaseData.getGame().getPlayer_state_id());
 
         boltImage.setVisibility(View.INVISIBLE);
+        numarIntrebariTextView.setText("" + numarDeIntrebari);
 
         initData();
         startGame();
@@ -160,6 +166,11 @@ public class GameActivity extends AppCompatActivity {
 
 
     public void reloadGame() {
+        if (numarDeIntrebari == 0) {
+            endGame();
+        }
+        this.numarDeIntrebari--;
+        numarIntrebariTextView.setText("" + numarDeIntrebari);
         loadQuestion();
     }
 
@@ -179,6 +190,7 @@ public class GameActivity extends AppCompatActivity {
                 boltQuestions++;
                 startBoltAnim();
             } else {
+                normalQuestions++;
                 countDownTimer.start();
             }
             question.setText(rQuestion.getText());
@@ -211,6 +223,8 @@ public class GameActivity extends AppCompatActivity {
                     if (answear1.getText().toString().contains(correctAnswear)) {
                         if (isBoltQuestion) {
                             boltQuestionsCorrect++;
+                        } else {
+                            normalQuestionsCorrect++;
                         }
                         makeCorrectAnim(answear1);
                         Handler handler = new Handler();
@@ -238,6 +252,8 @@ public class GameActivity extends AppCompatActivity {
                     if (answear2.getText().toString().contains(correctAnswear)) {
                         if (isBoltQuestion) {
                             boltQuestionsCorrect++;
+                        } else {
+                            normalQuestionsCorrect++;
                         }
                         makeCorrectAnim(answear2);
                         Handler handler = new Handler();
@@ -265,6 +281,8 @@ public class GameActivity extends AppCompatActivity {
                     if (answear3.getText().toString().contains(correctAnswear)) {
                         if (isBoltQuestion) {
                             boltQuestionsCorrect++;
+                        } else {
+                            normalQuestionsCorrect++;
                         }
                         makeCorrectAnim(answear3);
                         Handler handler = new Handler();
@@ -292,6 +310,8 @@ public class GameActivity extends AppCompatActivity {
                     if (answear4.getText().toString().contains(correctAnswear)) {
                         if (isBoltQuestion) {
                             boltQuestionsCorrect++;
+                        } else {
+                            normalQuestionsCorrect++;
                         }
                         makeCorrectAnim(answear4);
                         Handler handler = new Handler();
@@ -334,12 +354,7 @@ public class GameActivity extends AppCompatActivity {
         Handler handler = new Handler();
         countDownTimer.cancel();
 
-        //Update rankings with new score in database and databaseData
-        Rankings ranking = new Rankings(0, points, 0);
-        List<Rankings> rankings = DatabaseData.getRankings();
-        rankings.add(ranking);
-        databaseHandler.updateRankings(rankings);
-        DatabaseData.setRankings(databaseHandler.getAllRankings());
+        //Update rankings with new score in database and databaseDa
 
         //TODO what should happen if game ends
         handler.postDelayed(new Runnable() {
@@ -349,9 +364,13 @@ public class GameActivity extends AppCompatActivity {
             }
         }, 1600);
 
-//        Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
-//        intent.putExtra("score", points);
-//        startActivity(intent);
+        Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
+        intent.putExtra("boltQuestions", boltQuestions);
+        intent.putExtra("boltQuestionsCorrect", boltQuestionsCorrect);
+        intent.putExtra("normalQuestions", normalQuestions);
+        intent.putExtra("normalQuestionsCorrect",normalQuestionsCorrect);
+
+        startActivity(intent);
     }
 
     public void makeWrongAnim(Button answear) {

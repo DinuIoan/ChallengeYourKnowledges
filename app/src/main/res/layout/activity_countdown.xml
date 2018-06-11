@@ -47,12 +47,10 @@
     </RelativeLayout>
 
 
-
     <Button
         android:id="@+id/incepe_button"
         android:layout_width="200dp"
         android:layout_height="84dp"
-        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:background="@drawable/style_joaca_button"
@@ -101,8 +99,9 @@
                 android:id="@+id/numar_materii_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_weight="1"
-                android:layout_marginLeft="10dp"
+                android:gravity="center"
                 android:text="TextView"
                 android:textColor="@color/black"
                 android:textSize="25sp"
@@ -132,12 +131,13 @@
                 android:id="@+id/materie_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_weight="1"
-                android:layout_marginLeft="10dp"
-                android:textStyle="bold"
+                android:gravity="center"
+                android:text="Materie:"
                 android:textColor="@color/black"
                 android:textSize="25sp"
-                android:text="Materie:" />
+                android:textStyle="bold" />
 
             <Spinner
                 android:id="@+id/spinnerMaterie"

@@ -7,30 +7,40 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.MainActivity;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.R;
 
 
 public class GameOverActivity extends AppCompatActivity {
-    private int score;
-    private TextView scoreTextView;
-    private Button playAgainButton;
+    private int boltQuestions = 0;
+    private int boltQuestionsCorrect = 0;
+    private int normalQuestions = 0;
+    private int normalQuestionsCorrect = 0;
+    private Button backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_over);
+
         Bundle extras = getIntent().getExtras();
-        score = extras.getInt("score");
-        scoreTextView = (TextView) findViewById(R.id.score);
-        scoreTextView.setText("" + score);
-        playAgainButton = (Button) findViewById(R.id.play_again);
-        playAgainButton.setOnClickListener(new View.OnClickListener() {
+        boltQuestions = extras.getInt("boltQuestions", 0);
+        boltQuestionsCorrect = extras.getInt("boltQuestionsCorrect", 0);
+        normalQuestions = extras.getInt("normalQuestions", 0);
+        normalQuestionsCorrect = extras.getInt("normalQuestionsCorrect", 0);
+
+        backButton = (Button) findViewById(R.id.back_button);
+
+
+        backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), GameActivity.class);
+                Intent intent = new Intent(GameOverActivity.this, MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
+
     }
 
     @Override

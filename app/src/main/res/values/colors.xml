@@ -28,4 +28,7 @@
     <color name="boltColorEnd">#CDDC39</color>
 
     <color name="boltQuestionColor">#CDDC39</color>
+
+    <color name="progressBarBackground">#000000</color>
+    <color name="progressBarProgress">#76FF03</color>
 </resources>
