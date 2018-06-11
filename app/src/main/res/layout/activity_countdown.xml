@@ -13,49 +13,16 @@
         android:id="@+id/materie_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="150dp"
-        android:layout_marginEnd="66dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="36dp"
         android:fontFamily="casual"
-        android:text="TextView"
+        android:text="Materie:"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/red3"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numar_intrebari_text_view"
-        tools:text="Materie:" />
+        app:layout_constraintTop_toBottomOf="@+id/numar_intrebari_text_view" />
 
-
-    <ImageView
-        android:id="@+id/green1"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/red2"
-        app:layout_constraintTop_toBottomOf="@+id/action_bar_relative_layout"
-        app:layout_constraintVertical_bias="0.94"
-        app:srcCompat="@drawable/ic_action_brightness_green" />
-
-    <ImageView
-        android:id="@+id/red2"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/green1"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/red3"
-        app:layout_constraintTop_toBottomOf="@+id/action_bar_relative_layout"
-        app:layout_constraintVertical_bias="0.94"
-        app:srcCompat="@drawable/ic_action_brightness_red" />
 
     <RelativeLayout
         android:id="@+id/action_bar_relative_layout"
@@ -90,25 +57,23 @@
         android:id="@+id/linear_layout_nr_intrebari"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="150dp"
         android:layout_marginEnd="54dp"
         android:layout_marginStart="180dp"
         android:layout_marginTop="36dp"
+        android:background="@drawable/style_spinner"
         android:orientation="vertical"
         android:translationZ="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/green1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_numar_de_intrebari"
-        android:background="@drawable/style_spinner">
+        app:layout_constraintTop_toBottomOf="@+id/layout_numar_de_intrebari">
 
         <Spinner
-            android:id="@+id/static_spinner_nr_intrebari"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="20dp" />
+            android:id="@+id/static_spinner_materie"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp" />
     </LinearLayout>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -127,44 +92,28 @@
         android:background="@drawable/style_spinner">
 
         <Spinner
-            android:id="@+id/static_spinner_materie"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="20dp" />
+            android:id="@+id/static_spinner_nr_intrebari"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp" />
     </LinearLayout>
-
-    <ImageView
-        android:id="@+id/red3"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/red2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/action_bar_relative_layout"
-        app:layout_constraintVertical_bias="0.94"
-        app:srcCompat="@drawable/ic_action_brightness_red" />
 
     <TextView
         android:id="@+id/numar_intrebari_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="59dp"
         android:layout_marginStart="33dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="36dp"
         android:fontFamily="casual"
-        android:text="TextView"
+        android:text="Numar de\n intrebari:"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/layout_numar_de_intrebari"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/action_bar_relative_layout"
-        tools:text="Numar de\n intrebari:" />
+        app:layout_constraintTop_toBottomOf="@+id/action_bar_relative_layout" />
 
     <Button
         android:id="@+id/incepe_button"
@@ -174,16 +123,28 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:translationZ="8dp"
         android:background="@drawable/style_joaca_button"
         android:text="Incepe "
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/red2"
+        android:translationZ="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/countdown_timer_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linear_layout_nr_intrebari" />
+
+    <TextView
+        android:id="@+id/countdown_timer_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="85dp"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>

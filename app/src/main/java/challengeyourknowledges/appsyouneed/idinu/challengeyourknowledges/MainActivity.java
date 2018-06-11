@@ -3,6 +3,7 @@ package challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -35,8 +36,6 @@ public class MainActivity extends AppCompatActivity {
         }
         setContentView(R.layout.activity_main);
 
-        Stetho.initializeWithDefaults(this);
-
         databaseHandler = new DatabaseHandler(MainActivity.this);
         if (databaseHandler.getAllQuestions().size() < 1 ) {
             InitializeDatabase.initializeDatabase(databaseHandler, getApplicationContext());
@@ -48,12 +47,15 @@ public class MainActivity extends AppCompatActivity {
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (DatabaseData.getGame().getGames_number() == 0) {
+            Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Intent intent = new Intent(getApplicationContext(), CountdownActivity.class);
+                        startActivity(intent);
+                    }
+                }, 500);
 
-                } else {
-                    Intent intent = new Intent(getApplicationContext(), CountdownActivity.class);
-                    startActivity(intent);
-                }
             }
         });
 

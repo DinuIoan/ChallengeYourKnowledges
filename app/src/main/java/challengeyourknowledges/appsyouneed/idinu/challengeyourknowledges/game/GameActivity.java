@@ -49,7 +49,6 @@ public class GameActivity extends AppCompatActivity {
     private ImageView boltImage;
     private TextView question;
     private TextView timer;
-    private TextView pointsTextView;
     private ConstraintLayout constraintLayoutQuestionBox;
     private ValueAnimator boltValueAnimator;
     private ValueAnimator boltQuestionAnimator;
@@ -66,6 +65,7 @@ public class GameActivity extends AppCompatActivity {
     private int lifes;
     private DatabaseHandler databaseHandler;
     private CountDownTimer countDownTimer;
+    private CountDownTimer countDownTimerBolt;
     private boolean isBoltQuestion;
     private int boltQuestionsCorrect = 0;
     private int boltQuestions = 0;
@@ -92,52 +92,51 @@ public class GameActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_game);
         databaseHandler = new DatabaseHandler(this);
 
         numarDeIntrebari = getIntent().getIntExtra("numarIntrebari", 0);
         materie = getIntent().getStringExtra("materie");
 
-        back_button = (Button) findViewById(R.id.back_button);
         answear1 = (Button) findViewById(R.id.button_answear1);
         answear2 = (Button) findViewById(R.id.button_answear2);
         answear3 = (Button) findViewById(R.id.button_answear3);
         answear4 = (Button) findViewById(R.id.button_answear4);
-        heart1 = (ImageView) findViewById(R.id.heart1);
-        heart2 = (ImageView) findViewById(R.id.heart2);
-        heart3 = (ImageView) findViewById(R.id.heart3);
         boltImage = (ImageView) findViewById(R.id.bolt_image_view);
         question = (TextView) findViewById(R.id.question_text_view);
         timer = (TextView) findViewById(R.id.timer);
         constraintLayoutQuestionBox = (ConstraintLayout) findViewById(R.id.constraint_layout_question);
 
-        DatabaseData.getGame().setGames_number(DatabaseData.getGame().getGames_number() - 1);
-        databaseHandler.modifyGameObject( DatabaseData.getGame().getGames_number(), DatabaseData.getGame().getPlayer_state_id());
+//        DatabaseData.getGame().setGames_number(DatabaseData.getGame().getGames_number() - 1);
+//        databaseHandler.modifyGameObject( DatabaseData.getGame().getGames_number(), DatabaseData.getGame().getPlayer_state_id());
 
         boltImage.setVisibility(View.INVISIBLE);
 
-        back_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //TODO dialog questioning if you are sure you want to exit
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
         initData();
         startGame();
     }
 
     public void initData() {
+        DatabaseData.setQuestions(databaseHandler.getAllQuestions());
         questions = DatabaseData.getQuestions();
-        questions = questions.subList(0, numarDeIntrebari);
+        if (questions.size() > numarDeIntrebari) {
+            questions = questions.subList(0, numarDeIntrebari);
+        }
         Collections.shuffle(questions);
         questionsAnsweared = new ArrayList<>();
-        points = 0;
-        lifes = 3;
         time = 21;
         isBoltQuestion = false;
-        this.countDownTimer = new CountDownTimer(time * 1000, 1000) {
+        this.countDownTimer = new CountDownTimer(21 * 1000, 1000) {
+            public void onTick(long millisUntilFinished) {
+                String remaining = "" + millisUntilFinished / 1000;
+                timer.setText(remaining);
+            }
+            public void onFinish() {
+                looseLife(null);
+            }
+        };
+
+        this.countDownTimerBolt = new CountDownTimer(11 * 1000, 1000) {
             public void onTick(long millisUntilFinished) {
                 String remaining = "" + millisUntilFinished / 1000;
                 timer.setText(remaining);
@@ -149,18 +148,13 @@ public class GameActivity extends AppCompatActivity {
     }
 
     public void startGame() {
-        heart1.setVisibility(View.VISIBLE);
-        heart2.setVisibility(View.VISIBLE);
-        heart3.setVisibility(View.VISIBLE);
         loadQuestion();
         time = 21;
-        //startTimer();
     }
 
 
     public void reloadGame() {
         loadQuestion();
-        countDownTimer.start();
     }
 
     public void pauseGame() {
@@ -178,6 +172,8 @@ public class GameActivity extends AppCompatActivity {
             if (rQuestion.getType().contains("fast")) {
                 boltQuestions++;
                 startBoltAnim();
+            } else {
+                countDownTimer.start();
             }
             question.setText(rQuestion.getText());
             List<String> answears = new ArrayList<>();
@@ -197,20 +193,19 @@ public class GameActivity extends AppCompatActivity {
             answear4.setText(answear4Text);
 
             // START TIMER
-            countDownTimer.start();
 
             answear1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     if (isBoltQuestion) {
                         stopBoltAnim();
+                    } else {
+                        countDownTimer.cancel();
                     }
                     if (answear1.getText().toString().contains(correctAnswear)) {
                         if (isBoltQuestion) {
                             boltQuestionsCorrect++;
                         }
-                        points += rQuestion.getPoints();
-                        pointsTextView.setText("" + points);
                         makeCorrectAnim(answear1);
                         Handler handler = new Handler();
                         handler.postDelayed(new Runnable() {
@@ -231,13 +226,13 @@ public class GameActivity extends AppCompatActivity {
                 public void onClick(View v) {
                     if (isBoltQuestion) {
                         stopBoltAnim();
+                    } else {
+                        countDownTimer.cancel();
                     }
                     if (answear2.getText().toString().contains(correctAnswear)) {
                         if (isBoltQuestion) {
                             boltQuestionsCorrect++;
                         }
-                        points += rQuestion.getPoints();
-                        pointsTextView.setText("" + points);
                         makeCorrectAnim(answear2);
                         Handler handler = new Handler();
                         handler.postDelayed(new Runnable() {
@@ -258,13 +253,13 @@ public class GameActivity extends AppCompatActivity {
                 public void onClick(View v) {
                     if (isBoltQuestion) {
                         stopBoltAnim();
+                    } else {
+                        countDownTimer.cancel();
                     }
                     if (answear3.getText().toString().contains(correctAnswear)) {
                         if (isBoltQuestion) {
                             boltQuestionsCorrect++;
                         }
-                        points += rQuestion.getPoints();
-                        pointsTextView.setText("" + points);
                         makeCorrectAnim(answear3);
                         Handler handler = new Handler();
                         handler.postDelayed(new Runnable() {
@@ -285,13 +280,13 @@ public class GameActivity extends AppCompatActivity {
                 public void onClick(View v) {
                     if (isBoltQuestion) {
                         stopBoltAnim();
+                    } else {
+                        countDownTimer.cancel();
                     }
                     if (answear4.getText().toString().contains(correctAnswear)) {
                         if (isBoltQuestion) {
                             boltQuestionsCorrect++;
                         }
-                        points += rQuestion.getPoints();
-                        pointsTextView.setText("" + points);
                         makeCorrectAnim(answear4);
                         Handler handler = new Handler();
                         handler.postDelayed(new Runnable() {
@@ -321,32 +316,12 @@ public class GameActivity extends AppCompatActivity {
        if (isBoltQuestion) {
            stopBoltAnim();
        }
-
-       if (lifes > 0) {
-            lifes -= 1;
-            if (lifes == 2) {
-                heart3.setVisibility(View.INVISIBLE);
-//                heart3.setImageResource(R.drawable.heartblack);
-            }
-            if (lifes == 1) {
-                heart2.setVisibility(View.INVISIBLE);
-//                heart3.setImageResource(R.drawable.heartblack);
-
-            }
-            if (lifes == 0) {
-                heart1.setVisibility(View.INVISIBLE);
-//                heart3.setImageResource(R.drawable.heartblack);
-            }
-           handler.postDelayed(new Runnable() {
-               @Override
-               public void run() {
-                   reloadGame();
-               }
-           }, 1600);
-//            reloadGame();
-       } else {
-           endGame();
-       }
+       handler.postDelayed(new Runnable() {
+           @Override
+           public void run() {
+               reloadGame();
+           }
+       }, 1600);
     }
 
     public void endGame() {
@@ -395,7 +370,7 @@ public class GameActivity extends AppCompatActivity {
 
         if (DatabaseData.getGame().getGames_number() > 0) {
             builder.setTitle("JOC TERMINAT")
-                    .setMessage(R.string.retryMessage1 + points + R.string.retryMessage2)
+                    .setMessage(R.string.retryMessage2)
                     .setPositiveButton(R.string.retry, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             Intent countdownActivityIntent = new Intent(GameActivity.this, CountdownActivity.class);
@@ -413,7 +388,7 @@ public class GameActivity extends AppCompatActivity {
                     .setIcon(android.R.drawable.ic_dialog_alert);
         } else {
             builder.setTitle("JOC TERMINAT")
-                    .setMessage(R.string.retryMessage1 + points + R.string.castigaJocuriMessage)
+                    .setMessage(R.string.castigaJocuriMessage)
                     .setPositiveButton(R.string.castigaJocuri, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             Intent mainActivityIntent = new Intent(GameActivity.this, MainActivity.class);
@@ -439,64 +414,41 @@ public class GameActivity extends AppCompatActivity {
         boltImage.setVisibility(View.VISIBLE);
         time = 11;
         isBoltQuestion = true;
-        //V1
-        boltValueAnimator = ValueAnimator.ofArgb(R.drawable.style_answear_button, R.drawable.anim_bolt_answear_button);
-        boltValueAnimator.setDuration(10 * 1000);
-        boltValueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                answear1.setBackgroundColor((int) animation.getAnimatedValue());
-                answear2.setBackgroundColor((int) animation.getAnimatedValue());
-                answear3.setBackgroundColor((int) animation.getAnimatedValue());
-                answear4.setBackgroundColor((int) animation.getAnimatedValue());
-            }
-        });
-        boltValueAnimator.start();
-
-        boltQuestionAnimator = ValueAnimator.ofArgb(R.drawable.style_question_box, R.drawable.anim_question_box);
-        boltQuestionAnimator.setDuration(10 * 1000);
-        boltQuestionAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                constraintLayoutQuestionBox.setBackgroundColor((int) animation.getAnimatedValue());
-            }
-        });
-        boltQuestionAnimator.start();
-
 
         // V2
-                /*answear1.setBackgroundResource(R.drawable.anim_bolt_answear_button);
-                answear2.setBackgroundResource(R.drawable.anim_bolt_answear_button);
-                answear3.setBackgroundResource(R.drawable.anim_bolt_answear_button);
-                answear4.setBackgroundResource(R.drawable.anim_bolt_answear_button);
-                constraintLayoutQuestionBox.setBackgroundResource(R.drawable.anim_question_box);
-                boltAnimationButton1 = (AnimationDrawable) answear1.getBackground();
-                boltAnimationButton2 = (AnimationDrawable) answear2.getBackground();
-                boltAnimationButton3 = (AnimationDrawable) answear3.getBackground();
-                boltAnimationButton4 = (AnimationDrawable) answear4.getBackground();
-                boltQuestionBoxAnim = (AnimationDrawable) constraintLayoutQuestionBox.getBackground();
-                boltAnimationButton1.start();
-                boltAnimationButton2.start();
-                boltAnimationButton3.start();
-                boltAnimationButton4.start();
-                boltQuestionBoxAnim.start();*/
+        answear1.setBackgroundResource(R.drawable.anim_bolt_answear_button);
+        answear2.setBackgroundResource(R.drawable.anim_bolt_answear_button);
+        answear3.setBackgroundResource(R.drawable.anim_bolt_answear_button);
+        answear4.setBackgroundResource(R.drawable.anim_bolt_answear_button);
+        constraintLayoutQuestionBox.setBackgroundResource(R.drawable.anim_question_box);
+        boltAnimationButton1 = (AnimationDrawable) answear1.getBackground();
+        boltAnimationButton2 = (AnimationDrawable) answear2.getBackground();
+        boltAnimationButton3 = (AnimationDrawable) answear3.getBackground();
+        boltAnimationButton4 = (AnimationDrawable) answear4.getBackground();
+        boltQuestionBoxAnim = (AnimationDrawable) constraintLayoutQuestionBox.getBackground();
+        boltAnimationButton1.start();
+        boltAnimationButton2.start();
+        boltAnimationButton3.start();
+        boltAnimationButton4.start();
+        boltQuestionBoxAnim.start();
+        countDownTimerBolt.start();
     }
 
     private void stopBoltAnim() {
         boltImage.setVisibility(View.INVISIBLE);
 
         //V2
-//          boltAnimationButton1.stop();
-//          boltAnimationButton2.stop();
-//          boltAnimationButton3.stop();
-//          boltAnimationButton4.stop();
+          boltAnimationButton1.stop();
+          boltAnimationButton2.stop();
+          boltAnimationButton3.stop();
+          boltAnimationButton4.stop();
         answear1.setBackgroundResource(R.drawable.style_answear_button);
         answear2.setBackgroundResource(R.drawable.style_answear_button);
         answear3.setBackgroundResource(R.drawable.style_answear_button);
         answear4.setBackgroundResource(R.drawable.style_answear_button);
         constraintLayoutQuestionBox.setBackgroundResource(R.drawable.style_question_box);
         isBoltQuestion = false;
-        time = 21;
+        countDownTimerBolt.cancel();
     }
 
     @Override
