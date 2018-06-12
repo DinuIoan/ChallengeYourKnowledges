@@ -59,15 +59,9 @@ public class CountdownActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 materiaafostSelectata = true;
                 if (position == 0) {
-                    materieSelectata = "Limba romana";
+                    materieSelectata = "limbaromana";
                 } else if(position == 1) {
-                    materieSelectata = "Logica";
-                } else if (position == 2) {
-                    materieSelectata = "Istorie";
-                } else if (position == 3) {
-                    materieSelectata = "Geografie";
-                } else if (position == 4) {
-                    materieSelectata = "Fizica";
+                    materieSelectata = "istorie";
                 }
             }
 

@@ -37,7 +37,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private static final String ANSWEAR2 = "answear2";
     private static final String ANSWEAR3 = "answear3";
     private static final String CORRECT_ANSWEAR = "correctAnswear";
-    private static final String ANSWEAR_POINTS = "answearPoints";
+    private static final String DOMAIN = "domain";
 
     private static final String RANKINGS_TABLE = "Rankings";
     private static final String RANKINGS_ID_KEY = "id";
@@ -75,7 +75,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                     + ANSWEAR2 + " text, "
                     + ANSWEAR3 + " text, "
                     + CORRECT_ANSWEAR + " text, "
-                    + ANSWEAR_POINTS + " integer, "
+                    + DOMAIN + " text, "
                     + PLAYER_STATE_ID_FK + " integer " +
                 " ) ";
 
@@ -139,7 +139,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                     + question.getAnswear2() + "', '"
                     + question.getAnswear3() + "', '"
                     + question.getCorrect_answear() + "', '"
-                    + question.getPoints() + "', '"
+                    + question.getDomain() + "', '"
                     + question.getPlayer_state_id() +
                 "')";
         database.execSQL(ADD_QUESTION);
@@ -222,7 +222,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
 
     public void modifyQuestionObject(int id, String text, String type, String answear1, String answear2, String answear3,
-                                     String correct_answear,int answearPoints, int player_state_id_fk) {
+                                     String correct_answear,String domain, int player_state_id_fk) {
         SQLiteDatabase database = getWritableDatabase();
         String UPDATE_QUESTION_OBJECT = "update " + QUESTION_TABLE +
                 " set "
@@ -232,7 +232,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                     + ANSWEAR2 + " = '" + answear2 + "' "
                     + ANSWEAR3 + " = '" + answear3 + "' "
                     + CORRECT_ANSWEAR + " = '" + correct_answear + "' "
-                    + ANSWEAR_POINTS + " = '" + answearPoints + "' "
+                    + DOMAIN + " = '" + domain + "' "
                     + PLAYER_STATE_ID_FK + " = '" + player_state_id_fk + "' "
                     + " where " + QUESTION_ID_KEY + " = " + id;
         database.execSQL(UPDATE_QUESTION_OBJECT);
@@ -291,7 +291,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             Question question = new Question(cursor.getInt(0), cursor.getString(1),
                                             cursor.getString(2), cursor.getString(3),
                                             cursor.getString(4), cursor.getString(5),
-                                            cursor.getString(6), cursor.getInt(7),
+                                            cursor.getString(6), cursor.getString(7),
                                             cursor.getInt(8));
             questionList.add(question);
         }
@@ -369,12 +369,30 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             question = new Question(cursor.getInt(0), cursor.getString(1),
                     cursor.getString(2), cursor.getString(3),
                     cursor.getString(4), cursor.getString(5),
-                    cursor.getString(6), cursor.getInt(7),
+                    cursor.getString(6), cursor.getString(7),
                     cursor.getInt(8));
         }
         cursor.close();
         database.close();
         return question;
+    }
+
+    public List<Question> getQuestionsByDomain(String domain) {
+        SQLiteDatabase database = getReadableDatabase();
+        String SELECT_QUESTION_BY_DOMAIN = "select * from " + QUESTION_TABLE +
+                " where " + DOMAIN + " = " + domain;
+        Cursor cursor = database.rawQuery(SELECT_QUESTION_BY_DOMAIN, null);
+        List<Question> questions = null;
+
+        while (cursor.moveToNext()) {
+            Question question = new Question(cursor.getInt(0), cursor.getString(1),
+                    cursor.getString(2), cursor.getString(3),
+                    cursor.getString(4), cursor.getString(5),
+                    cursor.getString(6), cursor.getString(7),
+                    cursor.getInt(8));
+            questions.add(question);
+        }
+        return questions;
     }
 
     public Rankings getRankingById(int id) {

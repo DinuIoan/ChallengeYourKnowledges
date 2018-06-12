@@ -8,12 +8,12 @@ public class Question {
     private String answear2;
     private String answear3;
     private String correct_answear;
-    private Integer points;
+    private String domain;
     private Integer player_state_id;
 
 
     public Question(Integer id, String text, String type, String answear1,
-                    String answear2, String answear3, String correct_answear, Integer points, Integer player_state_id) {
+                    String answear2, String answear3, String correct_answear, String domain, Integer player_state_id) {
         this.id = id;
         this.text = text;
         this.type = type;
@@ -22,7 +22,7 @@ public class Question {
         this.answear3 = answear3;
         this.correct_answear = correct_answear;
         this.player_state_id = player_state_id;
-        this.points = points;
+        this.domain = domain;
     }
 
     public String getCorrect_answear() {
@@ -89,12 +89,16 @@ public class Question {
         this.answear3 = answear3;
     }
 
-    public Integer getPoints() {
-        return points;
+    public String getDomain() {
+        return domain;
     }
 
-    public void setPoints(Integer points) {
-        this.points = points;
+    public void setDomain(String domain) {
+        this.domain = domain;
     }
 
+    public static Question clone(Question question) {
+        return new Question(question.getId().intValue(), question.getText(), question.getType(), question.getAnswear1(), question.getAnswear2(),
+                question.getAnswear3(), question.getCorrect_answear(), question.getDomain(), question.getPlayer_state_id().intValue() );
+    }
 }

@@ -60,22 +60,41 @@ public class InitializeDatabase {
         String answear2 = "";
         String answear3 = "";
         String correct_answear = "";
-        int points = 0;
+        String domain = "";
+        domain = checkDomain(parts[0]);
         if (parts[0].contains("fast")){
             type = "fast";
-            points = 10;
-        } else if( parts[0].contains("normal")){
-            type = "normal";
-            points = 10;
         }
-        text = parts[1];
-        correct_answear = parts[2];
-        answear1 = parts[3];
-        answear2 = parts[4];
-        System.out.println(text);
-        answear3 = parts[5];
+        if( parts[0].contains("normal")){
+            type = "normal";
+        }
+        if (parts[0].contains("af")) {
+            type = "af";
+            text = parts[1];
+            correct_answear = parts[2];
+            answear1 = "";
+            answear2 = "";
+            answear3 = "";
+        } else {
+            text = parts[1];
+            correct_answear = parts[2];
+            answear1 = parts[3];
+            answear2 = parts[4];
+            System.out.println(text);
+            answear3 = parts[5];
+        }
         Question question = new Question(0, text, type, answear1, answear2,
-                answear3, correct_answear, points, 0);
+                answear3, correct_answear, domain, 0);
         return question;
+    }
+
+    public static String checkDomain(String type) {
+        if (type.contains("limbaromana")){
+            return "limbaromana";
+        }
+        if (type.contains("istorie")) {
+            return "istorie";
+        }
+        return "";
     }
 }

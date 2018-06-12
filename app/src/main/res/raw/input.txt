@@ -1,5 +1,90 @@
-fast/Cine a scris opera ''Patul lui Procust''? / Camil Petrescu / Mircea Nedelciu / Marin Sorescu / Ion Creanga /
-fast/Cine a scris opera ''Moara cu noroc''? / Ioan Slavici / Sadoveanu / Liviu Rebreanu / Marin Sorescu /
-fast/Cine a scris opera ''O scrisoare pierduta''? / Ion Luca Caragiale / Camil Petrescu / George Calinescu / Ion Creanga /
-normal/Principalele forme logice sunt: / notiunea, argumentul si premisa / propozitia, inferenta si teza; / notiunea, propozitia si rationamentul; / inferenta, premisa si concluzia. /
-normal/Forma logica ce reflecta la nivelul gandirii clase (categorii) de obiecte este: / propozitia / notiunea / inferenta / argumentul /
+fast-limbaromana/Cine a scris opera ''Patul lui Procust''? / Camil Petrescu / Mircea Nedelciu / Marin Sorescu / Ion Creanga /
+fast-limbaromana/Cine a scris opera ''Moara cu noroc''? / Ioan Slavici / Sadoveanu / Liviu Rebreanu / Marin Sorescu /
+fast-limbaromana/Cine a scris opera ''O scrisoare pierduta''? / Ion Luca Caragiale / Camil Petrescu / George Calinescu / Ion Creanga /
+fast-limbaromana/In  enuntul ''Te iubesc, Petru.'' virgula are rolul: / de a izola substantivul in vocativ / de a izola apozitia / de a separa termenii unei enumerații / nu este corect pusa /
+fast-limbaromana/In structura ''pan-ai pierit'' cratima are rolul : / de a elida vocala si de a ajuta la pronuntarea legata a doua cuvinte diferite / de a elida o consoana / de a marca sfarsitul unui enunt / asa se scrie cuvantul /
+fast-limbaromana/Poemul ''Luceafarul'' de M. Eminescu apartine: / epocii marilor clasici / perioadei interbelice / perioadei postbelice / nu este poem /
+fast-limbaromana/Este poezie postbelica: / Leoaica tanara, iubirea / Testament / Eu nu strivesc corola de minuni a lumii / Plumb /
+fast-limbaromana/Testamentul de Tudor Arghezi este o creatie lirica: / modernista, interbelica / romantica, anterbelica / neomodernista, postbelica / romantica, interbelica /
+fast-limbaromana/Poezia care apartine simbolismului este: / Plumb de George Bacovia / Plumb de Ioan Slavici / Riga Crypto si lapona Enigel de Ion Barbu / Aci sosi pe vremuri de Ion Pilat /
+fast-limbaromana/''Aci sosi pe vremuri'' de Ion Pilat este: / poezie interbelica, traditionalista / poezie postbelica, neomodernista / poezie interbelica, modernista / poezie interbelica, neomodernista /
+fast-limbaromana/''Eu nu strivesc corola de minuni a lumii'' de Lucian Blaga este: / poezie interbelica, modernista / poezie interbelica, simbolista / poezie romantica / poezie postbelica, drama /
+fast-limbaromana/''Leoaica tanara, iubirea'' de Nichita Stanescu este: / poezie postbelica, neomodernista / poezie, interbelica, simbolista / poezie, anterbelica, neomodernista / poezie interbelica, modernista /
+fast-limbaromana/Ion Creanga se incadreaza in: / perioada marilor clasici / perioada postbelica / perioada interbelica / perioada renascentista /
+fast-limbaromana/Opera literara ''Povestea lui Harap Alb'' de Ion Creanga este: / basm cult / nuvela istorica / basm incult / nuvela realista /
+fast-limbaromana/Este nuvela realist-psihologica opera: / Moara cu noroc de Ioan Slavici / Baltagul de Mihail Sadoveanu / Alexandru Lapusneanu de Costache Negruzz / Moara cu noroc de Ion Creanga /
+normal-limbaromana/Contureaza dimensiunea temporala intr-un text structuri precum: / Intr-o seara de iulie, in timpul razboiului, din prima clipa / Toamna, în gradina,la scoala / La palat, pe prispa, in casa bunicilor / In poienita, vara, cu familia /
+normal-limbaromana/Contureaza dimensiunea spatiala intr-un text structuri precum: / In Campia Dunarii, la mare, acasa / Astazi, la tara, pe terasa / Vara, noaptea trecuta, atunci / Intr-o seara de iulie, in timpul razboiului, din prima clipa /
+normal-limbaromana/Sunt trasaturi ale genului liric : / prezenta instantei comunicarii lirice-eul liric, abundenta figurilor de stil, monologul liric / prezenta naratorului si a personajelor, abundenta figurilor de stil, monologul liric / prezenta instantei comunicarii lirice- eul liric, abundenta figurilor de stil, naratiunea / Naratiunea, prezenta personajelor, prezenta actiunii /
+normal-limbaromana/Sunt trasaturi ale genului epic: / prezenta instantelor comunicarii epice-narator, personaje, naratiunea / prezenta didascaliilor, naratiunea, eul liric / prezenta instanei comunicarii lirice- eul liric, naratiunea / abundenta figurilor de stil /
+normal-limbaromana/Sunt trasaturi ale genului dramatic / prezenta didascaliilor, structurarea pe acte si scene, dialogul / monolog liric, structurarea pe acte si scene, figuri de stil / prezenta instantei comunicarii lirice- eul liric, abundenta figurilor de stil, dialogul / prezenta didascaliilor, naratiunea, eul liric /
+normal-limbaromana/Genul liric cuprinde operele: / in care autorul isi transmite in mod direct gandurile prin intermediul eului liric / in care autorul isi transmite indirect gandurile cu ajutorul actiunii si al personajelor / scrise cu scopul de a fi reprezentate pe scena / in care autorul isi transmite direct gandurile prin intermediul didascaliilor /
+normal-limbaromana/Apartin modernismului poeziile din seria: / ''Testament'', ''Riga Crypto si lapona Enigel'', ''Eu nu strivesc corola de minuni a lumii'' / ''Testament'', ''Plumb'' / ''Luceafarul'', ''Testament'', ''Aci sosi pe vremuri'' / ''Aci sosi pe vremuri'', ''Plumb'', ''Leoaica tanara, iubirea'' /
+normal-limbaromana/Conceptele de '' cunoastere luciferica '' si ''cunoasterea paradisiaca'' sunt specifice liricii lui: / Mihai Eminescu / Tudor Arghezi / Lucian Blaga / Ioan Slavici /
+normal-limbaromana/Genul epic cuprinde operele: / operele in care gandurile si ideile sunt transmise in mod indirect prin intermediul actiunii si al personajelor / in care gandurile, ideile si sentimentele sunt transmise in mod direct prin intermediul eului liric / operele scrise cu scopul de afi peprezentate pe scena / in care sunt prezente figurile de stil /
+normal-limbaromana/Sunt romane interbelice: / Ion, Baltagul,Ultima noapte de dragoste intaia noapte de razboi, Enigma Otiliei / Ion, Baltagul, Morometii, Zmeura de campie / Baltagul, Morometii, Ion, Ultima noapte de dragoste intaia noapte de razboi, Enigma Otiliei / Enigma Otiliei, Ion, Morometii /
+normal-limbaromana/Au caracter de bildungsroman operele: / ''Povestea lui Harap Alb'', ''Baltagul'', ''Enigma Otiliei'' / ''Povestea lui Harap Alb'', ''Ion'', ''Morometii'' / ''Baltagul'', ''Moara cu noroc'', ''Alexandru Lapusneanu'' / ''Povestea lui Harap Alb'', ''Moara cu noroc '' /
+normal-limbaromana/Este roman interbelic, modern, subiectiv, de analiza psihologica, al experientei / Ultima noapte de dragoste, intaia noapte de razboi de Camil Petrescu / Enigma Otiliei de George Calinescu / Zmeura de campie de Mircea Nedelciu / Moara cu noroc de Ioan Slavici /
+normal-limbaromana/A fost publicata mai intai in revista Luceafarul (1968), apoi inclusa in trilogia ''Setea muntelui de sare'' opera: / Iona, de Marin Sorescu / Jocul ielelor, de Camil Petrescu / O scrisoare pierduta, de Ion Luca Caragiale / Iona de George Bacovia /
+normal-limbaromana/Satirizarea defectelor - moravurilor societatii romanesti de la sfarsitul secolului al XIX-lea constituie tema operei: / O scrisoare pierduta, de Ion Luca Caragiale / Iona, de Marin Sorescu / Jocul ielelor, de Camil Petrescu / La tiganci, de Camil Petrescu /
+normal-limbaromana/Tema literara a dramei Iona, de Marin Sorescu o constituie: / destinul omului captiv in propriul sau destin - conditia umana / drama intelectualului lucid insetat de absolut / lupta pentru putere / lupta pentru avere /
+af-limbaromana/''Estetica uratului'' este o tehnica inovatoare introdusa in lirica romaneasca de Mihai Eminescu / Fals / Adevarat /
+af-limbaromana/Conditia omului de geniu este tema literara in Luceafarul: / Adevarat / Fals /
+af-limbaromana/Arta poetica este creatia lirica in care autorul isi exprima, cu ajutorul unor mijloace artistice adecvate, propria conceptie despre lume si despre rolul artistului si ale operei sale in societate. / Adevarat / Fals /
+af-limbaromana/''Plumb'' este scrisa de George Bacovia si a fost publicata in volumul ''Plumb'', in 1916. / Adevarat / Fals /
+af-limbaromana/Poezia ''Testament'' este scrisa de Lucain Blaga si este arta poetica neomodernista / Fals / Adevarat /
+af-limbaromana/''Leoaica tanara, iubirea'' de Nichita Stanescu se incadreaza in neomodernism si a fost publicata in 1964 in volumul '' O viziune a sentimentelor ''. / Adevarat / Fals /
+af-limbaromana/Formele verbale si pronominale de pers I si a II- a, substantivele in vocativ, interjectiile reprezinta marci ale subiectivitatii intr-un text. / Adevarat / Fals /
+af-limbaromana/Punctele de suspensie, semne de punctuatie, marcheaza intreruperea discursului epic, liric, dramatic, intensifica starile eului liric, naratorului, personajului si au rol meditativ. / Adevarat / Fals /
+af-limbaromana/Substantivul inima din enuntul ''S-a afundat in inima padurii'' are sens conotativ. / Adevarat / Fals /
+af-limbaromana/''Luceafarul'' de Mihai Eminescu apartine Epocii marilor clasici si a fost publicata in revista Dacia literara. / Fals / Adevarat /
+af-limbaromana/''Eu nu strivesc corola de minuni a lumii'' a lui Lucian Blaga este o creatie lirica interbelica, modernista, publicata in volumul ''Poemele luminii'' (1919). / Adevarat / Fals /
+af-limbaromana/Opera literara Alexandru Lapusneanu de Costache Negruzzi apartine perioadei pasoptiste/ Adevarat / Fals /
+af-limbaromana/Opera literera Alexandru Lapusneanu este nuvela istorica si romantica. / Adevarat / Fals /
+af-limbaromana/Sunt romane postbelice Ion si Morometii. / Fals / Adevarat /
+af-limbaromana/Este traditional romanul Enigma Otiliei de George Calinescu ? / Fals / Adevarat /
+fast-istorie/Daco-getii au reprezentat ramura: / nordica a tracilor / sudica a tracilor / nordica a slavilor / sudica a slavilor /
+fast-istorie/Rezultatul procesului istoric al romanizarii a constat in formarea unui nou popor: / cel al daco-romanilor /  cel geto-dacic /  cel geto-tracic / cel roman /
+fast-istorie/Romanitatea romanilor a devenit un subiect de controversa istorica la sfarsitul secolului: / al XVIII-lea / al XVI-lea / al VIII-lea / al XI-lea /
+fast-istorie/Disputa in jurul romanitatii si a continuitatii romanilor s-a desfasurat din secolul al XVIII-lea din motive: / politice / religioase / imigrationiste / romantice /
+fast-istorie/Limba romana face parte din familia limbilor: / romanice, neolatine / slave, tracice / romanice, indo-europene / romanice, dacice/
+fast-istorie/Slavii ajung pe teritoriul Daciei in numar foarte mare in: / secolul al VI-lea dHr / secolul al VIII-lea dHr / secolul al X-lea dHr / secolul al IV-lea dHr /
+fast-istorie/Constitutia Romaniei promulgata de principele Carol I in anul: / 1 iulie 1866 / 1 iunie 1866 / 1 iulie 1886 / 1 iunie 1886 /
+fast-istorie/Prima constitutie comunista a fost adoptata in anul: / 1948 / 1950 / 1938 / 1968 /
+fast-istorie/Aprobarea unei legi de conducatorul unui stat, pentru a-i da caracter executoriu se numeste: / sanctionare / referendum / act sau lege fundamentala / revolta /
+fast-istorie/Constitutia din anul 1938 a fost aplicata pana in anul: / 1940 / 1950 / 1941 / 1938 /
+fast-istorie/Constitutiile comuniste din anii 1948 si 1952 sunt inspirate dupa legea fundamentala a: / URSS / Belgia / Franta / Germania /
+fast-istorie/Constitutia care acorda puteri sporite regelui a intrat in vigoare in: / 27 februarie 1938 / 27 februarie 1968 / 27 martie 1938 / 27 martie 1940 /
+fast-istorie/Dupa 1945, in prima etapa a Razboiului Rece, Romania se afla in sfera de influenta: / sovietica / slava / engleza / turceasca /
+fast-istorie/Romania a stabilit relatii diplomatice cu Republica Federala Germania in anul: / 1967 / 1966 / 1957 / 1956 /
+fast-istorie/Romania devine membra a Organizatiei Natiunilor Unite in anul: / 1955 / 1954 / 1953 / 1951 /
+normal-istorie/Institutia financiara internationala cu sediul la Washington prin care sunt sprijinite statele aflate in curs de dezvoltare, creata in anul 1945 se numeste: / Fondul Monetar International / Banca Mondiala / Organizatia Natiunilor Unite / Fondul Monetar National /
+normal-istorie/In perioada 1965 - 1989 regimul national -comunist ale lui Nicolae Ceausescu a continuat politica externa de distantare fata de: / Moscova / Paris / Berlin / Budapesta /
+normal-istorie/Supus presiunilor Moscovei, regele Mihai a fost obligat sa accepte formarea guvernului condus de Petru Groza, aflat sub control P.C.R la: / 6 martie 1945 / 6 aprilie 1945 / 6 martie 1946 / 6 aprilie 1946 /
+normal-istorie/Disidenta a reprezentat o forma individuala de protest, specifica regimului national-comunist al lui: / Nicolae Ceausescu / Ion Iliescu / Petru Groza / Gheorghe Gheorghiu Dej /
+normal-istorie/Demonstratiile de protest de la Timisoara (declansate de intentia Securitatii de a-l evacua din locuina sa pe pastorul Laszlo Tokes) au avut loc in: / 16 - 21 decembrie 1989 / 21 - 22 decembrie 1989 / 21 decembrie 1989 / 25 decembrie 1989 /
+normal-istorie/Primul domnitor al Tarilor Romane care a dus o politica de cruciada antiotomana a fost: / Mircea cel Batran / Mihai Viteazul / Vlad Tepes / Iancu de Hunedoara /
+normal-istorie/Batalia de la Vaslui (Podul Inalt) unde Stefan cel Mare a obtinut o stralucita victorie impotriva Imperiului Otoman a avut loc in anul: / 1475 / 1476 / 1745 / 1764 /
+normal-istorie/Teoria continuitatii romanilor in spatiul carpato-danubiano-pontic a fost sustinuta si dezvoltata, cu argumente istorice, lingvistice si arheologice, de istorici precum: / B.P. Hasdeu, Dimitrie Onciul si A.D. Xenopol / Reprezentantii Scolii Ardelene / Gh. Sincai, P. Maior si Samuil Micu / B.P Hasdeu, Gh Sincai /
+normal-istorie/În secolul al XIX-lea, in conditiile anexarii Transilvaniei la Ungaria, dupa transformarea Imperiului Habsburgic in Imperiul Austro-Ungar (1867), Robert Roesler a dezvoltat: / teoria imigrationista / teoria continuitatii / teoria autohtonista / teoria religioasa /
+normal-istorie/Procesul etnogenezei romanesti care a stat la baza formarii poporului roman s-a incheiat la: / Sfarsitul secolului al VIII-lea si la inceputul secolului al IX-lea / ASfarsitul secolului al VII-lea si la inceputul secolului al IX-lea / ASfarsitul secolului al VII-lea si la inceputul secolului al X-lea / ASfarsitul secolului al VI-lea si la inceputul secolului al X-lea /
+normal-istorie/Dupa abandonarea Daciei de romani in urma retragerii aureliene din anul 271/275, procesul de romanizare a continuat ca urmare a / legaturilor cu Imperiul Roman / legaturilor cu dacii liberi / legaturilor cu noul val al popoarelor migratoare / legaturilor cu slavii liberi /
+normal-istorie/Conform constitutiei din 1866, parlamentul avea o structura bicamerala, fiind alcatuit din: / Adunarea Deputatilor si Senat / Adunarea Deputatilor din Guvern / Adunarea Deputatilor si Curtea de Justitie / Adunarea Deputatilor si Guvern /
+normal-istorie/Perioada de declin in care a intrat Imperiul Otoman de la sfarsitul secolului al XVIII lea se numeste: / Criza Orientala / destramarea Imperiului Otoman / uniunea nationala / libertate /
+normal-istorie/Dupa actiunile de politica antiotomana desfasurate de Constantin Brancoveanu si Dimitrie Cantemir, Imperiul Otoman a instaurat in Tara Romaneasca si Moldova domniile: / fanariote / pamantene / suzerane / otomane /
+normal-istorie/In cronica notarului anonim al regelui maghiar Bela - Gesta Hungarorum (Faptele ungurilor) sunt mentionate voievodatele din: / Transilvania - Banat / Tara Romaneasca / Moldova / Ardeal /
+af-istorie/Romania a luat parte activ la Conferinta pentru Securitate si Cooperare in Europa de la Helsinki in anul 1975 / Fals / Adevarat /
+af-istorie/Constitutia comunista din 1965 avea 114 articole: / Adevarat / Fals /
+af-istorie/Constitutia din 1923 a contribuit la consolidarea statului roman in urma realizarii Marii uniri / Adevarat / Fals /
+af-istorie/Nationalizare = consultarea cetatenilor in privinta unor probleme importante de stat in care li se solicita sa raspunda pozitiv sau negativ:/ Fals / Adevarat /
+af-istorie/Romania nu a participat la invadarea Cehoslovaciei de catre armatele statelor Organizatiei Tratatului de la Varsovia din anul 1968 / Adevarat / Fals/
+af-istorie/Regele Mihai I a fost nevoit sa abdice la 30 decembrie 1947 / Adevarat / Fals /
+af-istorie/Regimul stalinist al lui Gheorghe Gheorghiu Dej a avut loc in perioada 1948-1966 / Fals / Adevarat /
+af-istorie/Sovietizare = trecerea in proprietatea statului a obiectivelor economice si sociale aflate in proprietatea privata: / Fals / Adevarat /
+af-istorie/Trupele sovietice s-au retras din Romania in anul 1958 / Adevarat / Fals /
+af-istorie/"Revolutie culturala" de inspiratie chineza si nord-coreeana s-a desfasurat in Romania in perioada 1965 - 1989 / Fals / Adevarat /
+af-istorie/Greva minerilor din Valea Jiului impotriva regimului ceausist  a avut loc in  anul 1977 / Adevarat / Fals /
+af-istorie/Securitatea institutiei cu rol de politie politica a fost infiintata in anul 1948 / Adevarat / Fals /
+af-istorie/Capitulatie = documentul incheiat intre Tarile Romane si Imperiul Otoman care prevedea obligatiile si statutul acestora in raport cu Poarta / Adevarat / Fals /
+af-istorie/Primul domnitor care a luptat impotriva ostilor otomane pe teritoriul tarii sale a fost Mircea cel Batran / Adevarat / Fals /
+af-istorie/Stefan cel Mare a fost domnitor al Moldovei in perioada 1457 - 1501 / Fals / Adevarat /
