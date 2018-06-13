@@ -46,6 +46,7 @@ public class GameOverActivity extends AppCompatActivity {
         fastProgressBar = (ProgressBar) findViewById(R.id.progressBar_stress);
         normalProgressBar = (ProgressBar) findViewById(R.id.progressBar_normal);
         afProgressBar = (ProgressBar) findViewById(R.id.progressBar_adevarat_fals);
+        populateProgressBars();
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,7 +75,7 @@ public class GameOverActivity extends AppCompatActivity {
             }
         });
 
-        populateProgressBars();
+
     }
 
     public void populateProgressBars() {

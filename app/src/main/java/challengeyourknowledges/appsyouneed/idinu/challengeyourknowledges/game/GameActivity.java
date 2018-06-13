@@ -140,6 +140,8 @@ public class GameActivity extends AppCompatActivity {
     public void initData() {
         DatabaseData.setQuestions(databaseHandler.getQuestionsByDomain(materie));
         List<Question> principalQuestions = DatabaseData.getQuestions();
+        Collections.shuffle(principalQuestions);
+        questions = new ArrayList<>();
         for (Question question: principalQuestions) {
             Question clonedQuestion = Question.clone(question);
             questions.add(clonedQuestion);
@@ -148,7 +150,6 @@ public class GameActivity extends AppCompatActivity {
         if (questions.size() > numarDeIntrebari) {
             questions = questions.subList(0, numarDeIntrebari);
         }
-        Collections.shuffle(questions);
         questionsAnsweared = new ArrayList<>();
         time = 21;
         isBoltQuestion = false;
@@ -199,6 +200,7 @@ public class GameActivity extends AppCompatActivity {
         }
         this.numarDeIntrebari--;
         numarIntrebariTextView.setText("" + numarDeIntrebari);
+        isAfQuestion = false;
         loadQuestion();
     }
 
@@ -249,13 +251,12 @@ public class GameActivity extends AppCompatActivity {
                 answear1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        if (isBoltQuestion) {
-                            stopBoltAnim();
-                        } else {
+                        if (!isBoltQuestion) {
                             countDownTimer.cancel();
                         }
                         if (answear1.getText().toString().contains(correctAnswear)) {
                             if (isBoltQuestion) {
+                                stopBoltAnim();
                                 boltQuestionsCorrect++;
                             } else {
                                 normalQuestionsCorrect++;
@@ -270,6 +271,9 @@ public class GameActivity extends AppCompatActivity {
                             }, 1800);
 //                        reloadGame();
                         } else {
+                            if (isBoltQuestion) {
+                                stopBoltAnim();
+                            }
                             looseLife(answear1);
                         }
                     }
@@ -278,13 +282,12 @@ public class GameActivity extends AppCompatActivity {
                 answear2.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        if (isBoltQuestion) {
-                            stopBoltAnim();
-                        } else {
+                        if (!isBoltQuestion) {
                             countDownTimer.cancel();
                         }
                         if (answear2.getText().toString().contains(correctAnswear)) {
                             if (isBoltQuestion) {
+                                stopBoltAnim();
                                 boltQuestionsCorrect++;
                             } else {
                                 normalQuestionsCorrect++;
@@ -299,6 +302,9 @@ public class GameActivity extends AppCompatActivity {
                             }, 1800);
 //                        reloadGame();
                         } else {
+                            if (isBoltQuestion) {
+                                stopBoltAnim();
+                            }
                             looseLife(answear2);
                         }
                     }
@@ -307,13 +313,12 @@ public class GameActivity extends AppCompatActivity {
                 answear3.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        if (isBoltQuestion) {
-                            stopBoltAnim();
-                        } else {
+                        if (!isBoltQuestion) {
                             countDownTimer.cancel();
                         }
                         if (answear3.getText().toString().contains(correctAnswear)) {
                             if (isBoltQuestion) {
+                                stopBoltAnim();
                                 boltQuestionsCorrect++;
                             } else {
                                 normalQuestionsCorrect++;
@@ -328,6 +333,9 @@ public class GameActivity extends AppCompatActivity {
                             }, 1800);
 //                        reloadGame();
                         } else {
+                            if (isBoltQuestion) {
+                                stopBoltAnim();
+                            }
                             looseLife(answear3);
                         }
                     }
@@ -336,14 +344,13 @@ public class GameActivity extends AppCompatActivity {
                 answear4.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        if (isBoltQuestion) {
-                            stopBoltAnim();
-                        } else {
+                        if (!isBoltQuestion) {
                             countDownTimer.cancel();
                         }
                         if (answear4.getText().toString().contains(correctAnswear)) {
                             if (isBoltQuestion) {
                                 boltQuestionsCorrect++;
+                                stopBoltAnim();
                             } else {
                                 normalQuestionsCorrect++;
                             }
@@ -357,6 +364,9 @@ public class GameActivity extends AppCompatActivity {
                             }, 1800);
 //                        reloadGame();
                         } else {
+                            if (isBoltQuestion) {
+                                stopBoltAnim();
+                            }
                             looseLife(answear4);
                         }
                     }
@@ -533,6 +543,7 @@ public class GameActivity extends AppCompatActivity {
     }
 
     private void stopBoltAnim() {
+
         boltImage.setVisibility(View.INVISIBLE);
         clockImageview.setImageResource(R.drawable.ic_access_alarms_orange);
         boltImage.animate().cancel();

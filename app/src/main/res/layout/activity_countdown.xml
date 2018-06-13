@@ -106,7 +106,7 @@
                 android:textColor="@color/black"
                 android:textSize="25sp"
                 android:textStyle="bold"
-                tools:text="Numar de\n intrebari:" />
+                tools:text="Numar de intrebari:" />
 
             <Spinner
                 android:id="@+id/spinnerNumarDeIntrebari"
