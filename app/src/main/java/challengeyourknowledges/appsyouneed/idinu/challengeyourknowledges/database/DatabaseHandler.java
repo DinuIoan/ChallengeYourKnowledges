@@ -380,9 +380,9 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public List<Question> getQuestionsByDomain(String domain) {
         SQLiteDatabase database = getReadableDatabase();
         String SELECT_QUESTION_BY_DOMAIN = "select * from " + QUESTION_TABLE +
-                " where " + DOMAIN + " = " + domain;
+                " where " + DOMAIN + " = '" + domain + "'";
         Cursor cursor = database.rawQuery(SELECT_QUESTION_BY_DOMAIN, null);
-        List<Question> questions = null;
+        List<Question> questions = new ArrayList<>();
 
         while (cursor.moveToNext()) {
             Question question = new Question(cursor.getInt(0), cursor.getString(1),

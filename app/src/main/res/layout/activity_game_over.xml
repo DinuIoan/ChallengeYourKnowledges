@@ -84,9 +84,7 @@
             android:layout_height="50dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:max="100"
             android:padding="15dp"
-            android:progress="80"
             android:progressDrawable="@drawable/custom_progress_bar" />
 
         <TextView
@@ -108,9 +106,7 @@
             android:layout_height="50dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:max="100"
             android:padding="15dp"
-            android:progress="80"
             android:progressDrawable="@drawable/custom_progress_bar" />
 
         <TextView
@@ -132,7 +128,6 @@
             android:layout_height="50dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:max="100"
             android:padding="15dp"
             android:progress="80"
             android:progressDrawable="@drawable/custom_progress_bar" />
@@ -140,20 +135,20 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/reincearca_button"
+        android:id="@+id/menu_button"
         android:layout_width="140dp"
         android:layout_height="70dp"
         android:text="Meniu"
         app:layout_constraintBottom_toBottomOf="parent"
         android:translationZ="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/menu_button"
+        app:layout_constraintEnd_toStartOf="@+id/reincearca_button"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progress_bars_linear_layout"
         android:background="@drawable/style_joaca_button"/>
 
     <Button
-        android:id="@+id/menu_button"
+        android:id="@+id/reincearca_button"
         android:layout_width="140dp"
         android:layout_height="70dp"
         android:text="Incearca\n din nou"
@@ -161,7 +156,7 @@
         android:translationZ="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/reincearca_button"
+        app:layout_constraintStart_toEndOf="@+id/menu_button"
         app:layout_constraintTop_toBottomOf="@+id/progress_bars_linear_layout"
         android:background="@drawable/style_joaca_button"/>
 
