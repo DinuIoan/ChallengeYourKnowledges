@@ -97,10 +97,16 @@ public class CountdownActivity extends AppCompatActivity {
             }
         });
 
-        this.countDownTimer = new CountDownTimer(4 * 1000, 1000) {
+        this.countDownTimer = new CountDownTimer(3 * 1000, 1000) {
             public void onTick(long millisUntilFinished) {
-                String remaining = "" + millisUntilFinished / 1000;
-                countdownTextView.setText(remaining);
+                if(millisUntilFinished / 1000 == 3) {
+                    countdownTextView.setText("3");
+                } else if (millisUntilFinished / 1000 == 2) {
+                    countdownTextView.setText("2");
+                } else if (millisUntilFinished / 1000 == 1) {
+                    countdownTextView.setText("1");
+                }
+
             }
             public void onFinish() {
                 Intent intent = new Intent(CountdownActivity.this, GameActivity.class);
@@ -116,6 +122,9 @@ public class CountdownActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (materiaafostSelectata && numarulDeIntrebariAFostSelectat) {
                     countDownTimer.start();
+                    incepeButton.setClickable(false);
+                    materieSpinner.setClickable(false);
+                    numarIntrebariSpinner.setClickable(false);
                 } else if (!materiaafostSelectata) {
                     createAlertDialog("materie");
                 } else if (!numarulDeIntrebariAFostSelectat) {

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges">
 
@@ -18,8 +19,10 @@
         <activity android:name=".game.GameActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".game.GameOverActivity" />
-        <activity android:name=".stats.StatsActivity" />
         <activity android:name=".rules.RulesActivity" />
         <activity android:name=".game.CountdownActivity" />
+        <activity android:name=".castigaIncercari.CastigaIncercariActivity"></activity>
+        <activity android:name=".tipsTricks.TipsAndTricksActivity"></activity>
     </application>
+
 </manifest>

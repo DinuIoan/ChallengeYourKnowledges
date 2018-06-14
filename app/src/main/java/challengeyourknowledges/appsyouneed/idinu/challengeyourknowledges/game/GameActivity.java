@@ -67,8 +67,10 @@ public class GameActivity extends AppCompatActivity {
     private CountDownTimer countDownTimer;
     private CountDownTimer countDownTimerBolt;
     private CountDownTimer countDownTimerAf;
+    private CountDownTimer countDownTimerCustom;
     private boolean isBoltQuestion;
     private boolean isAfQuestion;
+    private boolean isCountDownTimerCustom = false;
     private int boltQuestionsCorrect = 0;
     private int boltQuestions = 0;
     private int normalQuestions = 0;
@@ -186,6 +188,8 @@ public class GameActivity extends AppCompatActivity {
                 looseLife(null);
             }
         };
+
+
     }
 
     public void startGame() {
@@ -251,6 +255,9 @@ public class GameActivity extends AppCompatActivity {
                 answear1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        if (isCountDownTimerCustom) {
+                            countDownTimerCustom.cancel();
+                        }
                         if (!isBoltQuestion) {
                             countDownTimer.cancel();
                         }
@@ -282,6 +289,9 @@ public class GameActivity extends AppCompatActivity {
                 answear2.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        if (isCountDownTimerCustom) {
+                            countDownTimerCustom.cancel();
+                        }
                         if (!isBoltQuestion) {
                             countDownTimer.cancel();
                         }
@@ -313,6 +323,9 @@ public class GameActivity extends AppCompatActivity {
                 answear3.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        if (isCountDownTimerCustom) {
+                            countDownTimerCustom.cancel();
+                        }
                         if (!isBoltQuestion) {
                             countDownTimer.cancel();
                         }
@@ -344,6 +357,9 @@ public class GameActivity extends AppCompatActivity {
                 answear4.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        if (isCountDownTimerCustom) {
+                            countDownTimerCustom.cancel();
+                        }
                         if (!isBoltQuestion) {
                             countDownTimer.cancel();
                         }
@@ -375,6 +391,9 @@ public class GameActivity extends AppCompatActivity {
                 adevaratButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        if (isCountDownTimerCustom) {
+                            countDownTimerCustom.cancel();
+                        }
                         Handler handler = new Handler();
                         if (correctAnswear.toLowerCase().contains("adevarat")) {
                             afQuestionsCorrect++;
@@ -395,6 +414,9 @@ public class GameActivity extends AppCompatActivity {
                 falsButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        if (isCountDownTimerCustom) {
+                            countDownTimerCustom.cancel();
+                        }
                         Handler handler = new Handler();
                         if (correctAnswear.toLowerCase().contains("fals")) {
                             afQuestionsCorrect++;
@@ -413,6 +435,9 @@ public class GameActivity extends AppCompatActivity {
                 });
             }
         } else {
+            if (isCountDownTimerCustom) {
+                countDownTimerCustom.cancel();
+            }
             endGame();
         }
     }
@@ -420,6 +445,8 @@ public class GameActivity extends AppCompatActivity {
 
    public void looseLife(Button answear) {
        Handler handler = new Handler();
+
+
        if (answear != null && !isAfQuestion){
            makeWrongAnim(answear);
        } else if(answear != null && isAfQuestion) {
@@ -444,6 +471,7 @@ public class GameActivity extends AppCompatActivity {
         intent.putExtra("afQuestionsCorrect",afQuestionsCorrect);
 
         startActivity(intent);
+        finish();
     }
 
     public void makeWrongAnim(Button answear) {
@@ -496,13 +524,16 @@ public class GameActivity extends AppCompatActivity {
                 })
                  .setNegativeButton(R.string.nu, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        if (isAfQuestion) {
-                            countDownTimerAf.start().onTick(secsUntilFinish * 1000);
-                        } else if (isBoltQuestion) {
-                            countDownTimerBolt.start().onTick(secsUntilFinish * 1000);
-                        } else {
-                            countDownTimer.start().onTick(secsUntilFinish * 1000);
-                        }
+                        initCountDownTimerCustom();
+                        countDownTimerCustom.start();
+                        isCountDownTimerCustom = true;
+//                        if (isAfQuestion) {
+//                            countDownTimerAf.start().onTick(secsUntilFinish * 1000);
+//                        } else if (isBoltQuestion) {
+//                            countDownTimerBolt.start().onTick(secsUntilFinish * 1000);
+//                        } else {
+//                            countDownTimer.start().onTick(secsUntilFinish * 1000);
+//                        }
                         dialog.cancel();
                     }
                 })
@@ -576,6 +607,25 @@ public class GameActivity extends AppCompatActivity {
         constraintLayoutAfAnswears.setVisibility(View.INVISIBLE);
         constraintLayoutNormalAnswears.setVisibility(View.VISIBLE);
         constraintLayoutQuestionBox.setBackgroundResource(R.drawable.style_question_box);
+    }
+
+    public void initCountDownTimerCustom() {
+        this.countDownTimerCustom = new CountDownTimer(secsUntilFinish * 1000, 1000) {
+
+            @Override
+            public void onTick(long l) {
+                secsUntilFinish = l / 1000;
+                String remaining = "" + l / 1000;
+                timer.setText(remaining);
+            }
+
+            @Override
+            public void onFinish() {
+                looseLife(null);
+                countDownTimerCustom.cancel();
+
+            }
+        };
     }
 
     @Override
