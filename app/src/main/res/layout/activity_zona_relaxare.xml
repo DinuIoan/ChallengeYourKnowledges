@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".zonarelaxare.ZonaRelaxareActivity"
+    android:background="@drawable/style_main_background">
+
+    <LinearLayout
+        android:id="@+id/linear_layout_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/action_bar_relative_layout">
+
+        <LinearLayout
+            android:id="@+id/linear_layout_horizontal_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_bancuri"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/style_joaca_button"
+                android:text="Bancuri"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:translationZ="8dp" />
+
+            <Button
+                android:id="@+id/button_stiai_ca"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/style_joaca_button"
+                android:text="STIAI CA..."
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:translationZ="8dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_tips_tricks"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/style_joaca_button"
+            android:text="TIPS AND TRICKS"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:translationZ="8dp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/action_bar_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="8dp"
+        android:padding="5dp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_above="@+id/lineImageView"
+            android:layout_margin="5dp"
+            android:background="@drawable/ic_reply_all" />
+
+        <ImageView
+            android:id="@+id/lineImageView"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_margin="5dp"
+            android:layout_below="@+id/logoImageView"
+            android:background="@drawable/style_line"
+            android:translationZ="15dp"/>
+
+        <ImageView
+            android:id="@+id/logoImageView"
+            android:layout_width="90dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/graphic_book" />
+
+    </RelativeLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

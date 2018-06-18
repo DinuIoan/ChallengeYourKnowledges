@@ -35,13 +35,6 @@
             android:layout_centerHorizontal="true"
             android:src="@drawable/graphic_book" />
 
-        <ImageButton
-            android:id="@+id/pop_up_settings"
-            style="?android:attr/actionOverflowButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/lineImageView"
-            android:layout_centerVertical="true" />
     </RelativeLayout>
 
     <Button
@@ -70,7 +63,7 @@
         android:layout_marginBottom="32dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/style_joaca_button"
-        android:text="@string/butonTipsTricks"
+        android:text="@string/buttonZonaDeRelaxare"
         android:translationZ="8dp"
         android:textColor="@color/black"
         android:textSize="20sp"

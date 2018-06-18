@@ -21,8 +21,10 @@
         <activity android:name=".game.GameOverActivity" />
         <activity android:name=".rules.RulesActivity" />
         <activity android:name=".game.CountdownActivity" />
-        <activity android:name=".castigaIncercari.CastigaIncercariActivity"></activity>
-        <activity android:name=".tipsTricks.TipsAndTricksActivity"></activity>
+        <activity android:name=".castigaIncercari.CastigaIncercariActivity" />
+        <activity android:name=".tipsTricks.TipsAndTricksActivity" />
+        <activity android:name=".zonarelaxare.ZonaRelaxareActivity" />
+        <activity android:name=".zonarelaxare.BancuriStiaiCaActivity"></activity>
     </application>
 
 </manifest>

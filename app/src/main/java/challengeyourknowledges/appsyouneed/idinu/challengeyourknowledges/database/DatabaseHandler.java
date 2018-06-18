@@ -11,10 +11,12 @@ import java.util.Collections;
 import java.util.List;
 
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.AppInfo;
+import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.Banc;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.Game;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.PlayerState;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.Question;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.Rankings;
+import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.StiaiCa;
 
 public class DatabaseHandler extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "gameOfThronesDb";
@@ -46,6 +48,15 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private static final String APP_INFO_TABLE = "AppInfo";
     private static final String APP_INFO_ID = "id";
     private static final String STARTED_TIME = "lastPlayedTime";
+
+    private static final String BANCURI_TABLE = "Bancuri";
+    private static final String BANCURI_ID = "id";
+    private static final String BANCURI_TEXT = "text";
+
+    private static final String STIAICA_TABLE = "StiaiCa";
+    private static final String STIAICA_ID = "id";
+    private static final String STIAICA_TEXT = "text";
+
 
     public DatabaseHandler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -92,11 +103,25 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                     + STARTED_TIME + " integer " +
                 " ) ";
 
+        String CREATE_BANCURI_TABLE = "create table " + BANCURI_TABLE +
+                " ( "
+                    + BANCURI_ID + " integer primary key autoincrement, "
+                    + BANCURI_TEXT + " text " +
+                 " ) ";
+
+        String CREATE_STIAICA_TABLE = "create table " + STIAICA_TABLE +
+                " ( "
+                + STIAICA_ID + " integer primary key autoincrement, "
+                + STIAICA_TEXT + " text " +
+                " ) ";
+
         db.execSQL(CREATE_PLAYER_STATE_TABLE);
         db.execSQL(CREATE_GAMES_TABLE);
         db.execSQL(CREATE_QUESTION_TABLE);
         db.execSQL(CREATE_RANKINGS_TABLE);
         db.execSQL(CREATE_APPINFO_TABLE);
+        db.execSQL(CREATE_BANCURI_TABLE);
+        db.execSQL(CREATE_STIAICA_TABLE);
 
     }
 
@@ -107,6 +132,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.execSQL("drop table if exists " + QUESTION_TABLE);
         db.execSQL("drop table if exists " + RANKINGS_TABLE);
         db.execSQL("drop table if exists " + APP_INFO_TABLE);
+        db.execSQL("drop table if exists " + BANCURI_TABLE);
+        db.execSQL("drop table if exists " + STIAICA_TABLE);
         onCreate(db);
     }
 
@@ -166,6 +193,23 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         database.execSQL(ADD_APPINFO);
         database.close();
     }
+
+    public void addBanc(Banc banc) {
+        SQLiteDatabase database = getWritableDatabase();
+        String ADD_BANC = "insert into " + BANCURI_TABLE +
+                " values(null, '" + banc.getText() + "')";
+        database.execSQL(ADD_BANC);
+        database.close();
+    }
+
+    public void addStiaiCa(StiaiCa stiaiCa) {
+        SQLiteDatabase database = getWritableDatabase();
+        String ADD_STIAICA = "insert into " + STIAICA_TABLE+
+                " values(null, '" + stiaiCa.getText() + "')";
+        database.execSQL(ADD_STIAICA);
+        database.close();
+    }
+
 
     public void deletePlayerStateObjectFromDatabaseById(int id) {
         SQLiteDatabase database = getWritableDatabase();
@@ -424,6 +468,40 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public void updateAppInfo(long startedTime, long endedTime) {
         SQLiteDatabase database = getWritableDatabase();
         //TODO updata app info
+    }
+
+    public List<Banc> getALLBancuri() {
+        SQLiteDatabase database = getReadableDatabase();
+        String SELECT_ALL_BANCURI = "select * from " + BANCURI_TABLE;
+        Cursor cursor = database.rawQuery(SELECT_ALL_BANCURI, null);
+        List<Banc> bancuriList = new ArrayList<>();
+
+        while (cursor.moveToNext()) {
+            Banc banc = new Banc();
+            banc.setId(cursor.getInt(0));
+            banc.setText(cursor.getString(1));
+            bancuriList.add(banc);
+        }
+        cursor.close();
+        database.close();
+        return bancuriList;
+    }
+
+    public List<StiaiCa> getALLStiaiCa() {
+        SQLiteDatabase database = getReadableDatabase();
+        String SELECT_ALL_STIAI_CA = "select * from " + STIAICA_TABLE;
+        Cursor cursor = database.rawQuery(SELECT_ALL_STIAI_CA, null);
+        List<StiaiCa> stiaicaList = new ArrayList<>();
+
+        while (cursor.moveToNext()) {
+            StiaiCa stiaica= new StiaiCa();
+            stiaica.setId(cursor.getInt(0));
+            stiaica.setText(cursor.getString(1));
+            stiaicaList.add(stiaica);
+        }
+        cursor.close();
+        database.close();
+        return stiaicaList;
     }
 
 }

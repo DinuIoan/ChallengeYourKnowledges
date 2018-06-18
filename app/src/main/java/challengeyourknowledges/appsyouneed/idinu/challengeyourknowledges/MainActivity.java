@@ -13,11 +13,12 @@ import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.databas
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.game.CountdownActivity;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.rules.RulesActivity;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.tipsTricks.TipsAndTricksActivity;
+import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.zonarelaxare.ZonaRelaxareActivity;
 
 public class MainActivity extends AppCompatActivity {
     private Button playButton;
     private Button rulesButton;
-    private Button tipsTricksButton;
+    private Button zonaRelaxareButton;
 
     private DatabaseHandler databaseHandler;
 
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         }
         playButton = (Button) findViewById(R.id.button_play);
         rulesButton = (Button) findViewById(R.id.button_rules);
-        tipsTricksButton = (Button) findViewById(R.id.button_tips_tricks);
+        zonaRelaxareButton = (Button) findViewById(R.id.button_tips_tricks);
 
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,10 +61,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        tipsTricksButton.setOnClickListener(new View.OnClickListener() {
+        zonaRelaxareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), TipsAndTricksActivity.class);
+                Intent intent = new Intent(getApplicationContext(), ZonaRelaxareActivity.class);
                 startActivity(intent);
             }
         });
