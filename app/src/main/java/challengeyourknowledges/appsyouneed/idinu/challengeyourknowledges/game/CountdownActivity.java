@@ -101,7 +101,7 @@ public class CountdownActivity extends AppCompatActivity {
             public void onTick(long millisUntilFinished) {
                 if(millisUntilFinished / 1000 == 3) {
                     countdownTextView.setText("3");
-                } else if (millisUntilFinished / 1000 == 2) {
+                } else if (millisUntilFinished % 1000 > 800 && millisUntilFinished % 1000 < 1200) {
                     countdownTextView.setText("2");
                 } else if (millisUntilFinished / 1000 == 1) {
                     countdownTextView.setText("1");

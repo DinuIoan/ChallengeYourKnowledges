@@ -44,13 +44,16 @@
             android:layout_centerHorizontal="true"
             android:src="@drawable/graphic_book" />
 
-        <ImageButton
-            android:id="@+id/pop_up_settings"
-            style="?android:attr/actionOverflowButtonStyle"
+        <TextView
+            android:id="@+id/tipul_materiei_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_above="@+id/lineImageView"
             android:layout_alignEnd="@+id/lineImageView"
-            android:layout_centerVertical="true" />
+            android:layout_centerVertical="true"
+            android:textColor="@color/lineColor"
+            android:textSize="20sp"
+            android:textStyle="bold" />
     </RelativeLayout>
 
     <LinearLayout
@@ -70,7 +73,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Conditii de stres:"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="@color/black"
@@ -92,7 +94,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Conditii normale:"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="@color/black"
@@ -114,7 +115,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Adevarat / Fals:"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="@color/black"
