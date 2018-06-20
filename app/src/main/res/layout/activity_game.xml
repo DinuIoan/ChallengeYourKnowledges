@@ -267,7 +267,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="10dp"
             android:text="Numar de\n intrebari:"
-            android:textColor="@color/grey"
+            android:textColor="@color/lineColor"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/numar_intrebari_textview"
@@ -322,7 +322,7 @@
             android:layout_height="70dp"
             android:layout_above="@+id/lineImageView"
             android:layout_margin="5dp"
-            android:background="@drawable/ic_reply_all" />
+            android:background="@drawable/ic_arrow_back" />
 
         <ImageView
             android:id="@+id/lineImageView"
@@ -340,13 +340,18 @@
             android:layout_centerHorizontal="true"
             android:src="@drawable/graphic_book" />
 
-        <ImageButton
-            android:id="@+id/pop_up_settings"
-            style="?android:attr/actionOverflowButtonStyle"
+        <TextView
+            android:id="@+id/tipul_materiei_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_above="@+id/lineImageView"
             android:layout_alignEnd="@+id/lineImageView"
-            android:layout_centerVertical="true" />
+            android:layout_centerVertical="true"
+            android:textColor="@color/lineColor"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

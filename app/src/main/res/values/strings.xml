@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">ChallengeYourKnowledges</string>
     <string name="butonJoaca"> TESTEAZĂ-ȚI CUNOȘTINȚELE </string>
-    <string name="butonIncercari"> CÂȘTIGĂ\n ÎNCERCĂRI </string>
+    <string name="butonTipsTricks"> TIPS and TRICKS </string>
+    <string name="buttonZonaDeRelaxare"> Zona de relaxare </string>
     <string name="butonReguli">REGULI</string>
     <string name="title">Învață. Repetă. Câștigă.</string>
     <string name="da">Da, sunt sigur.</string>
@@ -26,4 +27,6 @@
     <string name="materieNeselectata">Trebuie selectata materia!</string>
     <string name="numarIntrebariNeselectat">Trebuie selectat numarul de intrebari dorit!</string>
     <string name="ok">OK</string>
+    <string name="gasesteDiferentele">Gaseste\ndiferentele</string>
+
 </resources>

@@ -19,12 +19,18 @@ public class GameOverActivity extends AppCompatActivity {
     private int normalQuestionsCorrect = 0;
     private int afQuestions = 0;
     private int afQuestionsCorrect = 0;
+    private TextView tipulMaterieiTextView;
+    private String materie;
     private Button backButton;
     private Button incearcaDinNouButton;
     private Button meniuButton;
     private ProgressBar fastProgressBar;
     private ProgressBar normalProgressBar;
     private ProgressBar afProgressBar;
+    private TextView conditiiDeStresTextView;
+    private TextView conditiiNormaleTextView;
+    private TextView afTextView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +44,12 @@ public class GameOverActivity extends AppCompatActivity {
         normalQuestionsCorrect = extras.getInt("normalQuestionsCorrect", 0);
         afQuestions = extras.getInt("afQuestions", 0);
         afQuestionsCorrect = extras.getInt("afQuestionsCorrect", 0);
+        materie = extras.getString("materie","");
+
+        conditiiDeStresTextView = (TextView) findViewById(R.id.conditii_stress_textview);
+        conditiiNormaleTextView = (TextView) findViewById(R.id.conditii_normale_textview);
+        afTextView = (TextView) findViewById(R.id.adevarat_fals_textview);
+        tipulMaterieiTextView = (TextView) findViewById(R.id.tipul_materiei_text_view);
 
         backButton = (Button) findViewById(R.id.back_button);
         incearcaDinNouButton = (Button) findViewById(R.id.reincearca_button);
@@ -47,6 +59,16 @@ public class GameOverActivity extends AppCompatActivity {
         normalProgressBar = (ProgressBar) findViewById(R.id.progressBar_normal);
         afProgressBar = (ProgressBar) findViewById(R.id.progressBar_adevarat_fals);
         populateProgressBars();
+
+        conditiiDeStresTextView.setText("Conditii de stres: " + boltQuestionsCorrect + "/" + boltQuestions);
+        conditiiNormaleTextView.setText("Conditii normale: " + normalQuestionsCorrect + "/" + normalQuestions);
+        afTextView.setText("Adevarat / Fals: " + afQuestionsCorrect + "/" + afQuestions);
+
+        if (materie.contains("limbaromana")) {
+            tipulMaterieiTextView.setText("Limba romana");
+        } else if (materie.contains("istorie")) {
+            tipulMaterieiTextView.setText("Istorie");
+        }
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override

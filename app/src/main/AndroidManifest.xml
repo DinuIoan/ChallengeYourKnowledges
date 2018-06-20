@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges">
 
@@ -11,15 +12,18 @@
         <activity android:name=".splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".game.GameActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".game.GameOverActivity" />
-        <activity android:name=".stats.StatsActivity" />
         <activity android:name=".rules.RulesActivity" />
         <activity android:name=".game.CountdownActivity" />
+        <activity android:name=".castigaIncercari.CastigaIncercariActivity" />
+        <activity android:name=".tipsTricks.TipsAndTricksActivity" />
+        <activity android:name=".zonarelaxare.ZonaRelaxareActivity" />
+        <activity android:name=".zonarelaxare.BancuriStiaiCaActivity"></activity>
     </application>
+
 </manifest>

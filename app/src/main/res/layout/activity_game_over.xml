@@ -26,7 +26,7 @@
             android:layout_height="70dp"
             android:layout_above="@+id/lineImageView"
             android:layout_margin="5dp"
-            android:background="@drawable/ic_reply_all" />
+            android:background="@drawable/ic_arrow_back" />
 
         <ImageView
             android:id="@+id/lineImageView"
@@ -44,14 +44,43 @@
             android:layout_centerHorizontal="true"
             android:src="@drawable/graphic_book" />
 
-        <ImageButton
-            android:id="@+id/pop_up_settings"
-            style="?android:attr/actionOverflowButtonStyle"
+        <TextView
+            android:id="@+id/tipul_materiei_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_above="@+id/lineImageView"
             android:layout_alignEnd="@+id/lineImageView"
-            android:layout_centerVertical="true" />
+            android:layout_centerVertical="true"
+            android:textColor="@color/lineColor"
+            android:textSize="20sp"
+            android:textStyle="bold" />
     </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/star_image_view"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="427dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/action_bar_relative_layout"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/star" />
+
+    <TextView
+        android:id="@+id/points_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="436dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginStart="325dp"
+        android:text="15"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/star_image_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/action_bar_relative_layout" />
 
     <LinearLayout
         android:id="@+id/progress_bars_linear_layout"
@@ -70,7 +99,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Conditii de stres:"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="@color/black"
@@ -92,7 +120,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Conditii normale:"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="@color/black"
@@ -114,7 +141,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Adevarat / Fals:"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="@color/black"
@@ -142,7 +168,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:translationZ="8dp"
         app:layout_constraintEnd_toStartOf="@+id/reincearca_button"
-        app:layout_constraintHorizontal_bias="0.5"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progress_bars_linear_layout"
         android:background="@drawable/style_joaca_button"/>
@@ -155,7 +181,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:translationZ="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/menu_button"
         app:layout_constraintTop_toBottomOf="@+id/progress_bars_linear_layout"
         android:background="@drawable/style_joaca_button"/>

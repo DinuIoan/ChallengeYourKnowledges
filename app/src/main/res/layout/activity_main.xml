@@ -35,13 +35,6 @@
             android:layout_centerHorizontal="true"
             android:src="@drawable/graphic_book" />
 
-        <ImageButton
-            android:id="@+id/pop_up_settings"
-            style="?android:attr/actionOverflowButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/lineImageView"
-            android:layout_centerVertical="true" />
     </RelativeLayout>
 
     <Button
@@ -55,7 +48,7 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button_stats"
+        app:layout_constraintBottom_toTopOf="@+id/button_tips_tricks"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,13 +57,13 @@
         android:stateListAnimator="@animator/button_pressed_animator"/>
 
     <Button
-        android:id="@+id/button_stats"
+        android:id="@+id/button_tips_tricks"
         android:layout_width="200dp"
         android:layout_height="84dp"
         android:layout_marginBottom="32dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/style_joaca_button"
-        android:text="@string/butonIncercari"
+        android:text="@string/buttonZonaDeRelaxare"
         android:translationZ="8dp"
         android:textColor="@color/black"
         android:textSize="20sp"
@@ -98,7 +91,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_stats"
+        app:layout_constraintTop_toBottomOf="@+id/button_tips_tricks"
         app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/star_image_view"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="427dp"
+        android:layout_marginStart="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/points_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/action_bar_relative_layout"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/star" />
+
+    <TextView
+        android:id="@+id/points_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="300dp"
+        android:text="15"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/star_image_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/action_bar_relative_layout" />
 
 </android.support.constraint.ConstraintLayout>
