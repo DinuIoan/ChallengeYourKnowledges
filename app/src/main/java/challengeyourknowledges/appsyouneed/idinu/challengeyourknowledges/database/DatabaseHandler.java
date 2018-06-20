@@ -67,6 +67,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         String CREATE_PLAYER_STATE_TABLE = "create table " + PLAYER_STATE_TABLE +
                 " ( "
                     + PLAYER_STATE_ID_KEY + " integer primary key , "
+                    + POINTS + " integer, "
                     + NAME + " text " +
                 " )" ;
 
@@ -140,7 +141,9 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public void addPlayerState(PlayerState playerState) {
         SQLiteDatabase database = getWritableDatabase();
         String ADD_PLAYER_STATE = "insert into " + PLAYER_STATE_TABLE +
-                " values('" + playerState.getId() + "', '" + playerState.getName() + "')";
+                " values('" + playerState.getId() + "', '"  +
+                playerState.getPoints() + "', '" +
+                playerState.getName() + "')";
         database.execSQL(ADD_PLAYER_STATE);
         database.close();
     }
@@ -244,10 +247,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
 
 
-    public void modifyPlayerStateObject(int id, String name) {
+    public void modifyPlayerStateObject(int id, Integer points, String name) {
         SQLiteDatabase database = getWritableDatabase();
         String UPDATE_PLAYER_STATE_OBJECT = "update " + PLAYER_STATE_TABLE +
                 " set "
+                    + POINTS + " = '" + points + "' "
                     + NAME + " = '" + name + "' "
                     + " where " + PLAYER_STATE_ID_KEY + " = " + id;
         database.execSQL(UPDATE_PLAYER_STATE_OBJECT);
@@ -302,7 +306,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         List<PlayerState> playerStateList = new ArrayList<>();
 
         while (cursor.moveToNext()) {
-            PlayerState playerState = new PlayerState(cursor.getInt(0), cursor.getString(1));
+            PlayerState playerState = new PlayerState(cursor.getInt(0), cursor.getInt(1), cursor.getString(2));
             playerStateList.add(playerState);
         }
         cursor.close();
@@ -380,7 +384,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         PlayerState playerState = null;
 
         if (cursor.moveToFirst()) {
-            playerState = new PlayerState(cursor.getInt(0), cursor.getString(1));
+            playerState = new PlayerState(cursor.getInt(0), cursor.getInt(1), cursor.getString(2));
         }
         cursor.close();
         database.close();

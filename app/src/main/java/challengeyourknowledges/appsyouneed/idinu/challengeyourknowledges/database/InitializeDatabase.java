@@ -26,7 +26,7 @@ public class InitializeDatabase {
         final Resources resources = context.getResources();
         InputStream inputStream = resources.openRawResource(R.raw.input);
         AppInfo appInfo = new AppInfo(0L, System.currentTimeMillis());
-        PlayerState playerState = new PlayerState(0, "player1");
+        PlayerState playerState = new PlayerState(0,0,  "player1");
         if (databaseHandler.getAppInfo() == null) {
             databaseHandler.addAppInfo(appInfo);
         }
