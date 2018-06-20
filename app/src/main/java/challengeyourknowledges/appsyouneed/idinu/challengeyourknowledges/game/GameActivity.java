@@ -1,6 +1,5 @@
 package challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.game;
 
-import android.animation.ValueAnimator;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -18,19 +17,15 @@ import android.widget.TextView;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.R;
 
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.MainActivity;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.database.DatabaseData;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.database.DatabaseHandler;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.Question;
-import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.Rankings;
 
 public class GameActivity extends AppCompatActivity {
     private Button answear1;
@@ -172,7 +167,7 @@ public class GameActivity extends AppCompatActivity {
                 timer.setText(remaining);
             }
             public void onFinish() {
-                looseLife(null);
+                wrongAnswear(null);
             }
         };
 
@@ -183,7 +178,7 @@ public class GameActivity extends AppCompatActivity {
                 timer.setText(remaining);
             }
             public void onFinish() {
-                looseLife(null);
+                wrongAnswear(null);
             }
         };
 
@@ -194,7 +189,7 @@ public class GameActivity extends AppCompatActivity {
                 timer.setText(remaining);
             }
             public void onFinish() {
-                looseLife(null);
+                wrongAnswear(null);
             }
         };
 
@@ -291,7 +286,7 @@ public class GameActivity extends AppCompatActivity {
                             if (isBoltQuestion) {
                                 stopBoltAnim();
                             }
-                            looseLife(answear1);
+                            wrongAnswear(answear1);
                         }
                     }
                 });
@@ -326,7 +321,7 @@ public class GameActivity extends AppCompatActivity {
                             if (isBoltQuestion) {
                                 stopBoltAnim();
                             }
-                            looseLife(answear2);
+                            wrongAnswear(answear2);
                         }
                     }
                 });
@@ -361,7 +356,7 @@ public class GameActivity extends AppCompatActivity {
                             if (isBoltQuestion) {
                                 stopBoltAnim();
                             }
-                            looseLife(answear3);
+                            wrongAnswear(answear3);
                         }
                     }
                 });
@@ -396,7 +391,7 @@ public class GameActivity extends AppCompatActivity {
                             if (isBoltQuestion) {
                                 stopBoltAnim();
                             }
-                            looseLife(answear4);
+                            wrongAnswear(answear4);
                         }
                     }
                 });
@@ -420,7 +415,7 @@ public class GameActivity extends AppCompatActivity {
                                 }
                             }, 1800);
                         } else {
-                            looseLife(adevaratButton);
+                            wrongAnswear(adevaratButton);
                         }
                     }
                 });
@@ -444,7 +439,7 @@ public class GameActivity extends AppCompatActivity {
                                 }
                             }, 1800);
                         } else {
-                            looseLife(falsButton);
+                            wrongAnswear(falsButton);
                         }
                     }
                 });
@@ -459,7 +454,7 @@ public class GameActivity extends AppCompatActivity {
     }
 
 
-   public void looseLife(Button answear) {
+   public void wrongAnswear(Button answear) {
        Handler handler = new Handler();
 
 
@@ -543,6 +538,16 @@ public class GameActivity extends AppCompatActivity {
                 .setMessage(R.string.estiSigur)
                 .setPositiveButton(R.string.da, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
+
+
+
+
+                        //TODO de scazut un punct daca renunta la test
+
+
+
+
+
                         Intent intent = new Intent(GameActivity.this, MainActivity.class);
                         startActivity(intent);
                         finish();
@@ -640,7 +645,7 @@ public class GameActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                looseLife(null);
+                wrongAnswear(null);
                 countDownTimerCustom.cancel();
 
             }

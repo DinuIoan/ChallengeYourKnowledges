@@ -3,6 +3,7 @@ package challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.splash
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.MainActivity;
@@ -58,15 +59,18 @@ public class SplashActivity extends AppCompatActivity {
                 return 1234;
             }
 
+
             @Override
             protected void onPostExecute(Integer params){
                 // dismiss your dialog
                 // launch your News activity
-                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
-                startActivity(intent);
-
-                // close this activity
-                finish();
+                Handler h = new Handler();
+                h.postDelayed(new Runnable() {
+                    public void run() {
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(intent);
+                    }
+                }, 2000);
             }
 
         }

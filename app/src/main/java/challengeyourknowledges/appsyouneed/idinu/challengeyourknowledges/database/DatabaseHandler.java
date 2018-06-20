@@ -109,7 +109,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                     + BANCURI_ID + " integer primary key autoincrement, "
                     + BANCURI_TEXT + " text " +
                  " ) ";
-
+;
         String CREATE_STIAICA_TABLE = "create table " + STIAICA_TABLE +
                 " ( "
                 + STIAICA_ID + " integer primary key autoincrement, "
