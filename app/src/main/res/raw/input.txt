@@ -82,9 +82,144 @@ af-istorie/Regele Mihai I a fost nevoit sa abdice la 30 decembrie 1947 / Adevara
 af-istorie/Regimul stalinist al lui Gheorghe Gheorghiu Dej a avut loc in perioada 1948-1966 / Fals / Adevarat /
 af-istorie/Sovietizare = trecerea in proprietatea statului a obiectivelor economice si sociale aflate in proprietatea privata: / Fals / Adevarat /
 af-istorie/Trupele sovietice s-au retras din Romania in anul 1958 / Adevarat / Fals /
-af-istorie/"Revolutie culturala" de inspiratie chineza si nord-coreeana s-a desfasurat in Romania in perioada 1965 - 1989 / Fals / Adevarat /
+af-istorie/''Revolutie culturala'' de inspiratie chineza si nord-coreeana s-a desfasurat in Romania in perioada 1965 - 1989 / Fals / Adevarat /
 af-istorie/Greva minerilor din Valea Jiului impotriva regimului ceausist  a avut loc in  anul 1977 / Adevarat / Fals /
 af-istorie/Securitatea institutiei cu rol de politie politica a fost infiintata in anul 1948 / Adevarat / Fals /
 af-istorie/Capitulatie = documentul incheiat intre Tarile Romane si Imperiul Otoman care prevedea obligatiile si statutul acestora in raport cu Poarta / Adevarat / Fals /
 af-istorie/Primul domnitor care a luptat impotriva ostilor otomane pe teritoriul tarii sale a fost Mircea cel Batran / Adevarat / Fals /
 af-istorie/Stefan cel Mare a fost domnitor al Moldovei in perioada 1457 - 1501 / Fals / Adevarat /
+fast-geografie/Muntii Vosgi se afla pe teritoriul statului: / Franta / Spania / Suedia / Germania /
+fast-geografie/Pe teritoriul carui stat se afla Muntii Padurea Neagra? / Germania / Ungaria / Austria / Serbia /
+fast-geografie/In nordul carui stat se afla Campia Padului? / Italia / Romania / Polonia / Spania /
+fast-geografie/Pe teritoriul carui stat se afla Muntii Pindului? / Grecia / Italia / Romania / Franta /
+fast-geografie/Fluviul Ebro strabate teritoriul statului a carui capitala este orasul marcat, pe harta, cu numarul: / Spania / Italia / Franta / Anglia /
+fast-geografie/Fluviul Ron strabate teritoriul statului a carui capitala este: / Paris / Madrid / Rome / Berlin /
+fast-geografie/Vegetatia de stepa se dezvolta pe soluri numite: / cernoziomuri / spodosoluri / argiluvisoluri / Niciun raspuns nu este corect /
+fast-geografie/Mistralul bate in sudul statului: / Franta / Spania / Anglia / Italia /
+fast-geografie/Vanturile polare bat in : / Norvegia / Ucraina / Olanda / Germania /
+fast-geografie/Bora este un vant care bate pe teritoriul: / Croatiei / Norvegiei / Suediei / Italiei /
+fast-geografie/Din generatia oraselor antice face parte orasul-capitala / Londra / Roma / Madrid / Paris /
+fast-geografie/Face parte din grupa lingvistica romanica, limba vorbita de locuitorii statului / Italia / Germania / Ucraina / Rusia /
+fast-geografie/Orasul-capitala al statului care isi asigura energia electrica aproape 100% din resursele hidroenergetice este / Oslo / Stockholm / Paris / Moscova /
+fast-geografie/Din care subdiviziune a Carpatilor fac parte Muntii Padurea Craiului? / Muntii Apuseni / Grupa Retezat / Carpatii Curburii / Grupa Bucegi /
+fast-geografie/Podisul Getic se intinde intre… / Dambovita si Dunare / Prahova si Motru / Dambovita si Jiu / Prahova si Dunare /
+normal-geografie/Fluviul Volga strabate teritoriul statului a carui capitala este : / Moscow / Volgograd / Tver / Sankt Petersburg /
+normal-geografie/Fluviul Elba strabate teritoriul statului a carui capitala este: / Berlin / Dresden / Lauenburg / Stendal /
+normal-geografie/Fluviul Arno strabate teritoriul statului si orasul : / Italia - Florenta / Italia - Roma / Italia - San Marino / Italia - Bologna /
+normal-geografie/Altitudinea minima in Europa se afla pe teritoriul statului / Rusia / Germania / Ucraina / Ungaria /
+normal-geografie/Padurile de conifere se dezvolta pe soluri numite: / spodosoluri / argiluvisoluri / cernoziomuri / Niciun raspuns nu este corect /
+normal-geografie/Padurile de foioase se dezvolta pe soluri numite: / argiluvisoluri / cernoziomuri / spodosoluri / Niciun raspuns nu este corect /
+normal-geografie/Bilantul natural al populatiei in Belgia este : / pozitiv / negativ / in scadere / nedeterminat /
+normal-geografie/Gruparea de tip megalopolis Randstad-Holland se afla in / Olanda / Germania / Belgia / Ucraina /
+normal-geografie/Energia mareelor este valorificata in: / Franta / Italia / Grecia / Olanda /
+normal-geografie/Depresiunea Fagarasului face parte din: /  Depresiunea Colinara a Transilvaniei / Grupa Muntilor Fagaras  / Subcarpatii Getici / Grupa Muntilor Parang /
+normal-geografie/Cea mai mare inaltime din Grupa Muntilor Parang este / 2519 m / 2509 m / 2505 m / 2535 m /
+normal-geografie/Podisul Mehedinti este alcatuit din: / sisturi cristaline si calcare / sisturi cristaline si granit / argile si marne / calcare si loess /
+normal-geografie/Din care unitate de relief face parte Podisul Tarnavelor? / Depresiunea Colinara a Transilvaniei / Podisul Moldovei / Podisul Getic / Dealurile de Vest /
+normal-geografie/Din care subdiviziune a Carpatilor fac parte Muntii Iezer? / Grupa Fagaras / Grupa Parang / Carpatii Curburii / Grupa Bucegi /
+normal-geografie/Care din urmatoarele companii are ponderea ce mai mare pe piata energiei electrice a Romaniei? / Hidroelectrica / Nuclearoelectrica / Complexul energetic Rovinari / Complexul energetic Turceni /
+af-geografie/Spania este cel mai mare cultivator de stejar de pluta / Fals / Adevarat /
+af-geografie/Norvegia extrage zacaminte de petrol si gaze naturale din Marea Nordului / Adevarat / Fals /
+af-geografie/Vegetatia de maquis  este prezenta in Spania / Fals / Adevarat /
+af-geografie/Soluri de tip terra rosa sunt specifice Spaniei / Fals / Adevarat /
+af-geografie/Clima temperat-oceanica este specifica Norvegiei / Fals / Adevarat /
+af-geografie/Cea mai populata capitala europeana este Moscova / Adevarat / Fals /
+af-geografie/Vegetatia de tundra este prezenta in Norvegia / Adevarat / Fals /
+af-geografie/Fluviul Loara strabate teritoriul statului a carui capitala este orasul Paris: / Adevarat / Fals /
+af-geografie/Cel mai mare port maritim se afla pe teritoriul Olandei / Adevarat / Fals /
+af-geografie/Romania are 41 de unitati administrative in prezent / Adevarat / Fals /
+af-geografie/Bacau este judetul cu cea mai mare populatie din Romania / Fals / Adevarat /
+af-geografie/44 de state se afla integral in cadrul Europei / Adevarat / Fals /
+af-geografie/Zimnicea este cea mai sudica localitate a Romaniei. / Adevarat / Fals /
+af-geografie/Beba Veche este cea mai nordica localitate a Romaniei. / Fals / Adevarat /
+af-geografie/Romania cuprine peste 3% din populatia Europei. / Adevarat / Fals /
+fast-economie/Dupa criteriul subiectului purtator, nevoile se clasifica in: / Individuale si sociale / Colective si sociale / Fiziologice si complexe / Vitale si elevate /
+fast-economie/Carbunele, minereul de fier si padurea sunt resurse: / Primare / Regenerabile / Derivate / Neregenerabile /
+fast-economie/Bunurile care se pot inlocui unul cu altul se numesc bunuri: / Substituibile / Complementare / Inferioare / Superioare /
+fast-economie/Cunoasterea elasticitatii cererii in functie de pret pentru un bun economic este importanta pentru: / Producator / Consumator / Cumparator / Debitor /
+fast-economie/Subiectul proprietatii il constituie: / Agentul vietii economice / Resursele economice / Bunurile libere / Factorii de productie /
+fast-economie/Obiectul proprietatii este reprezentat de: / Bunuri / Consumatori / Vanzatori / Intermediari /
+fast-economie/Care din urmatoarele elemente nu sunt costuri fixe: / Salariile personalului direct productiv / Chiria / Utilitatile / Dobanzile /
+fast-economie/Profitul brut este un indicator economic calculat ca: / Suma dintre profitul net si impozite / Diferenta dintre profitul net si impozite / Suma dintre profitul de monopol si impozite / Diferenta dintre supraprofit si impozite /
+fast-economie/Nivelul masei profitului se afla in relatie de acelasi sens cu: / Pretul de vanzare / Cuantumul salariilor / Nivelul costului / Durata unei rotatii a capitalului /
+fast-economie/In cadrul neofactorilor se includ / Abilitatea intreprinzatorului / Utilajele de ultima generatie / Personalul supracalificat / Utilajele uzate /
+fast-economie/Piata cu concurenta perfecta nu se caracterizeaza prin: / Perfecta eterogenitate a produselor / Atomicitate perfecta / Perfecta mobilitate a factorilor de productie / Transparenta perfecta /
+fast-economie/Piata  furnizorilor de servicii de telefonie mobila in Romania este de tip: / Oligopol / Monopolistic / Monopson / Oligopson /
+fast-economie/Care din urmatoarele piete se apropie de modelul concurentei perfecte: / Piata bursiera / Piata legumelor / Piata producatorilor de automobile / Piata producatorilor de armament /
+fast-economie/In conditiile unei rate de dobanzii de 10%, un depozit bancar de 200.000 u.m. aduce deponentului o dobanda de 10.000 u.m. daca e plasat pe o perioada de: / 6 luni / 2 luni / 3 luni / 12 luni /
+fast-economie/Cea mai mare parte a masei banesti aflata in circulatie se prezinta sub forma: / Monedei metalice / Monedei scripturale / Numerarului / Bancnotei /
+normal-economie/Caracterul limitat al resurselor are in vedere faptul ca: / Sunt insuficiente in raport cu nevoile / Se uzeaza in timp / Sunt refolosibile / Se regenereaza intr-o perioada indelungata /
+normal-economie/La baza Piramidei lui Maslow se află nevoile / Nevoile fiziologice  / Autorealizare / De siguranta si securitate / De apartenenta /
+normal-economie/Spre deosebire de bunurile libere, bunurile economice: / Sunt rare / Se obtin fara efort / Exista in cantitati nelimitate / Acopera integral nevoile /
+normal-economie/Din punct de vedere al venitului consumatorului, bunurile se clasifica in: / Superioare si inferioare / Economice si libere / Complementare si substituibile / Regenerabile si neregenerabile /
+normal-economie/Coeficientul de elasticitate a cererii la pret se calculeaza ca raport intre modificarea: / Relativa a cererii si modificarea relativa a pretului / Relativa a cererii si modificarea absoluta a pretului / Absoluta a cererii si modificarea relativa a pretului / Absoluta a pretului si modificarea absoluta a cererii /
+normal-economie/In cazul unui bun cu cerere inelastica, daca pretul acestuia creste, atunci cantitatea ceruta: / Scade, iar cheltuielile consumatorului cresc / Creste, iar cheltuielile consumatorului se reduc / Scade, iar cheltuielile consumatorului se reduc si ele / Creste, iar cheltuielile consumatorului cresc si ele /
+normal-economie/Daca o crestere a pretului bunului A duce la cresterea cererii pentru bunul B, atunci A si B sunt bunuri: / Substituibile / Superioare / Complementare / Inferioare /
+normal-economie/Cresterea pretului factorilor de productie va influenta oferta astfel: / Curba ofertei se va deplasa spre stanga / Curba ofertei se va deplasa spre dreapta / Curba cererii se va deplasa spre dreapta / Curba cererii se va deplasa spre stanga /
+normal-economie/Pentru produsul Alfa, cresterea pretului cu 5% determina o crestere a cantitatii oferite in piata cu 10%. In aceste conditii, oferta este: / Elastica / Inelastica / Cu elasticitate unitara / Perfect elastica /
+normal-economie/Pragul de rentabilitate este acel nivel al productiei: / La care cifra de afaceri este egala cu suma costurilor fixe si variabile / La care cifra de afaceri este egala cu valoarea costurilor variabile / Pana la care activitatea are sens economic / La care cifra de afaceri este egala cu valoarea costurilor fixe /
+normal-economie/Cresterea cu 10% a vanzarilor unei firme in conditiile in care pretul, costurile fixe si costul variabil mediu raman constante, va determina: / Cresterea profitului cu mai mult de 10% / Cresterea profitului cu 10% / Cresterea profitului cu mai putin de 10% / Mentinerea profitului la acelasi nivel /
+normal-economie/Care din urmatoarele elemente este constant pentru intervale relativ reduse de variatie a productiei: / Costul variabil mediu / Costul fix mediu / Costul variabil / Energia electrica utilizata in procesul de productie /
+normal-economie/Reducerea in timp a duratei muncii este un proces pozitiv determinat de: / Sporirea productivitatii muncii / Reducerea progresiva a investitiilor / Cresterea si diversificarea nevoilor / Cresterea cheltuielilor de productie /
+normal-economie/Daca un agent economic majoreaza randamentul utilizarii factorilor de productie, mentinand constante costurile si pretul, atunci: / Profitul va creste / Se va declansa falimentul / Se diminueaza eficienta / Rentabilitatea va scadea /
+normal-economie/O firma obtine o productie de 15.000 de bucati dintr-un bun X in conditiile in care productivitatea medie a muncii este de 100. In aceste conditii, numarul de lucratori este: / 150 / 1500 / 200 / 2500 /
+af-economie/Padurea, culturile agricole, bancurile de pesti din ocean sunt resurse regenerabile / Adevarat / Fals /
+af-economie/Intre trasaturile bunurilor economice nu se regaseste limitarea. / Fals / Adevarat /
+af-economie/Nevoile difera de la un individ la altul in functie de o serie factori cum ar fi: mediul in care traieste, grupul social caruia ii apartine, nivelul de educatie, caracteristici personale ale individului etc. / Adevarat / Fals /
+af-economie/Bunurile economice si bunurile libere provin din activitatea economica. / Fals / Adevarat /
+af-economie/Intre pretul produsului si cerere exista o relatie de directa proportionalitate / Fals / Adevarat /
+af-economie/Incasarile producatorilor cresc in conditiile cresterii preturilor pentru bunurile cu cerere unitara / Fals / Adevarat /
+af-economie/Oferta individuala este cantitatea dintr-un bun economic pe care un anumit producator este dispus sa o vanda la un anumit pret. / Adevarat / Fals /
+af-economie/Pe termen scurt, daca nivelul costurilor variabile totale creste mai mult decat creste productia, atunci costul fix unitar va scadea. / Adevarat / Fals /
+af-economie/In componenta cheltuielilor materiale nu sunt cuprinse costurile de amortizare a capitalului fix: / Fals / Adevarat /
+af-economie/Capitalul, ca factor de productie, este format din bunuri rezultate din procese economice anterioare si utilizate in procesul de productie. / Adevarat / Fals /
+af-economie/Cladirile, masinile, utilajele reprezinta amortizari. / Fals / Adevarat /
+af-economie/Uzura fizica si morala sunt specifice capitalului fix. / Adevarat / Fals /
+af-economie/In piata de oligopol, actiunea fiecaruia dintre ofertanti, luata separat, are o influenta semnificativa  asupra pietei. / Adevarat / Fals /
+af-economie/In domenii ca distributia energiei electrice, a gazelor naturale sau a apei curente monopolul se dovedeste a fi cea mai eficienta forma de organizare a pietei. / Adevarat / Fals /
+af-economie/Atunci cand evaluam pretul unui apartament, banii indeplinesc functia de depozit de valoare. / Fals / Adevarat /
+fast-biologie/În structura nucleului intră: / carioplasma / organite celulare comune tuturor celulelor / neurofibrile / centrozomul /
+fast-biologie/Epiteliul cheratinizat este întâlnit la nivelul​: / epidermei / mucoasei bucale / mucoasei esofagiene / mucoasei faringiene /
+fast-biologie/Sunt glande endocrine: / glandele suprarenale / glandele sebacee / glandele lacrimale / glandele sudoripare /
+fast-biologie/Cartilaje fibroase sunt: / discurile intervertebrale / cartilajele costale / cartilajele laringeale / cartilajele traheale /
+fast-biologie/Gimnospermele aparţin regnului / Plante / Fungi / Monera / Animale /
+fast-biologie/Din grupul moluştelor fac parte: / cefalopodele / arahnidele / anelidele / hidrozoarele /
+fast-biologie/Carpienele şi metacarpienele aparţin scheletului:  / membrului superior / capului / membrului inferior / trunchiului  /
+fast-biologie/Sternocleidomastoidienii sunt muşchi scheletici care aparțin: / gâtului / capului / abdomenului / toracelui /
+fast-biologie/Ovarele şi testiculele: / secretă hormoni / sunt căi genitale / sunt gameţi / sunt localizate în torace /
+fast-biologie/Unul dintre hormonii secretați de hipofiză este: / prolactina / adrenalina / insulina / tiroxina /
+fast-biologie/Gasteropodele, cefalopodele şi lamelibranhiatele sunt: / viermi / cordate / moluşte / celenterate /
+fast-biologie/Sclerotica este: / învelişul extern al globului ocular  / bogat vascularizată / componentă a sistemului optic / sediul receptorilor vizuali  /
+fast-biologie/Boală cu transmitere sexuală este: / candidoza / epilepsia / astigmatismul / ateroscleroza  /
+fast-biologie/Sunt plante: / coniferele / ciupercile / bacteriile / euglenele /
+fast-biologie/Boală a sistemului respirator la om este: / strabismul / epilepsia / gastrita / laringita /
+normal-biologie/Ribozomii: / au rol în sinteza proteinelor / sunt mai numeroși în celulele vârstnice / nu se găsesc în neuron / au rol în respirația celulară /
+normal-biologie/Membrana celulară: / este organizată după modelul mozaicului fluid / conține mitocondrii / conține materialul genetic al celulei / este formată din citosol /
+normal-biologie/Incluziunile citoplasmatice: / sunt  reprezentate de granule de substanțe de rezervă, produși de secreție /  sunt definitive / formează canalicule / sunt reprezentate de miofibrile și neurofibrile /
+normal-biologie/La nivel celular, fosforilarea oxidativă se realizează la nivelul: / mitocondriei / centrozomului / ribozomului / reticulului endoplasmatic /
+normal-biologie/Stimulii cu intensitate inferioară pragului: / nu produc impuls nervos / produc un impuls mai puternic decât cel produs de valoarea prag / nu produc potențiale locale / produc un impuls nervos mai mic decât valoarea prag /
+normal-biologie/Fotosinteza, la plante: / necesită prezenţa luminii / constă în sinteza de substanţe anorganice / este un tip de nutriţie heterotrofă / se realizează în absenţa pigmenţilor asimilatori  /
+normal-biologie/Stomacul mamiferelor: / este localizat în cavitatea abdominală / este glandă anexă a sistemului digestiv / participă la realizarea funcţiei de relaţie / produce un suc digestiv lipsit de enzime /
+normal-biologie/Rinichii:  / sunt componente ale sistemului excretor / au în zona corticală piramide cu baza spre hil / sunt localizaţi în cavitatea toracică / sunt protejaţi de o pleură externă  /
+normal-biologie/Diencefalul: / este unul dintre componentele encefalului / are suprafaţa brăzdată de şanţuri care delimitează lobi / este alcătuit din bulb, punte şi mezencefal / se leagă de cerebel prin trei perechi de pedunculi /
+normal-biologie/Fiecare dintre celulele-fiice formate prin diviziunea mitotică a unei celule-mamă cu 2n = 22 cromozomi are: / 2n = 22 cromozomi  / 2n = 11 cromozomi / n = 22 cromozomi / n = 11 cromozomi /
+normal-biologie/Nutriţia heterotrofă: / se poate realiza saprofit şi parazit / constă în sinteza de substanţe organice / poate fi evidenţiată după O2 absorbi / este specifică organismelor vegetale /
+normal-biologie/La mamifere, în timpul unei inspiraţii normale: / creşte volumul plămânilor / este eliminat aerul din plămâni / se relaxează muşchii intercostali / sternul se apropie de coloana vertebrală /
+normal-biologie/Ficatul: / secretă un suc digestiv lipsit de enzime  / degradează lipidele cu ajutorul lipazelor / este localizat în cavitatea toracică / participă la digestia gastrică a glucidelor /
+normal-biologie/Retina din structura ochiului mamiferelor este: / sediul receptorilor vizual / situată între cornee şi cristalin / înveliş extern al globului ocular / bogat vascularizată /
+normal-biologie/Organul abdominal care are în structura sa numeroşi nefroni este: / rinichiul / plămânul / esofagul / stomacul /
+af-biologie/Membrana nucleară este dublă, străbătută de pori. / Adevarat / Fals /
+af-biologie/Țesutul muscular neted se contractă voluntar / Fals / Adevarat /
+af-biologie/Celulele gliale iau locul neuronilor distruși / Adevarat / Fals /
+af-biologie/SIDA este o boală cu transmitere sexuală, provocată de o bacterie. / Fals / Adevarat /
+af-biologie/Ereditatea şi variabilitatea sunt însuşiri ale lumii vii. / Adevarat / Fals /
+af-biologie/Bila secretată de ficat conţine enzime lipolitice cu rol în emulsionarea grăsimilor. / Fals / Adevarat /
+af-biologie/Veziculele seminale sunt conducte genitale ale sistemului reproducător masculin. / Fals / Adevarat /
+af-biologie/Ribozomii sunt organite specifice celulei animale. / Fals / Adevarat /
+af-biologie/Sistemul excretor al mamiferelor este alcătuit din rinichi şi căi urinare. / Adevarat / Fals /
+af-biologie/Celulele cu bastonaşe au rol în deosebirea culorilor. / Fals / Adevarat /
+af-biologie/În procesul de eliminare, urina trece din uretere în vezica urinară. / Adevarat / Fals /
+af-biologie/Pepsina face parte din compoziția chimică a sucului pancreatic. / Fals / Adevarat /
+af-biologie/La mamifere, căile urinare sunt reprezentate de rinichi, uretere şi vezica urinară. / Fals / Adevarat /
+af-biologie/Tetraplegia este una dintre manifestările epilepsiei. / Fals / Adevarat /
+af-biologie/Ereditatea şi variabilitatea sunt însuşiri ale lumii vii. / Adevarat / Fals /

@@ -68,6 +68,12 @@ public class GameOverActivity extends AppCompatActivity {
             tipulMaterieiTextView.setText("Limba romana");
         } else if (materie.contains("istorie")) {
             tipulMaterieiTextView.setText("Istorie");
+        } else if (materie.contains("geografie")) {
+            tipulMaterieiTextView.setText("Geografie");
+        } else if(materie.contains("economie")) {
+            tipulMaterieiTextView.setText("Economie");
+        } else if (materie.contains("biologie")) {
+            tipulMaterieiTextView.setText("Biologie");
         }
 
         backButton.setOnClickListener(new View.OnClickListener() {

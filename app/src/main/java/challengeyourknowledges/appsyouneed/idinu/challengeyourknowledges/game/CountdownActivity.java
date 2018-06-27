@@ -62,6 +62,12 @@ public class CountdownActivity extends AppCompatActivity {
                     materieSelectata = "limbaromana";
                 } else if(position == 1) {
                     materieSelectata = "istorie";
+                } else if (position == 2) {
+                    materieSelectata = "geografie";
+                } else if(position == 3) {
+                    materieSelectata = "economie";
+                } else if (position == 4) {
+                    materieSelectata = "biologie";
                 }
             }
 

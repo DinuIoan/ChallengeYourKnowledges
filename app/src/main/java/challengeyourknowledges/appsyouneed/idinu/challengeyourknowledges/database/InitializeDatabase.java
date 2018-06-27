@@ -95,6 +95,15 @@ public class InitializeDatabase {
         if (type.contains("istorie")) {
             return "istorie";
         }
+        if (type.contains("geografie")) {
+            return "geografie";
+        }
+        if (type.contains("economie")) {
+            return "economie";
+        }
+        if (type.contains("biologie")) {
+           return "biologie";
+        }
         return "";
     }
 }

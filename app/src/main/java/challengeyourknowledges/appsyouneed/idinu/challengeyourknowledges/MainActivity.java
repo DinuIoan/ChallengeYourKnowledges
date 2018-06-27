@@ -7,12 +7,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.castigaIncercari.CastigaIncercariActivity;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.database.DatabaseHandler;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.database.InitializeDatabase;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.game.CountdownActivity;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.rules.RulesActivity;
-import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.tipsTricks.TipsAndTricksActivity;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.zonarelaxare.ZonaRelaxareActivity;
 
 public class MainActivity extends AppCompatActivity {
