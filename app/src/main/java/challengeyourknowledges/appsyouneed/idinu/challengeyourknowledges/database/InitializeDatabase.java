@@ -68,7 +68,7 @@ public class InitializeDatabase {
         if( parts[0].contains("normal")){
             type = "normal";
         }
-        if (parts[0].contains("af")) {
+        if (parts[0].contains("af-")) {
             type = "af";
             text = parts[1];
             correct_answear = parts[2];
@@ -80,7 +80,6 @@ public class InitializeDatabase {
             correct_answear = parts[2];
             answear1 = parts[3];
             answear2 = parts[4];
-            System.out.println(text);
             answear3 = parts[5];
         }
         Question question = new Question(0, text, type, answear1, answear2,

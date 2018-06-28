@@ -6,7 +6,9 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
+import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.database.DatabaseData;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.database.DatabaseHandler;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.database.InitializeDatabase;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.game.CountdownActivity;
@@ -17,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private Button playButton;
     private Button rulesButton;
     private Button zonaRelaxareButton;
+    private TextView pointsTextView;
 
     private DatabaseHandler databaseHandler;
 
@@ -25,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         if (getIntent().getBooleanExtra("EXIT", false)) {
             finish();
+            return;
         }
         setContentView(R.layout.activity_main);
 
@@ -35,6 +39,14 @@ public class MainActivity extends AppCompatActivity {
         playButton = (Button) findViewById(R.id.button_play);
         rulesButton = (Button) findViewById(R.id.button_rules);
         zonaRelaxareButton = (Button) findViewById(R.id.button_tips_tricks);
+
+        pointsTextView = (TextView) findViewById(R.id.points_text_view);
+
+        if (DatabaseData.getPlayerState().getPoints() == 0) {
+            pointsTextView.setText("0");
+        } else {
+            pointsTextView.setText("" + DatabaseData.getPlayerState().getPoints());
+        }
 
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override

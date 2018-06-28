@@ -544,16 +544,11 @@ public class GameActivity extends AppCompatActivity {
                 .setMessage(R.string.estiSigur)
                 .setPositiveButton(R.string.da, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-
-
-
-
-                        //TODO de scazut un punct daca renunta la test
-
-
-
-
-
+                        if (DatabaseData.getPlayerState().getPoints() != 0) {
+                            DatabaseData.getPlayerState().setPoints(DatabaseData.getPlayerState().getPoints() - 1);
+                            databaseHandler.modifyPlayerStateObject(0,
+                                    DatabaseData.getPlayerState().getPoints(), "player1");
+                        }
                         Intent intent = new Intent(GameActivity.this, MainActivity.class);
                         startActivity(intent);
                         finish();

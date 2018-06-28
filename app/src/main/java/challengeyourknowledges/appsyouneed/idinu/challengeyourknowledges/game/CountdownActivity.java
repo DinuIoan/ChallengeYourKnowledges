@@ -105,11 +105,12 @@ public class CountdownActivity extends AppCompatActivity {
 
         this.countDownTimer = new CountDownTimer(3 * 1000, 1000) {
             public void onTick(long millisUntilFinished) {
-                if(millisUntilFinished / 1000 == 3) {
+                long sec = millisUntilFinished / 1000;
+                if(sec == 3) {
                     countdownTextView.setText("3");
-                } else if (millisUntilFinished % 1000 > 800 && millisUntilFinished % 1000 < 1200) {
+                } else if (sec == 2) {
                     countdownTextView.setText("2");
-                } else if (millisUntilFinished / 1000 == 1) {
+                } else if (sec == 1) {
                     countdownTextView.setText("1");
                 }
 
