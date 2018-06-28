@@ -13,6 +13,7 @@ import java.io.InputStreamReader;
 
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.R;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.AppInfo;
+import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.Banc;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.Game;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.PlayerState;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.Question;
@@ -51,6 +52,25 @@ public class InitializeDatabase {
         if (databaseHandler.getAllGames().size() == 0) {
             databaseHandler.addGame(game);
         }
+        if (databaseHandler.getALLBancuri().size() == 0) {
+            InputStream bancuriInputStream = resources.openRawResource(R.raw.bancuri);
+            try (BufferedReader br = new BufferedReader(new InputStreamReader(bancuriInputStream))) {
+                String line;
+                Banc banc = new Banc();
+                banc.setText("");
+                while ((line = br.readLine()) != null) {
+                    if (line.contains("/")) {
+                        databaseHandler.addBanc(banc);
+                        banc.setText("");
+                    } else {
+                        banc.setText(banc.getText() + line);
+                    }
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
     }
 
     public static Question makeQuestion(String[] parts) {
@@ -87,7 +107,7 @@ public class InitializeDatabase {
         return question;
     }
 
-    public static String checkDomain(String type) {
+    private static String checkDomain(String type) {
         if (type.contains("limbaromana")){
             return "limbaromana";
         }
@@ -105,4 +125,5 @@ public class InitializeDatabase {
         }
         return "";
     }
+
 }

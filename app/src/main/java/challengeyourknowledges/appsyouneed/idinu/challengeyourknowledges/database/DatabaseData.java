@@ -3,6 +3,7 @@ package challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.databa
 import java.util.List;
 
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.AppInfo;
+import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.Banc;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.Game;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.PlayerState;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.Question;
@@ -14,6 +15,15 @@ public class DatabaseData {
     private static List<Question> questions;
     private static List<Rankings> rankings;
     private static AppInfo appInfo;
+    private static List<Banc> bancuri;
+
+    public static List<Banc> getBancuri() {
+        return bancuri;
+    }
+
+    public static void setBancuri(List<Banc> bancuri) {
+        DatabaseData.bancuri = bancuri;
+    }
 
     public static PlayerState getPlayerState() {
         return playerState;

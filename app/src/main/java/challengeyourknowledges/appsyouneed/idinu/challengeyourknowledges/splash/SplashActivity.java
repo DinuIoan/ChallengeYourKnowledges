@@ -56,6 +56,9 @@ public class SplashActivity extends AppCompatActivity {
                 if (DatabaseData.getAppInfo() == null ) {
                     DatabaseData.setAppInfo(db.getAppInfo());
                 }
+                if (DatabaseData.getBancuri() == null) {
+                    DatabaseData.setBancuri(db.getALLBancuri());
+                }
                 return 1234;
             }
 

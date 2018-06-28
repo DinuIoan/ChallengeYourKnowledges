@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".zonarelaxare.BancuriStiaiCaActivity"
-    android:background="@drawable/style_main_background">
+    android:background="@drawable/style_main_background"
+    tools:context=".zonarelaxare.BancuriStiaiCaActivity">
 
     <RelativeLayout
         android:id="@+id/action_bar_relative_layout"
@@ -30,10 +30,10 @@
             android:id="@+id/lineImageView"
             android:layout_width="match_parent"
             android:layout_height="5dp"
-            android:layout_margin="5dp"
             android:layout_below="@+id/logoImageView"
+            android:layout_margin="5dp"
             android:background="@drawable/style_line"
-            android:translationZ="15dp"/>
+            android:translationZ="15dp" />
 
         <ImageView
             android:id="@+id/logoImageView"
@@ -43,18 +43,15 @@
             android:src="@drawable/graphic_book" />
 
 
-
     </RelativeLayout>
 
     <Button
         android:id="@+id/back_info"
-        android:layout_width="59dp"
-        android:layout_height="42dp"
-        android:layout_marginBottom="5dp"
+        android:layout_width="66dp"
+        android:layout_height="43dp"
         android:layout_marginEnd="80dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/ic_arrow_back"
-        app:layout_constraintBottom_toTopOf="@+id/info_text_view"
+        android:background="@drawable/ic_arrow_back_banc"
         app:layout_constraintEnd_toStartOf="@+id/forward_button"
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,8 +59,8 @@
 
     <Button
         android:id="@+id/forward_button"
-        android:layout_width="61dp"
-        android:layout_height="42dp"
+        android:layout_width="66dp"
+        android:layout_height="43dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/ic_arrow_forward"
@@ -78,7 +75,6 @@
         android:layout_marginBottom="308dp"
         android:layout_marginTop="8dp"
         android:padding="5dp"
-        android:text="Doua prietene povestind intre ele:  – Tu, cum e sotul tau?  – E un amestec dintre Dr. House, Mr. Bean si Brad Pitt.  – Vai, tu, ai un barbat doctor, inteligent, simpatic si glumet, frumos si atragator?  – Ah, nu, e schiop si arogant, urat si caraghios, narcisist si drogat."
         android:textColor="@color/black"
         android:textSize="15sp"
         android:textStyle="bold"
