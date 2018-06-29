@@ -8,6 +8,7 @@ import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.G
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.PlayerState;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.Question;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.Rankings;
+import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.StiaiCa;
 
 public class DatabaseData {
     private static PlayerState playerState;
@@ -16,6 +17,15 @@ public class DatabaseData {
     private static List<Rankings> rankings;
     private static AppInfo appInfo;
     private static List<Banc> bancuri;
+    private static List<StiaiCa> stiaiCa;
+
+    public static List<StiaiCa> getStiaiCa() {
+        return stiaiCa;
+    }
+
+    public static void setStiaiCa(List<StiaiCa> stiaiCa) {
+        DatabaseData.stiaiCa = stiaiCa;
+    }
 
     public static List<Banc> getBancuri() {
         return bancuri;

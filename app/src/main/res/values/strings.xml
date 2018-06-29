@@ -9,7 +9,7 @@
     <string name="nu">Nu,\n revin la intrebari.</string>
     <string name="castigaJocuri">Câștigă jocuri</string>
     <string name="meniu"> Înapoi la meniu </string>
-    <string name="estiSigur"> Esti sigur ca vrei sa renunti?\n Daca da, vei pierde rezultatul.</string>
+    <string name="estiSigur"> Esti sigur ca vrei sa renunti?\nDaca da, vei pierde rezultatul.</string>
     <string name="retryMessage1">Bravo! Ai acumulat </string>
     <string name="castigaJocuriMessage"> puncte.\nCâștigă jocuri pentru a putea încerca din nou.</string>
 

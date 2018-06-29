@@ -59,6 +59,9 @@ public class SplashActivity extends AppCompatActivity {
                 if (DatabaseData.getBancuri() == null) {
                     DatabaseData.setBancuri(db.getALLBancuri());
                 }
+                if (DatabaseData.getStiaiCa() == null) {
+                    DatabaseData.setStiaiCa(db.getALLStiaiCa());
+                }
                 return 1234;
             }
 

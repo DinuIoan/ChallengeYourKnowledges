@@ -3,6 +3,7 @@ package challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.databa
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.provider.ContactsContract;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -17,23 +18,26 @@ import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.B
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.Game;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.PlayerState;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.Question;
+import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.StiaiCa;
 
 public class InitializeDatabase {
-    private static final String FILEPATH = "input.txt";
+    private static DatabaseHandler databaseHandler;
+    private static Resources resources;
 
-    public static void initializeDatabase(DatabaseHandler databaseHandler, Context context) {
+    public static void initializeDatabase(DatabaseHandler db, Context context) {
+        databaseHandler = db;
+        resources = context.getResources();
 
-        File inputQuestions = new File(FILEPATH);
-        final Resources resources = context.getResources();
+        initializeQuestions();
+        initializeBancuri();
+        initializeStiaiCa();
+        initializeAppInfo();
+        initializeGame();
+        initializePlayerState();
+    }
+
+    private static void initializeQuestions() {
         InputStream inputStream = resources.openRawResource(R.raw.input);
-        AppInfo appInfo = new AppInfo(0L, System.currentTimeMillis());
-        PlayerState playerState = new PlayerState(0,0,  "player1");
-        if (databaseHandler.getAppInfo() == null) {
-            databaseHandler.addAppInfo(appInfo);
-        }
-        if (databaseHandler.getAllPlayerState().size() == 0) {
-            databaseHandler.addPlayerState(playerState);
-        }
         if (databaseHandler.getAllQuestions().size() == 0) {
             try (BufferedReader br = new BufferedReader(new InputStreamReader(inputStream))) {
                 String line;
@@ -48,10 +52,30 @@ public class InitializeDatabase {
                 e.printStackTrace();
             }
         }
-        Game game = new Game(0, 7, playerState.getId());
+    }
+
+    private static void initializeAppInfo() {
+        AppInfo appInfo = new AppInfo(0L, System.currentTimeMillis());
+        if (databaseHandler.getAppInfo() == null) {
+            databaseHandler.addAppInfo(appInfo);
+        }
+    }
+
+    private static void initializePlayerState() {
+        PlayerState playerState = new PlayerState(0,0,  "player1");
+        if (databaseHandler.getAllPlayerState().size() == 0) {
+            databaseHandler.addPlayerState(playerState);
+        }
+    }
+
+    private static void initializeGame() {
+        Game game = new Game(0, 7, 0);
         if (databaseHandler.getAllGames().size() == 0) {
             databaseHandler.addGame(game);
         }
+    }
+
+    private static void initializeBancuri() {
         if (databaseHandler.getALLBancuri().size() == 0) {
             InputStream bancuriInputStream = resources.openRawResource(R.raw.bancuri);
             try (BufferedReader br = new BufferedReader(new InputStreamReader(bancuriInputStream))) {
@@ -70,7 +94,27 @@ public class InitializeDatabase {
                 e.printStackTrace();
             }
         }
+    }
 
+    private static void initializeStiaiCa() {
+        if (databaseHandler.getALLStiaiCa().size() ==0) {
+            InputStream stiaicaInputStream = resources.openRawResource(R.raw.stiaica);
+            try (BufferedReader br = new BufferedReader(new InputStreamReader(stiaicaInputStream))) {
+                String line;
+                StiaiCa stiaiCa = new StiaiCa();
+                stiaiCa.setText("");
+                while ((line = br.readLine()) != null) {
+                    if (line.contains("/")) {
+                        databaseHandler.addStiaiCa(stiaiCa);
+                        stiaiCa.setText("");
+                    } else {
+                        stiaiCa.setText(stiaiCa.getText() + line);
+                    }
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public static Question makeQuestion(String[] parts) {

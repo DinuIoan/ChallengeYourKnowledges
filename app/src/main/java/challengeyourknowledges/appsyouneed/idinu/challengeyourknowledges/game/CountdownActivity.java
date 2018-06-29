@@ -105,14 +105,11 @@ public class CountdownActivity extends AppCompatActivity {
 
         this.countDownTimer = new CountDownTimer(3 * 1000, 1000) {
             public void onTick(long millisUntilFinished) {
-                long sec = millisUntilFinished / 1000;
-                if(sec == 3) {
-                    countdownTextView.setText("3");
-                } else if (sec == 2) {
-                    countdownTextView.setText("2");
-                } else if (sec == 1) {
-                    countdownTextView.setText("1");
+                String remaining = "" + millisUntilFinished / 900;
+                if (millisUntilFinished/1000 == 3) {
+                    System.out.println("3");
                 }
+                countdownTextView.setText(remaining);
 
             }
             public void onFinish() {
@@ -128,10 +125,10 @@ public class CountdownActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (materiaafostSelectata && numarulDeIntrebariAFostSelectat) {
-                    countDownTimer.start();
                     incepeButton.setClickable(false);
                     materieSpinner.setClickable(false);
                     numarIntrebariSpinner.setClickable(false);
+                    countDownTimer.start();
                 } else if (!materiaafostSelectata) {
                     createAlertDialog("materie");
                 } else if (!numarulDeIntrebariAFostSelectat) {

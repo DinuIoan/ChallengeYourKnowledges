@@ -209,6 +209,7 @@ public class GameActivity extends AppCompatActivity {
 
 
     public void reloadGame() {
+        backButton.setClickable(true);
         if (numarDeIntrebari == 0) {
             endGame();
         }
@@ -286,8 +287,7 @@ public class GameActivity extends AppCompatActivity {
                                 public void run() {
                                     reloadGame();
                                 }
-                            }, 1800);
-//                        reloadGame();
+                            }, 1200);
                         } else {
                             if (isBoltQuestion) {
                                 stopBoltAnim();
@@ -321,8 +321,7 @@ public class GameActivity extends AppCompatActivity {
                                 public void run() {
                                     reloadGame();
                                 }
-                            }, 1800);
-//                        reloadGame();
+                            }, 1200);
                         } else {
                             if (isBoltQuestion) {
                                 stopBoltAnim();
@@ -356,8 +355,7 @@ public class GameActivity extends AppCompatActivity {
                                 public void run() {
                                     reloadGame();
                                 }
-                            }, 1800);
-//                        reloadGame();
+                            }, 1200);
                         } else {
                             if (isBoltQuestion) {
                                 stopBoltAnim();
@@ -391,8 +389,7 @@ public class GameActivity extends AppCompatActivity {
                                 public void run() {
                                     reloadGame();
                                 }
-                            }, 1800);
-//                        reloadGame();
+                            }, 1200);
                         } else {
                             if (isBoltQuestion) {
                                 stopBoltAnim();
@@ -419,7 +416,7 @@ public class GameActivity extends AppCompatActivity {
                                 public void run() {
                                     reloadGame();
                                 }
-                            }, 1800);
+                            }, 1200);
                         } else {
                             wrongAnswear(adevaratButton);
                         }
@@ -443,7 +440,7 @@ public class GameActivity extends AppCompatActivity {
                                 public void run() {
                                     reloadGame();
                                 }
-                            }, 1800);
+                            }, 1200);
                         } else {
                             wrongAnswear(falsButton);
                         }
@@ -477,7 +474,7 @@ public class GameActivity extends AppCompatActivity {
                public void run() {
                    reloadGame();
                }
-           }, 1600);
+           }, 1200);
        }
     }
 
@@ -499,24 +496,28 @@ public class GameActivity extends AppCompatActivity {
         answear.setBackgroundResource(R.drawable.wrong_answear_transition);
         rocketAnimation = (AnimationDrawable) answear.getBackground();
         rocketAnimation.start();
+        backButton.setClickable(false);
     }
 
     public void makeCorrectAnim(Button answear) {
         answear.setBackgroundResource(R.drawable.correct_answear_anim);
         rocketAnimation = (AnimationDrawable) answear.getBackground();
         rocketAnimation.start();
+        backButton.setClickable(false);
     }
 
     public void makeCorrectAnimAf(Button answear) {
         answear.setBackgroundResource(R.drawable.anim_correct_af_answear);
         rocketAnimation = (AnimationDrawable) answear.getBackground();
         rocketAnimation.start();
+        backButton.setClickable(false);
     }
 
     public void makeWrongAfAnim(Button answear) {
         answear.setBackgroundResource(R.drawable.anim_wrong_af_answear);
         rocketAnimation = (AnimationDrawable) answear.getBackground();
         rocketAnimation.start();
+        backButton.setClickable(false);
     }
 
     public void makeAlertDialog() {
