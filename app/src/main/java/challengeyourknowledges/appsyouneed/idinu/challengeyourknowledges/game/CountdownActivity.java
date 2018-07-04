@@ -7,6 +7,7 @@ import android.media.Image;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -105,7 +106,7 @@ public class CountdownActivity extends AppCompatActivity {
 
         this.countDownTimer = new CountDownTimer(3 * 1000, 1000) {
             public void onTick(long millisUntilFinished) {
-                String remaining = "" + millisUntilFinished / 900;
+                String remaining = "" + millisUntilFinished / 800;
                 if (millisUntilFinished/1000 == 3) {
                     System.out.println("3");
                 }
@@ -129,6 +130,7 @@ public class CountdownActivity extends AppCompatActivity {
                     materieSpinner.setClickable(false);
                     numarIntrebariSpinner.setClickable(false);
                     countDownTimer.start();
+
                 } else if (!materiaafostSelectata) {
                     createAlertDialog("materie");
                 } else if (!numarulDeIntrebariAFostSelectat) {

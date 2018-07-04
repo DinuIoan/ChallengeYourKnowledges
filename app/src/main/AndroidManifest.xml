@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -20,10 +20,9 @@
         <activity android:name=".game.GameOverActivity" />
         <activity android:name=".rules.RulesActivity" />
         <activity android:name=".game.CountdownActivity" />
-        <activity android:name=".castigaIncercari.CastigaIncercariActivity" />
         <activity android:name=".tipsTricks.TipsAndTricksActivity" />
         <activity android:name=".zonarelaxare.ZonaRelaxareActivity" />
-        <activity android:name=".zonarelaxare.BancuriStiaiCaActivity"></activity>
+        <activity android:name=".zonarelaxare.BancuriStiaiCaActivity"/>
     </application>
 
 </manifest>

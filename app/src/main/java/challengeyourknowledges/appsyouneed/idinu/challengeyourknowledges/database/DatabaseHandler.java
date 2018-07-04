@@ -251,7 +251,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         SQLiteDatabase database = getWritableDatabase();
         String UPDATE_PLAYER_STATE_OBJECT = "update " + PLAYER_STATE_TABLE +
                 " set "
-                    + POINTS + " = '" + points + "' "
+                    + POINTS + " = " + points + ", "
                     + NAME + " = '" + name + "' "
                     + " where " + PLAYER_STATE_ID_KEY + " = " + id;
         database.execSQL(UPDATE_PLAYER_STATE_OBJECT);

@@ -181,37 +181,37 @@ public class GameOverActivity extends AppCompatActivity {
     private boolean isPercentAchieved() {
         if (boltQuestions == 0) {
             if (normalQuestions == 0) {
-                if (afQuestionsCorrect != 0 && (afQuestionsCorrect * 100.0f) / afQuestions > 75) {
+                if (afQuestionsCorrect != 0 && (afQuestionsCorrect * 100.0f) / afQuestions >= 75) {
                     return true;
                 }
             } else if (afQuestions == 0) {
-                if (normalQuestionsCorrect != 0 && (normalQuestionsCorrect * 100.0f) / normalQuestions > 75) {
+                if (normalQuestionsCorrect != 0 && (normalQuestionsCorrect * 100.0f) / normalQuestions >= 75) {
                     return true;
                 }
             } else {
-                if (normalQuestionsCorrect != 0 && (normalQuestionsCorrect * 100.0f) / normalQuestions > 75) {
-                    if (afQuestionsCorrect != 0 && (afQuestionsCorrect * 100.0f) / afQuestions > 75) {
+                if (normalQuestionsCorrect != 0 && (normalQuestionsCorrect * 100.0f) / normalQuestions >= 75) {
+                    if (afQuestionsCorrect != 0 && (afQuestionsCorrect * 100.0f) / afQuestions >= 75) {
                         return true;
                     }
                 }
             }
         } else {
             if (normalQuestions == 0) {
-                if (boltQuestionsCorrect != 0 && (boltQuestionsCorrect * 100.0f) / boltQuestions > 75 ) {
-                    if (afQuestionsCorrect != 0 && (afQuestionsCorrect * 100.0f) / afQuestions > 75 ) {
+                if (boltQuestionsCorrect != 0 && (boltQuestionsCorrect * 100.0f) / boltQuestions >= 75 ) {
+                    if (afQuestionsCorrect != 0 && (afQuestionsCorrect * 100.0f) / afQuestions >= 75 ) {
                         return true;
                     }
                 }
             } else if (afQuestions == 0) {
-                if (boltQuestionsCorrect != 0 && (boltQuestionsCorrect * 100.0f) / boltQuestions > 75 ) {
-                    if (normalQuestionsCorrect != 0 && (normalQuestionsCorrect * 100.0f) / normalQuestions > 75) {
+                if (boltQuestionsCorrect != 0 && (boltQuestionsCorrect * 100.0f) / boltQuestions >= 75) {
+                    if (normalQuestionsCorrect != 0 && (normalQuestionsCorrect * 100.0f) / normalQuestions >= 75) {
                         return true;
                     }
                 }
             } else {
-                if (boltQuestionsCorrect != 0 && (boltQuestionsCorrect * 100.0f) / boltQuestions > 75 ) {
-                    if (normalQuestionsCorrect != 0 && (normalQuestionsCorrect* 100.0f) / normalQuestions> 75 ) {
-                        if (afQuestionsCorrect != 0 && (afQuestionsCorrect * 100.0f) / afQuestions > 75 ) {
+                if (boltQuestionsCorrect != 0 && (boltQuestionsCorrect * 100.0f) / boltQuestions >= 75) {
+                    if (normalQuestionsCorrect != 0 && (normalQuestionsCorrect* 100.0f) / normalQuestions>= 75 ) {
+                        if (afQuestionsCorrect != 0 && (afQuestionsCorrect * 100.0f) / afQuestions >= 75 ) {
                             return true;
                         }
                     }
