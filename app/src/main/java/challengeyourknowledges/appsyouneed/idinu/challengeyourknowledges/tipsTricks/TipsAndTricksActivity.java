@@ -19,6 +19,7 @@ import java.io.InputStreamReader;
 
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.MainActivity;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.R;
+import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.zonarelaxare.ZonaRelaxareActivity;
 
 public class TipsAndTricksActivity extends AppCompatActivity {
     private TextView tipsTricksTextView;
@@ -51,7 +52,7 @@ public class TipsAndTricksActivity extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), ZonaRelaxareActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -60,7 +61,7 @@ public class TipsAndTricksActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(TipsAndTricksActivity.this, MainActivity.class);
+        Intent intent = new Intent(TipsAndTricksActivity.this, ZonaRelaxareActivity.class);
         startActivity(intent);
         finish();
     }
