@@ -6,3 +6,7 @@
     - intrebari cu adevarat/fals - testeaza atentia - 15 secunde per intrebare.
 
 3. La finalul chestionarului, rezultatele sunt afisate sub forma de 'bara de progres'.
+
+4. Steluta castigata: daca pentru fiecare intrebare, procentul raspunsurilor corecte depaseste 75%.
+
+5. Steluta pierduta: daca in timpul chestionarului alegi sa renunti la el.

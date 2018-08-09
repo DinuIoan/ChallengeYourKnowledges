@@ -58,14 +58,6 @@
             android:layout_height="70dp"
             android:layout_centerHorizontal="true"
             android:src="@drawable/graphic_book" />
-
-        <ImageButton
-            android:id="@+id/pop_up_settings"
-            style="?android:attr/actionOverflowButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/lineImageView"
-            android:layout_centerVertical="true" />
     </RelativeLayout>
 
 

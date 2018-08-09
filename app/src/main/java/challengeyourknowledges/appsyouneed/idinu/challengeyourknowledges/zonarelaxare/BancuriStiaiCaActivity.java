@@ -88,7 +88,7 @@ public class BancuriStiaiCaActivity extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (isBancuri && position == bancuri.size()){
+                if (isBancuri && position == bancuri.size() - 1){
                     // last joke
                 } else {
                     position += 1;

@@ -107,12 +107,9 @@ public class CountdownActivity extends AppCompatActivity {
         this.countDownTimer = new CountDownTimer(3 * 1000, 1000) {
             public void onTick(long millisUntilFinished) {
                 String remaining = "" + millisUntilFinished / 800;
-                if (millisUntilFinished/1000 == 3) {
-                    System.out.println("3");
-                }
                 countdownTextView.setText(remaining);
-
             }
+
             public void onFinish() {
                 Intent intent = new Intent(CountdownActivity.this, GameActivity.class);
                 intent.putExtra("numarIntrebari", numarIntrebari);
