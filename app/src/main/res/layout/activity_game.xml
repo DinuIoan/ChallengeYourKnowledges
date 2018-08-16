@@ -8,6 +8,19 @@
     tools:context=".MainActivity"
     android:background="@drawable/style_main_background">
 
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraint_layout_answear" />
+
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraint_layout_af_answear"
         android:layout_width="match_parent"
@@ -70,7 +83,7 @@
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraint_layout_question"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="130dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="9dp"
         android:background="@drawable/style_question_box"
@@ -87,9 +100,9 @@
             android:id="@+id/question_text_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
             android:layout_marginEnd="2dp"
             android:layout_marginStart="2dp"
-            android:layout_marginTop="2dp"
             android:gravity="center_vertical|center_horizontal"
             android:textAppearance="@style/TextAppearance.AppCompat.Caption"
             android:textColor="@color/black"
@@ -97,7 +110,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
@@ -106,11 +119,9 @@
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraint_layout_answear"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_height="266dp"
+        android:layout_marginBottom="50dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -118,13 +129,12 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraint_layout_question"
         app:layout_constraintVertical_chainStyle="packed">
 
         <Button
             android:id="@+id/button_answear1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
@@ -146,63 +156,63 @@
             android:id="@+id/button_answear2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="2dp"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:translationZ="15dp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
             android:layout_marginTop="2dp"
+            android:background="@drawable/style_answear_button"
             android:gravity="center_vertical|center_horizontal"
+            android:padding="2dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:translationZ="15dp"
             app:layout_constraintBottom_toTopOf="@+id/button_answear3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_answear1"
-            android:background="@drawable/style_answear_button"/>
+            app:layout_constraintTop_toBottomOf="@+id/button_answear1" />
 
         <Button
             android:id="@+id/button_answear3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="2dp"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="2dp"
-            android:translationZ="15dp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
+            android:background="@drawable/style_answear_button"
             android:gravity="center_vertical|center_horizontal"
+            android:padding="2dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:translationZ="15dp"
             app:layout_constraintBottom_toTopOf="@+id/button_answear4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_answear2"
-            android:background="@drawable/style_answear_button"/>
+            app:layout_constraintTop_toBottomOf="@+id/button_answear2" />
 
         <Button
             android:id="@+id/button_answear4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="2dp"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="2dp"
-            android:translationZ="15dp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
+            android:background="@drawable/style_answear_button"
             android:gravity="center_vertical|center_horizontal"
+            android:padding="2dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:translationZ="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_answear3"
-            android:background="@drawable/style_answear_button"/>
+            app:layout_constraintTop_toBottomOf="@+id/button_answear3" />
 
 
     </android.support.constraint.ConstraintLayout>

@@ -8,6 +8,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.database.DatabaseData;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.database.DatabaseHandler;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.database.InitializeDatabase;
@@ -20,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private Button rulesButton;
     private Button zonaRelaxareButton;
     private TextView pointsTextView;
+    private AdView mAdView;
 
     private DatabaseHandler databaseHandler;
 
@@ -79,6 +85,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        MobileAds.initialize(this, "ca-app-pub-6866181891454476~7520037577");
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
     }
 
     @Override

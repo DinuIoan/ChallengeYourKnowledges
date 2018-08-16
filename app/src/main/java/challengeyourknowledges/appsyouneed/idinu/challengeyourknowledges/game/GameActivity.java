@@ -14,6 +14,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.R;
 
 
@@ -75,6 +80,7 @@ public class GameActivity extends AppCompatActivity {
     private int afQuestionsCorrect = 0;
     private long secsUntilFinish = 0;
 
+    private AdView mAdView;
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
@@ -92,6 +98,11 @@ public class GameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
         databaseHandler = new DatabaseHandler(this);
+
+        MobileAds.initialize(this, "ca-app-pub-3940256099942544~3347511713");
+        mAdView = findViewById(R.id.adView1);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         numarDeIntrebari = getIntent().getIntExtra("numarIntrebari", 0);
         materie = getIntent().getStringExtra("materie");
@@ -263,187 +274,154 @@ public class GameActivity extends AppCompatActivity {
                 answear3.setText(answear3Text);
                 answear4.setText(answear4Text);
 
-                answear1.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        if (isCountDownTimerCustom) {
-                            isCountDownTimerCustom = false;
-                            countDownTimerCustom.cancel();
-                        }
-                        if (!isBoltQuestion) {
-                            countDownTimer.cancel();
-                        }
-                        if (answear1.getText().toString().contains(correctAnswear)) {
-                            if (isBoltQuestion) {
-                                stopBoltAnim();
-                                boltQuestionsCorrect++;
-                            } else {
-                                normalQuestionsCorrect++;
-                            }
-                            makeCorrectAnim(answear1);
-                            Handler handler = new Handler();
-                            handler.postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    reloadGame();
-                                }
-                            }, 1200);
+                answear1.setOnClickListener(v -> {
+                    if (isCountDownTimerCustom) {
+                        isCountDownTimerCustom = false;
+                        countDownTimerCustom.cancel();
+                    }
+                    if (!isBoltQuestion) {
+                        countDownTimer.cancel();
+                    }
+                    if (answear1.getText().toString().contains(correctAnswear)) {
+                        if (isBoltQuestion) {
+                            stopBoltAnim();
+                            boltQuestionsCorrect++;
                         } else {
-                            if (isBoltQuestion) {
-                                stopBoltAnim();
-                            }
-                            wrongAnswear(answear1);
+                            normalQuestionsCorrect++;
                         }
+                        makeCorrectAnim(answear1);
+                        Handler handler = new Handler();
+                        handler.postDelayed(() -> reloadGame(), 1200);
+                    } else {
+                        if (isBoltQuestion) {
+                            stopBoltAnim();
+                        }
+                        wrongAnswear(answear1);
                     }
                 });
 
-                answear2.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        if (isCountDownTimerCustom) {
-                            isCountDownTimerCustom = false;
-                            countDownTimerCustom.cancel();
-                        }
-                        if (!isBoltQuestion) {
-                            countDownTimer.cancel();
-                        }
-                        if (answear2.getText().toString().contains(correctAnswear)) {
-                            if (isBoltQuestion) {
-                                stopBoltAnim();
-                                boltQuestionsCorrect++;
-                            } else {
-                                normalQuestionsCorrect++;
-                            }
-                            makeCorrectAnim(answear2);
-                            Handler handler = new Handler();
-                            handler.postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    reloadGame();
-                                }
-                            }, 1200);
+                answear2.setOnClickListener(v -> {
+                    if (isCountDownTimerCustom) {
+                        isCountDownTimerCustom = false;
+                        countDownTimerCustom.cancel();
+                    }
+                    if (!isBoltQuestion) {
+                        countDownTimer.cancel();
+                    }
+                    if (answear2.getText().toString().contains(correctAnswear)) {
+                        if (isBoltQuestion) {
+                            stopBoltAnim();
+                            boltQuestionsCorrect++;
                         } else {
-                            if (isBoltQuestion) {
-                                stopBoltAnim();
-                            }
-                            wrongAnswear(answear2);
+                            normalQuestionsCorrect++;
                         }
+                        makeCorrectAnim(answear2);
+                        Handler handler = new Handler();
+                        handler.postDelayed(() -> reloadGame(), 1200);
+                    } else {
+                        if (isBoltQuestion) {
+                            stopBoltAnim();
+                        }
+                        wrongAnswear(answear2);
                     }
                 });
 
-                answear3.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        if (isCountDownTimerCustom) {
-                            isCountDownTimerCustom = false;
-                            countDownTimerCustom.cancel();
-                        }
-                        if (!isBoltQuestion) {
-                            countDownTimer.cancel();
-                        }
-                        if (answear3.getText().toString().contains(correctAnswear)) {
-                            if (isBoltQuestion) {
-                                stopBoltAnim();
-                                boltQuestionsCorrect++;
-                            } else {
-                                normalQuestionsCorrect++;
-                            }
-                            makeCorrectAnim(answear3);
-                            Handler handler = new Handler();
-                            handler.postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    reloadGame();
-                                }
-                            }, 1200);
+                answear3.setOnClickListener(v -> {
+                    if (isCountDownTimerCustom) {
+                        isCountDownTimerCustom = false;
+                        countDownTimerCustom.cancel();
+                    }
+                    if (!isBoltQuestion) {
+                        countDownTimer.cancel();
+                    }
+                    if (answear3.getText().toString().contains(correctAnswear)) {
+                        if (isBoltQuestion) {
+                            stopBoltAnim();
+                            boltQuestionsCorrect++;
                         } else {
-                            if (isBoltQuestion) {
-                                stopBoltAnim();
-                            }
-                            wrongAnswear(answear3);
+                            normalQuestionsCorrect++;
                         }
+                        makeCorrectAnim(answear3);
+                        Handler handler = new Handler();
+                        handler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                reloadGame();
+                            }
+                        }, 1200);
+                    } else {
+                        if (isBoltQuestion) {
+                            stopBoltAnim();
+                        }
+                        wrongAnswear(answear3);
                     }
                 });
 
-                answear4.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        if (isCountDownTimerCustom) {
-                            isCountDownTimerCustom = false;
-                            countDownTimerCustom.cancel();
-                        }
-                        if (!isBoltQuestion) {
-                            countDownTimer.cancel();
-                        }
-                        if (answear4.getText().toString().contains(correctAnswear)) {
-                            if (isBoltQuestion) {
-                                boltQuestionsCorrect++;
-                                stopBoltAnim();
-                            } else {
-                                normalQuestionsCorrect++;
-                            }
-                            makeCorrectAnim(answear4);
-                            Handler handler = new Handler();
-                            handler.postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    reloadGame();
-                                }
-                            }, 1200);
+                answear4.setOnClickListener(v -> {
+                    if (isCountDownTimerCustom) {
+                        isCountDownTimerCustom = false;
+                        countDownTimerCustom.cancel();
+                    }
+                    if (!isBoltQuestion) {
+                        countDownTimer.cancel();
+                    }
+                    if (answear4.getText().toString().contains(correctAnswear)) {
+                        if (isBoltQuestion) {
+                            boltQuestionsCorrect++;
+                            stopBoltAnim();
                         } else {
-                            if (isBoltQuestion) {
-                                stopBoltAnim();
-                            }
-                            wrongAnswear(answear4);
+                            normalQuestionsCorrect++;
                         }
+                        makeCorrectAnim(answear4);
+                        Handler handler = new Handler();
+                        handler.postDelayed(() -> reloadGame(), 1200);
+                    } else {
+                        if (isBoltQuestion) {
+                            stopBoltAnim();
+                        }
+                        wrongAnswear(answear4);
                     }
                 });
             } else {
-                adevaratButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        if (isCountDownTimerCustom) {
-                            isCountDownTimerCustom = false;
-                            countDownTimerCustom.cancel();
-                        }
-                        Handler handler = new Handler();
-                        if (correctAnswear.toLowerCase().contains("adevarat")) {
-                            afQuestionsCorrect++;
-                            makeCorrectAnimAf(adevaratButton);
-                            handler = new Handler();
-                            handler.postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    reloadGame();
-                                }
-                            }, 1200);
-                        } else {
-                            wrongAnswear(adevaratButton);
-                        }
+                adevaratButton.setOnClickListener(v -> {
+                    if (isCountDownTimerCustom) {
+                        isCountDownTimerCustom = false;
+                        countDownTimerCustom.cancel();
+                    }
+                    Handler handler = new Handler();
+                    if (correctAnswear.toLowerCase().contains("adevarat")) {
+                        afQuestionsCorrect++;
+                        makeCorrectAnimAf(adevaratButton);
+                        handler = new Handler();
+                        handler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                reloadGame();
+                            }
+                        }, 1200);
+                    } else {
+                        wrongAnswear(adevaratButton);
                     }
                 });
 
-                falsButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        if (isCountDownTimerCustom) {
-                            isCountDownTimerCustom = false;
-                            countDownTimerCustom.cancel();
-                        }
-                        Handler handler = new Handler();
-                        if (correctAnswear.toLowerCase().contains("fals")) {
-                            afQuestionsCorrect++;
-                            makeCorrectAnimAf(falsButton);
-                            handler = new Handler();
-                            handler.postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    reloadGame();
-                                }
-                            }, 1200);
-                        } else {
-                            wrongAnswear(falsButton);
-                        }
+                falsButton.setOnClickListener(v -> {
+                    if (isCountDownTimerCustom) {
+                        isCountDownTimerCustom = false;
+                        countDownTimerCustom.cancel();
+                    }
+                    Handler handler = new Handler();
+                    if (correctAnswear.toLowerCase().contains("fals")) {
+                        afQuestionsCorrect++;
+                        makeCorrectAnimAf(falsButton);
+                        handler = new Handler();
+                        handler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                reloadGame();
+                            }
+                        }, 1200);
+                    } else {
+                        wrongAnswear(falsButton);
                     }
                 });
             }
@@ -469,12 +447,7 @@ public class GameActivity extends AppCompatActivity {
        if (answear == null) {
            reloadGame();
        } else {
-           handler.postDelayed(new Runnable() {
-               @Override
-               public void run() {
-                   reloadGame();
-               }
-           }, 1200);
+           handler.postDelayed(() -> reloadGame(), 1200);
        }
     }
 
@@ -543,17 +516,15 @@ public class GameActivity extends AppCompatActivity {
         }
         builder.setTitle("ATENTIE")
                 .setMessage(R.string.estiSigur)
-                .setPositiveButton(R.string.da, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        if (DatabaseData.getPlayerState().getPoints() != 0) {
-                            DatabaseData.getPlayerState().setPoints(DatabaseData.getPlayerState().getPoints() - 1);
-                            databaseHandler.modifyPlayerStateObject(0,
-                                    DatabaseData.getPlayerState().getPoints(), "player1");
-                        }
-                        Intent intent = new Intent(GameActivity.this, MainActivity.class);
-                        startActivity(intent);
-                        finish();
+                .setPositiveButton(R.string.da, (dialog, which) -> {
+                    if (DatabaseData.getPlayerState().getPoints() != 0) {
+                        DatabaseData.getPlayerState().setPoints(DatabaseData.getPlayerState().getPoints() - 1);
+                        databaseHandler.modifyPlayerStateObject(0,
+                                DatabaseData.getPlayerState().getPoints(), "player1");
                     }
+                    Intent intent = new Intent(GameActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
                 })
                  .setNegativeButton(R.string.nu, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
