@@ -9,6 +9,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 import org.w3c.dom.Text;
 
 import java.io.BufferedReader;
@@ -25,11 +29,17 @@ public class TipsAndTricksActivity extends AppCompatActivity {
     private TextView tipsTricksTextView;
     private static final String FILEPATH = "tips.txt";
     private Button backButton;
+    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tips_tricks);
+
+        MobileAds.initialize(this, "ca-app-pub-6866181891454476~7520037577");
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         tipsTricksTextView = (TextView) findViewById(R.id.tips_tricks_text_view);
         backButton = (Button) findViewById(R.id.back_button);
@@ -57,6 +67,7 @@ public class TipsAndTricksActivity extends AppCompatActivity {
                 finish();
             }
         });
+
     }
 
     @Override

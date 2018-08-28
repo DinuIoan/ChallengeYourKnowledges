@@ -8,6 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
@@ -29,6 +33,7 @@ public class BancuriStiaiCaActivity extends AppCompatActivity {
     private TextView infoTextView;
     private TextView titlu;
     private int position = 0;
+    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,6 +118,11 @@ public class BancuriStiaiCaActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        MobileAds.initialize(this, "ca-app-pub-6866181891454476~7520037577");
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
     }
 
     @Override

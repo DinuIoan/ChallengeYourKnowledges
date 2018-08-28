@@ -100,7 +100,6 @@ public class CountdownActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
             }
         });
 
@@ -122,17 +121,12 @@ public class CountdownActivity extends AppCompatActivity {
         incepeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (materiaafostSelectata && numarulDeIntrebariAFostSelectat) {
-                    incepeButton.setClickable(false);
-                    materieSpinner.setClickable(false);
-                    numarIntrebariSpinner.setClickable(false);
-                    countDownTimer.start();
+                incepeButton.setEnabled(false);
+                materieSpinner.setEnabled(false);
+                numarIntrebariSpinner.setEnabled(false);
+                backButton.setEnabled(false);
+                countDownTimer.start();
 
-                } else if (!materiaafostSelectata) {
-                    createAlertDialog("materie");
-                } else if (!numarulDeIntrebariAFostSelectat) {
-                    createAlertDialog("numar");
-                }
             }
         });
 
@@ -145,34 +139,6 @@ public class CountdownActivity extends AppCompatActivity {
                 finish();
             }
         });
-
-
-
-    }
-
-    private void createAlertDialog(String type) {
-        String message = "";
-        AlertDialog.Builder builder;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            builder = new AlertDialog.Builder(CountdownActivity.this, android.R.style.Theme_Material_Dialog_Alert);
-        } else {
-            builder = new AlertDialog.Builder(CountdownActivity.this);
-        }
-
-        if (type.equals("materie")) {
-            message = getResources().getString(R.string.materieNeselectata);
-        } else {
-            message = getResources().getString(R.string.numarIntrebariNeselectat);
-        }
-
-        builder.setTitle("ATENTIE")
-                .setMessage(message)
-                .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-
-                    }
-                })
-                .setIcon(android.R.drawable.ic_dialog_alert);
     }
 
     @Override

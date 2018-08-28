@@ -242,38 +242,11 @@ public class GameActivity extends AppCompatActivity {
             final Question rQuestion = questions.remove(randomQuestion);
             questionsAnsweared.add(rQuestion);
             // ANIMATE BOLT QUESTION
-            if (rQuestion.getType().contains("fast")) {
-                boltQuestions++;
-                stopAfStyle();
-                startBoltAnim();
-            } else if (rQuestion.getType().contains("af")) {
-                makeAfStyle();
-                isAfQuestion = true;
-                afQuestions++;
-            } else {
-                normalQuestions++;
-                countDownTimer.start();
-                stopAfStyle();
-            }
+            verifyType(rQuestion.getType());
             question.setText(rQuestion.getText());
             this.correctAnswear = rQuestion.getCorrect_answear();
-
             if (!isAfQuestion) {
-                List<String> answears = new ArrayList<>();
-                answears.add(rQuestion.getAnswear1());
-                answears.add(rQuestion.getAnswear2());
-                answears.add(rQuestion.getAnswear3());
-                answears.add(rQuestion.getCorrect_answear());
-                Collections.shuffle(answears);
-                String answear1Text = "1. " + answears.get(0);
-                String answear2Text = "2. " + answears.get(1);
-                String answear3Text = "3. " + answears.get(2);
-                String answear4Text = "4. " + answears.get(3);
-                answear1.setText(answear1Text);
-                answear2.setText(answear2Text);
-                answear3.setText(answear3Text);
-                answear4.setText(answear4Text);
-
+                setAnswearsText(rQuestion);
                 answear1.setOnClickListener(v -> {
                     if (isCountDownTimerCustom) {
                         isCountDownTimerCustom = false;
@@ -434,10 +407,42 @@ public class GameActivity extends AppCompatActivity {
         }
     }
 
+    private void setAnswearsText(Question rQuestion) {
+        List<String> answears = new ArrayList<>();
+        answears.add(rQuestion.getAnswear1());
+        answears.add(rQuestion.getAnswear2());
+        answears.add(rQuestion.getAnswear3());
+        answears.add(rQuestion.getCorrect_answear());
+        Collections.shuffle(answears);
+        String answear1Text = "1. " + answears.get(0);
+        String answear2Text = "2. " + answears.get(1);
+        String answear3Text = "3. " + answears.get(2);
+        String answear4Text = "4. " + answears.get(3);
+        answear1.setText(answear1Text);
+        answear2.setText(answear2Text);
+        answear3.setText(answear3Text);
+        answear4.setText(answear4Text);
+    }
+
+    private void verifyType(String type) {
+        if (type.contains("fast")) {
+            boltQuestions++;
+            stopAfStyle();
+            startBoltAnim();
+        } else if (type.contains("af")) {
+            makeAfStyle();
+            isAfQuestion = true;
+            afQuestions++;
+        } else {
+            normalQuestions++;
+            countDownTimer.start();
+            stopAfStyle();
+        }
+    }
+
 
    public void wrongAnswear(Button answear) {
        Handler handler = new Handler();
-
 
        if (answear != null && !isAfQuestion){
            makeWrongAnim(answear);
@@ -452,7 +457,7 @@ public class GameActivity extends AppCompatActivity {
     }
 
     public void endGame() {
-        Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
+        Intent intent = new Intent(GameActivity.this, GameOverActivity.class);
         intent.putExtra("boltQuestions", boltQuestions);
         intent.putExtra("boltQuestionsCorrect", boltQuestionsCorrect);
         intent.putExtra("normalQuestions", normalQuestions);
@@ -460,9 +465,9 @@ public class GameActivity extends AppCompatActivity {
         intent.putExtra("afQuestions",afQuestions);
         intent.putExtra("afQuestionsCorrect",afQuestionsCorrect);
         intent.putExtra("materie", materie);
-
         startActivity(intent);
         finish();
+
     }
 
     public void makeWrongAnim(Button answear) {
