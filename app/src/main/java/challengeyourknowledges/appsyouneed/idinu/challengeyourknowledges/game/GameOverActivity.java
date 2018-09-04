@@ -12,6 +12,8 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 
+import java.text.DecimalFormat;
+
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.MainActivity;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.R;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.database.DatabaseData;
@@ -41,6 +43,8 @@ public class GameOverActivity extends AppCompatActivity {
     private DatabaseHandler databaseHandler;
 
     private AdView mAdView;
+
+    private static DecimalFormat df2 = new DecimalFormat(".##");
 
 
     @Override
@@ -162,7 +166,9 @@ public class GameOverActivity extends AppCompatActivity {
 
         if (boltQuestions != 0 ) {
             if (boltQuestionsCorrect != 0) {
-                conditiiDeStresTextView.setText("Conditii de stres: " + (boltQuestionsCorrect * 100) / boltQuestions + "%");
+                float boltQuestionsCorrectPercent = (boltQuestionsCorrect * 100.0f) / boltQuestions;
+                conditiiDeStresTextView
+                        .setText("Conditii de stres: " + df2.format(boltQuestionsCorrectPercent) + "%");
             } else {
                 conditiiDeStresTextView.setText("Conditii de stres: 0%");
             }
@@ -171,7 +177,9 @@ public class GameOverActivity extends AppCompatActivity {
         }
         if (normalQuestions != 0 ) {
             if ( normalQuestionsCorrect != 0) {
-                conditiiNormaleTextView.setText("Conditii normale: " + (normalQuestionsCorrect * 100.0f) / normalQuestions + "%");
+                float normalQuestionsCorrectPercent = (normalQuestionsCorrect * 100.0f) / normalQuestions;
+                conditiiNormaleTextView
+                        .setText("Conditii normale: " + df2.format(normalQuestionsCorrectPercent)  + "%");
             } else {
                 conditiiNormaleTextView.setText("Conditii normale: 0%");
             }
@@ -180,7 +188,8 @@ public class GameOverActivity extends AppCompatActivity {
         }
         if (afQuestions != 0) {
             if (afQuestionsCorrect != 0) {
-                afTextView.setText("Adevarat / Fals: " + (afQuestionsCorrect * 100.0f) / afQuestions + "%");
+                float afQuestionsCorrectPercent = (afQuestionsCorrect * 100.0f) / afQuestions;
+                afTextView.setText("Adevarat / Fals: " + df2.format(afQuestionsCorrectPercent) + "%");
             } else {
                 afTextView.setText("Adevarat / Fals: 0%");
             }
