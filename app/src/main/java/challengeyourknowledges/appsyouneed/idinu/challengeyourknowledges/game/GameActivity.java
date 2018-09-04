@@ -360,6 +360,8 @@ public class GameActivity extends AppCompatActivity {
                     if (isCountDownTimerCustom) {
                         isCountDownTimerCustom = false;
                         countDownTimerCustom.cancel();
+                    } else {
+                        countDownTimerAf.cancel();
                     }
                     Handler handler = new Handler();
                     if (correctAnswear.toLowerCase().contains("adevarat")) {
@@ -381,6 +383,8 @@ public class GameActivity extends AppCompatActivity {
                     if (isCountDownTimerCustom) {
                         isCountDownTimerCustom = false;
                         countDownTimerCustom.cancel();
+                    } else {
+                        countDownTimerAf.cancel();
                     }
                     Handler handler = new Handler();
                     if (correctAnswear.toLowerCase().contains("fals")) {
@@ -399,10 +403,6 @@ public class GameActivity extends AppCompatActivity {
                 });
             }
         } else {
-            if (isCountDownTimerCustom) {
-                isCountDownTimerCustom = false;
-                countDownTimerCustom.cancel();
-            }
             endGame();
         }
     }
@@ -457,6 +457,7 @@ public class GameActivity extends AppCompatActivity {
     }
 
     public void endGame() {
+        stopCountdownTimer();
         Intent intent = new Intent(GameActivity.this, GameOverActivity.class);
         intent.putExtra("boltQuestions", boltQuestions);
         intent.putExtra("boltQuestionsCorrect", boltQuestionsCorrect);
@@ -527,11 +528,12 @@ public class GameActivity extends AppCompatActivity {
                         databaseHandler.modifyPlayerStateObject(0,
                                 DatabaseData.getPlayerState().getPoints(), "player1");
                     }
+                    stopCountdownTimer();
                     Intent intent = new Intent(GameActivity.this, MainActivity.class);
                     startActivity(intent);
                     finish();
                 })
-                 .setNegativeButton(R.string.nu, new DialogInterface.OnClickListener() {
+                .setNegativeButton(R.string.nu, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         initCountDownTimerCustom();
                         countDownTimerCustom.start();
@@ -624,10 +626,20 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onFinish() {
                 wrongAnswear(null);
-                countDownTimerCustom.cancel();
-
             }
         };
+    }
+
+    private void stopCountdownTimer() {
+        if (isBoltQuestion) {
+            countDownTimerBolt.cancel();
+        } else if (isAfQuestion) {
+            countDownTimerAf.cancel();
+        } else if (isCountDownTimerCustom) {
+            countDownTimerCustom.cancel();
+        } else {
+            countDownTimer.cancel();
+        }
     }
 
     @Override
@@ -647,6 +659,7 @@ public class GameActivity extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
+        stopCountdownTimer();
         super.onDestroy();
     }
 
