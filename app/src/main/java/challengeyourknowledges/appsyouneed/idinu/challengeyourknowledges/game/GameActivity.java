@@ -129,7 +129,12 @@ public class GameActivity extends AppCompatActivity {
 
         constraintLayoutAfAnswears.setVisibility(View.INVISIBLE);
 
-
+        answear1.setBackgroundResource(R.drawable.style_answear_button);
+        answear2.setBackgroundResource(R.drawable.style_answear_button);
+        answear3.setBackgroundResource(R.drawable.style_answear_button);
+        answear4.setBackgroundResource(R.drawable.style_answear_button);
+        adevaratButton.setBackgroundResource(R.drawable.style_af_answear);
+        falsButton.setBackgroundResource(R.drawable.style_af_answear);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -474,6 +479,9 @@ public class GameActivity extends AppCompatActivity {
     public void makeWrongAnim(Button answear) {
         answear.setBackgroundResource(R.drawable.wrong_answear_transition);
         rocketAnimation = (AnimationDrawable) answear.getBackground();
+        if (rocketAnimation.isRunning()) {
+            rocketAnimation.stop();
+        }
         rocketAnimation.start();
         backButton.setClickable(false);
     }
@@ -481,6 +489,9 @@ public class GameActivity extends AppCompatActivity {
     public void makeCorrectAnim(Button answear) {
         answear.setBackgroundResource(R.drawable.correct_answear_anim);
         rocketAnimation = (AnimationDrawable) answear.getBackground();
+        if (rocketAnimation.isRunning()) {
+            rocketAnimation.stop();
+        }
         rocketAnimation.start();
         backButton.setClickable(false);
     }
@@ -488,6 +499,9 @@ public class GameActivity extends AppCompatActivity {
     public void makeCorrectAnimAf(Button answear) {
         answear.setBackgroundResource(R.drawable.anim_correct_af_answear);
         rocketAnimation = (AnimationDrawable) answear.getBackground();
+        if (rocketAnimation.isRunning()) {
+            rocketAnimation.stop();
+        }
         rocketAnimation.start();
         backButton.setClickable(false);
     }
@@ -495,6 +509,9 @@ public class GameActivity extends AppCompatActivity {
     public void makeWrongAfAnim(Button answear) {
         answear.setBackgroundResource(R.drawable.anim_wrong_af_answear);
         rocketAnimation = (AnimationDrawable) answear.getBackground();
+        if (rocketAnimation.isRunning()) {
+            rocketAnimation.stop();
+        }
         rocketAnimation.start();
         backButton.setClickable(false);
     }
@@ -533,7 +550,7 @@ public class GameActivity extends AppCompatActivity {
                     startActivity(intent);
                     finish();
                 })
-                .setNegativeButton(R.string.nu, new DialogInterface.OnClickListener() {
+                 .setNegativeButton(R.string.nu, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         initCountDownTimerCustom();
                         countDownTimerCustom.start();
