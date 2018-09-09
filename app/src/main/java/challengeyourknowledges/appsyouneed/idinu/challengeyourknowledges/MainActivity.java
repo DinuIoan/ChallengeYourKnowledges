@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         if (getIntent().getBooleanExtra("EXIT", false)) {
             finish();
-            return;
         }
         setContentView(R.layout.activity_main);
 

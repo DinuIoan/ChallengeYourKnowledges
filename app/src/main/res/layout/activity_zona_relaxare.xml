@@ -88,7 +88,7 @@
             android:layout_height="70dp"
             android:layout_above="@+id/lineImageView"
             android:layout_margin="5dp"
-            android:background="@drawable/ic_arrow_back" />
+            android:background="@mipmap/back_button" />
 
         <ImageView
             android:id="@+id/lineImageView"
