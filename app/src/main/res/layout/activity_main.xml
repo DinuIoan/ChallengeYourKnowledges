@@ -26,7 +26,7 @@
             android:layout_margin="5dp"
             android:layout_below="@+id/logoImageView"
             android:background="@drawable/style_line"
-            android:translationZ="15dp"/>
+            android:translationZ="10dp"/>
 
         <ImageView
             android:id="@+id/logoImageView"

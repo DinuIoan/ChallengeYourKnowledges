@@ -34,6 +34,8 @@ public class CountdownActivity extends AppCompatActivity {
     private Spinner numarIntrebariSpinner;
     private Spinner materieSpinner;
     private Button backButton;
+    private int count = 3;
+    private boolean countdownTimerStarted = false;
 
 
     @Override
@@ -105,11 +107,12 @@ public class CountdownActivity extends AppCompatActivity {
 
         this.countDownTimer = new CountDownTimer(3 * 1000, 1000) {
             public void onTick(long millisUntilFinished) {
-                String remaining = "" + millisUntilFinished / 800;
-                countdownTextView.setText(remaining);
+//                String remaining = "" + millisUntilFinished / 800;
+                countdownTextView.setText("" + count--);
             }
 
             public void onFinish() {
+                countdownTimerStarted = false;
                 Intent intent = new Intent(CountdownActivity.this, GameActivity.class);
                 intent.putExtra("numarIntrebari", numarIntrebari);
                 intent.putExtra("materie", materieSelectata);
@@ -126,6 +129,7 @@ public class CountdownActivity extends AppCompatActivity {
                 numarIntrebariSpinner.setEnabled(false);
                 backButton.setEnabled(false);
                 countDownTimer.start();
+                countdownTimerStarted = true;
 
             }
         });
@@ -143,11 +147,16 @@ public class CountdownActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        countDownTimer.cancel();
-        Intent intent = new Intent(CountdownActivity.this, MainActivity.class);
-        startActivity(intent);
-        finish();
+        if (!countdownTimerStarted) {
+            countDownTimer.cancel();
+            Intent intent = new Intent(CountdownActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
     }
 
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
 }

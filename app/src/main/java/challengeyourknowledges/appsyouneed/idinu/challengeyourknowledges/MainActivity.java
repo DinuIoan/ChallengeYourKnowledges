@@ -34,11 +34,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         if (getIntent().getBooleanExtra("EXIT", false)) {
             finish();
+            return;
         }
         setContentView(R.layout.activity_main);
 
         databaseHandler = new DatabaseHandler(MainActivity.this);
-        if (databaseHandler.getAllQuestions().size() < 1 ) {
+        if (databaseHandler.getAllQuestions().size() < 1) {
             InitializeDatabase.initializeDatabase(databaseHandler, getApplicationContext());
         }
         playButton = (Button) findViewById(R.id.button_play);
@@ -56,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            Handler handler = new Handler();
+                Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
