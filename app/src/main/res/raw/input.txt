@@ -1,3 +1,18 @@
+fast-limbaromana/Care este seria de cuvinte corecte? / Innopteaza, inoada, innoata, inbie / Inopteaza, inoada, inoata, innbie / Innopteaza, innoada, inoata, imbie/ Innopteaza, innoada, inoata, inmbie /
+fast-limbaromana/Alege varianta corecta: / Ei o sa aiba o solutie / Ei o sa aibe o solutie. / Ei o sa aiva o solutie. / Ei o sa aive o solutie /
+fast-limbaromana/Care este sinonimul cuvantului ''tomnatic''? / Autumnal / Sepulcral / Hibernal / Autumnatic /
+fast-limbaromana/Alege varianta corecta: / Voi v-ati duce la plimbare. / Voi va-ti duce la plimbare. / Voi vat-i duce la plimbare. / Voi vati duce la plimbare. /
+fast-limbaromana/Romanul ''Ion'' a fost scris de... / Liviu Rebreanu /  George Calinescu / Mircea Eliade / Ioan Slavici /
+fast-limbaromana/Cuvantul ''avar'' inseamna: / Zgarcit / Econom / Risipitor / Generos / 
+fast-limbaromana/Care este tema romanului Maitreyi? / Iubirea incompatibila / Dragostea fata de arta / Iubirea implinita / Conditia omului de geniu /
+fast-limbaromana/In ce an a aparut romanul Ion? / 1920 / 1925 / 1932 / 1966 / 
+fast-limbaromana/Ce caracter are basmul Povestea lui Harap Alb? / Bildungsroman / Umoristic / Simetric / Circular /
+fast-limbaromana/In ce oras s-a infiintat Dacia literara? / Iasi / Arad / Timisoara / Bucuresti /
+fast-limbaromana/In romanul Ion, Ana este fiica lui: / Vasile Baciu / Invatatorul Herdelea / George Pintea / Aurel Ungureanu /
+fast-limbaromana/Intriga din romanul Enigma Otiliei se desfasoara: / Pe doua planuri / Invers / Circular / Pe trei planuri / 
+fast-limbaromana/Cum se numesc cele doua parti ale romanului Ion? / Glasul Pamantului si Glasul Iubirii / Ion si Ana si Ion si Florica / Glasul Dragostei si Tacerea de Aur / Romanul are o singura parte /
+fast-limbaromana/Ce sugerea titlul poeziei Plumb? / Apasarea, angoasa, greutatea sufocanta / Materialul din care era facut sicriul / Culoarea cosciugului / Nu are nici o semnificatie anume /
+fast-limbaromana/In cate acte se imparte comedia O scrisoare pierduta? / 4 / 3 / 6 / 5 /
 fast-limbaromana/Cine a scris opera ''Patul lui Procust''? / Camil Petrescu / Mircea Nedelciu / Marin Sorescu / Ion Creanga /
 fast-limbaromana/Cine a scris opera ''Moara cu noroc''? / Ioan Slavici / Sadoveanu / Liviu Rebreanu / Marin Sorescu /
 fast-limbaromana/Cine a scris opera ''O scrisoare pierduta''? / Ion Luca Caragiale / Camil Petrescu / George Calinescu / Ion Creanga /
@@ -13,6 +28,21 @@ fast-limbaromana/''Leoaica tanara, iubirea'' de Nichita Stanescu este: / poezie 
 fast-limbaromana/Ion Creanga se incadreaza in: / perioada marilor clasici / perioada postbelica / perioada interbelica / perioada renascentista /
 fast-limbaromana/Opera literara ''Povestea lui Harap Alb'' de Ion Creanga este: / basm cult / nuvela istorica / basm incult / nuvela realista /
 fast-limbaromana/Este nuvela realist-psihologica opera: / Moara cu noroc de Ioan Slavici / Baltagul de Mihail Sadoveanu / Alexandru Lapusneanu de Costache Negruzz / Moara cu noroc de Ion Creanga /
+normal-limbaromana/La ce se refera sintagma reflectarea poliedrica (cu privire la romanul Enigma Otiliei)? / Imaginea unui personaj este completata de parerea celorlaltor personaje / Imaginea personajului este reflectata doar de actiunile sale / Se pune accent pe introspectia personajelor / Se pune accentul pe dezvoltarea unui singur personaj /
+normal-limbaromana/La ce timp se afla verbul ''mananc'' din urmatoarea propozitie: Eu mancam atunci cand a venit? / Imperfect / Perfect / Perfect simplu / Prezumtiv /
+normal-limbaromana/Care dintre urmatoarele afirmatii NU sunt trasaturi ale genului liric? / Are o actiune bine definita in timp si spatiu / Ca moduri de expunere se folosesc preponderent descrierea subiectiva si monologul liric / Gandurile si sentimentele sunt exprimate in mod direct / Nu are personaje /
+normal-limbaromana/Cum il obliga Ion pe Vasile Baciu sa il accepte drept ginere? / O lasa insarcinata pe Ana / Devine bogat / Il santajeaza / Il minte ca este bolnav /
+normal-limbaromana/Poemul Luceafarul apare in anul: / 1883 / 1885 / 1873 / 1863 /
+normal-limbaromana/La ce se refera sintagma reflectarea poliedrica (cu privire la romanul Enigma Otiliei)? / Se pune accentul pe dezvoltarea unui singur personaj / Imaginea personajului este reflectata doar de actiunile sale / Imaginea unui personaj este completata de parerea celorlaltor personaje / Se pune accent pe introspectia personajelor / 
+normal-limbaromana/Care dintre urmatoarele poezii deschide volumul de debut, Poemele luminii si are rol de manifest literar? / Eu nu strivesc corola de minuni a lumii / Joc Secund / Leoaica, tanara iubirea / Testament /
+normal-limbaromana/Care dintre urmatoarele opere literare este construita sub forma unei confesiuni? / Ultima noapte de dragoste, intaia noapte de razboi / O scrisoare pierduta / Enigma Otiliei / Ion /
+normal-limbaromana/Care este ultima faza a dezumanizarii lui Ghita din Moara cu Noroc? / Cand o impinge pe sotia sa in bratele lui Lica Samadaul / Cand incepe sa se instraineze de familie / Cand da foc la moara / Cand isi paraseste familia /
+normal-limbaromana/Care dintre urmatoarele afirmatii despre timpul IMPERFECT este incorecta? / Este un timp al contemplarii viitorului / Este un timp al narativitatii subiective / Creeaza continuitatea unei stari din trecut / Este indice al trecerii de la realitate la imaginar /
+normal-limbaromana/Care este tema poeziei Eu nu strivesc corola de minuni a lumii? / Atitudinea poetica in fata marilor taine ale universului / Dificultatea adaptarii la o lume anosta si rece / Dezagregarea, descompunerea fiintei umane si a universului inconjurator. / Conditia omului de geniu /
+normal-limbaromana/Prin ce caracteristici NU poate fi definita nuvela fantastica? / Finalul este clar / Personajul se raporteaza intr-un fel diferit la lume / Existenta a doua planuri: real / ireal / Constructia subiectului nu este liniara /
+normal-limbaromana/Care dintre urmatoarele opere literare este considerata a fi o arta poetica neomoderna? / Leoaica, tanara iubirea / Lacustra / Testament / Flori de mucigai /
+normal-limbaromana/Din ce motiv este considerat titlul poeziei Flori de mucigai oximoron? / Datorita insolitei  alaturari a cuvintelor ce il compun / Pentru ca este la plural / Nu este considerat oximoron / Uneste doua cuvinte similare /
+normal-limbaromana/Unde obisnuia Ilie Moromete sa citeasca ziarul si sa aiba discutii politice cu prietenii sai? / Poiana lui Iocan / Pe prispa casei / In gradina sa / La poarta casei /
 normal-limbaromana/Contureaza dimensiunea temporala intr-un text structuri precum: / Intr-o seara de iulie, in timpul razboiului, din prima clipa / Toamna, în gradina,la scoala / La palat, pe prispa, in casa bunicilor / In poienita, vara, cu familia /
 normal-limbaromana/Contureaza dimensiunea spatiala intr-un text structuri precum: / In Campia Dunarii, la mare, acasa / Astazi, la tara, pe terasa / Vara, noaptea trecuta, atunci / Intr-o seara de iulie, in timpul razboiului, din prima clipa /
 normal-limbaromana/Sunt trasaturi ale genului liric : / prezenta instantei comunicarii lirice-eul liric, abundenta figurilor de stil, monologul liric / prezenta naratorului si a personajelor, abundenta figurilor de stil, monologul liric / prezenta instantei comunicarii lirice- eul liric, abundenta figurilor de stil, naratiunea / Naratiunea, prezenta personajelor, prezenta actiunii /
@@ -28,6 +58,21 @@ normal-limbaromana/Este roman interbelic, modern, subiectiv, de analiza psiholog
 normal-limbaromana/A fost publicata mai intai in revista Luceafarul (1968), apoi inclusa in trilogia ''Setea muntelui de sare'' opera: / Iona, de Marin Sorescu / Jocul ielelor, de Camil Petrescu / O scrisoare pierduta, de Ion Luca Caragiale / Iona de George Bacovia /
 normal-limbaromana/Satirizarea defectelor - moravurilor societatii romanesti de la sfarsitul secolului al XIX-lea constituie tema operei: / O scrisoare pierduta, de Ion Luca Caragiale / Iona, de Marin Sorescu / Jocul ielelor, de Camil Petrescu / La tiganci, de Camil Petrescu /
 normal-limbaromana/Tema literara a dramei Iona, de Marin Sorescu o constituie: / destinul omului captiv in propriul sau destin - conditia umana / drama intelectualului lucid insetat de absolut / lupta pentru putere / lupta pentru avere /
+af-limbaromana/Rochia are un imprimeu florar. / Adevarat / Fals /
+af-limbaromana/Romanul Ion este o monografie a vietii rurale in Campia Dunarii inaintea celui de-al doilea Razboi Mondial. / Fals / Adevarat /
+af-limbaromana/Autorul omniscient nareaza la persoana I. / Fals / Adevarat /
+af-limbaromana/Basmul este o specie in proza a genului epic in cuprinsul careia se povestesc intamplari miraculoase, puse pe sema unor personaje sau forte supranaturale. / Adevarat / Fals /
+af-limbaromana/Factura balzaciana a romanului Enigma Otiliei este data de modalitatea de constructie a personajelor si de temele abordate mostenirea si dragostea. / Adevarat / Fals / 
+af-limbaromana/Simetria compozitionala din Morometii este data de legatura dintre personaje si actiune. / Fals / Adevarat /
+af-limbaromana/La inceputul comediei O scrisoare pierduta, prefectul orasului era Stefan Tipatescu / Adevarat / Fals /
+af-limbaromana/La Tiganci este o nuvela fantastica. / Adevarat / Fals / 
+af-limbaromana/Procedeul circularitatii apare in Morometii. / Adevarat / Fals /
+af-limbaromana/Unul dintre planurile intrigii din Enigma Otiliei consta in moartea lui mos Costache / Fals / Adevarat / 
+af-limbaromana/In Iona se foloseste metoda bulgarelui de zapada. / Fals / Adevarat /
+af-limbaromana/Capitolul Ai să dai samă, doamnă!? face parte din Alexandru Lapusneanu. / Adevarat / Fals 
+af-limbaromana/Familia lui Moromete locuia in Prislop. / Fals / Adevarat / 
+af-limbaromana/Actiunea nuvelei Moara cu Noroc se petrece intre Sfantul Vasile si Paste. / Fals / Adevarat / 
+af-limbaromana/Motivul central al operei Iona este singuratatea. / Fals / Adevarat / 
 af-limbaromana/''Estetica uratului'' este o tehnica inovatoare introdusa in lirica romaneasca de Mihai Eminescu / Fals / Adevarat /
 af-limbaromana/Conditia omului de geniu este tema literara in Luceafarul: / Adevarat / Fals /
 af-limbaromana/Arta poetica este creatia lirica in care autorul isi exprima, cu ajutorul unor mijloace artistice adecvate, propria conceptie despre lume si despre rolul artistului si ale operei sale in societate. / Adevarat / Fals /
