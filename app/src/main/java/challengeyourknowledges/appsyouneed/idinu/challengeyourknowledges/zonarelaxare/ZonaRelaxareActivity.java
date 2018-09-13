@@ -18,8 +18,6 @@ public class ZonaRelaxareActivity extends AppCompatActivity {
     private Button backInfo;
     private Button forwardInfo;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

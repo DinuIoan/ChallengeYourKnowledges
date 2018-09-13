@@ -103,6 +103,21 @@ fast-istorie/Constitutia care acorda puteri sporite regelui a intrat in vigoare 
 fast-istorie/Dupa 1945, in prima etapa a Razboiului Rece, Romania se afla in sfera de influenta: / sovietica / slava / engleza / turceasca /
 fast-istorie/Romania a stabilit relatii diplomatice cu Republica Federala Germania in anul: / 1967 / 1966 / 1957 / 1956 /
 fast-istorie/Romania devine membra a Organizatiei Natiunilor Unite in anul: / 1955 / 1954 / 1953 / 1951 /
+fast-istorie/Razboiul de 100 de Ani dintre Anglia si Franta a fost purtat: / Intre anii 1337 - 1453 / Intre anii 1437 - 1555 / Intre anii 1237 - 1353 / Intre anii 1534 - 1653 /
+fast-istorie/Dacia romana a existat: / 165 de ani / 34 de ani / 67 de ani / 80 de ani /
+fast-istorie/Belgia a adoptat o constitutie liberala, dupa despartirea de Regatul Olandei. In ce an s-a intamplat acest eveniment? / 1831 / 1839 / 1821 / 1845 /
+fast-istorie/Tarile scandinave anexate de Hitler in anul 1940 sunt: / Danemarca si Norvegia / Doar Danemarca / Suedia si Norvegia / Suedia, Danemarca si Norvegia /
+fast-istorie/Presedintele bulgar Petar Mladenov a fost obligat de catre opozitie sa se retraga: / In anul 1990 / In anul 1989 / In anul 1999 / In anul 1991 / 
+fast-istorie/In ce perioada a Primului Razboi Mondial, Romania a adoptat pozitia de neutralitate? / 1914 - 1916 / 1901 - 1905 / 1905 - 1911 / 1940 - 1960 /
+fast-istorie/In ce an s-a destramat URSS? / 1991 / 1992 / 1989 / 1990 /
+fast-istorie/Germania si Italia au declarat razboi Statelor Unite ale Americii in data de: / 11 decembrie 1941 / 11 februarie 1944 / 11 mai 1945 / 11 iulie 1954 /
+fast-istorie/... a pierdut aproximativ doua treimi din teritoriu prin Pacea de la Trianon. / Ungaria / Rusia / Romania / Franta /
+fast-istorie/Spartanii in Razboiul peloponesiac au infruntat: / atenienii / atticanii / sicilienii / grecii /
+fast-istorie/Cuceritorului Mexicului se numea Cortez ... ? / Hernando / Armando / Diego / Joaquin /
+fast-istorie/Cand a adoptat imparatul Franz Iosef o Constitutie prin care recunostea autonomia Transilvaniei? / 4 martie 1848 / 4 martie 1850 / 4 martie 1851 / 4 martie 1849 /
+fast-istorie/Cand au invadat Transilvania trupele maghiare conduse de generalul Iosif Bem? / Decembrie 1848 / Mai 1848 / Martie 1848 / Ianuarie 1848 / 
+fast-istorie/Cand are loc Marea Adunare Nationala de la Blaj? / 3-15 Mai 1848 / 3-15 Mai 1869 / 3-15 Mai 1821 / 3-15 Mai 1855 /
+fast-istorie/La ce data a inceput revolutia la Bucuresti cand domnitorul Gheorghe Bibescu a aprobat Constitutia (Proclamatia de la Islaz)? / La 30 iunie / La 5 iunie / La 24 iunie / La 11 iunie /
 normal-istorie/Institutia financiara internationala cu sediul la Washington prin care sunt sprijinite statele aflate in curs de dezvoltare, creata in anul 1945 se numeste: / Fondul Monetar International / Banca Mondiala / Organizatia Natiunilor Unite / Fondul Monetar National /
 normal-istorie/In perioada 1965 - 1989 regimul national -comunist ale lui Nicolae Ceausescu a continuat politica externa de distantare fata de: / Moscova / Paris / Berlin / Budapesta /
 normal-istorie/Supus presiunilor Moscovei, regele Mihai a fost obligat sa accepte formarea guvernului condus de Petru Groza, aflat sub control P.C.R la: / 6 martie 1945 / 6 aprilie 1945 / 6 martie 1946 / 6 aprilie 1946 /
@@ -118,6 +133,21 @@ normal-istorie/Conform constitutiei din 1866, parlamentul avea o structura bicam
 normal-istorie/Perioada de declin in care a intrat Imperiul Otoman de la sfarsitul secolului al XVIII lea se numeste: / Criza Orientala / destramarea Imperiului Otoman / uniunea nationala / libertate /
 normal-istorie/Dupa actiunile de politica antiotomana desfasurate de Constantin Brancoveanu si Dimitrie Cantemir, Imperiul Otoman a instaurat in Tara Romaneasca si Moldova domniile: / fanariote / pamantene / suzerane / otomane /
 normal-istorie/In cronica notarului anonim al regelui maghiar Bela - Gesta Hungarorum (Faptele ungurilor) sunt mentionate voievodatele din: / Transilvania - Banat / Tara Romaneasca / Moldova / Ardeal /
+normal-istorie/La 205 ani dupa moartea sa, corpul unui rege prusac a fost readus la Potsdam. Cum se numea regele respectiv? / Frederic al II-lea / Frederic al IV-lea / Frederic al I-lea / Frederic al III-lea /
+normal-istorie/Tortura in Anglia a fost abolita: / In anul 1638 / In anul 1637 / In anul 1645 / In anul 1636 /
+normal-istorie/Pe 6 si pe 7 iulie 1700 in Marea Egee, flota otomana a nimicit in batalia navala: / Flota germana / Flota turceasca / Flota ruseasca / Flota romaneasca /
+normal-istorie/Parlamentul israelian, Knesset, s-a reunit pentru prima oara: / 14 februarie 1949 / 2 mai 1945 / 19 februarie 1959 / 22 ianuarie 1944 /
+normal-istorie/In anul 1887, de Ferdinand I de Saxa-Coburg a condus statul: / Bulgaria / Ungaria / Iugoslavia / Rusia /
+normal-istorie/... este cel mai vechi document constitutional al Angliei. / Magna Charta / Codex Argentus / Kamanche / Manuscrisul de la Londra /
+normal-istorie/Tratatul de la Balta-Liman. / 1 mai 1849 / 1 mai 1852 / 1 mai 1855 / 1 mai 1812 /
+normal-istorie/Rrebeliunea legionara a fost infranta in perioada: / 21 - 23 ianuarie 1941 / 21 - 23 ianuarie 1944 / 21 - 23 ianuarie 1939 / 21 - 23 ianuarie 1940 /
+normal-istorie/In data de ... Ion Antonescu a fost numit sef de guvern. / 4 septembrie 1940 / 4 septembrie 1939 / 4 septembrie 1942 / 4 septembrie 1944 /
+normal-istorie/Anii de domnie ai regelui Ferdinand al Romaniei: / 1914 - 1927 / 1912 - 1925 / 1910 - 1923 / 1916 - 1929 /
+normal-istorie/Cand a declarat Romania razboi Austro-Ungariei? / 14-Aug-16 / 14-Aug-20 / 14-Aug-22 / 14-Aug-18 /
+normal-istorie/In anul ... in Transilvania limba maghiara a devenit limba oficiala printr-o lege a invatamantului. / 1862 / 1865 / 1868 / 1860 / 
+normal-istorie/In anul ... limba germana a devenit limba oficiala in Transilvania. / 1847 / 1844 / 1848 / 1840 /
+normal-istorie/Cand a fost adoptata Legea pentru secularizarea averilor manastiresti, prin care un sfert din suprafata agricola a tarii a trecut in propietatea statului? / 13-25 decembrie 1863 / 13-25 decembrie 1860 / 13-25 decembrie 1867 / 13-25 decembrie 1869 / 
+normal-istorie/La ce data s-a format un guvern unic al Principatelor Unite, condus de Barbu Catargiu? / 22 ianuarie 1862 / 7 ianuarie 1862 / 30 ianuarie 1862 / 13 ianuarie 1862 /
 af-istorie/Romania a luat parte activ la Conferinta pentru Securitate si Cooperare in Europa de la Helsinki in anul 1975 / Fals / Adevarat /
 af-istorie/Constitutia comunista din 1965 avea 114 articole: / Adevarat / Fals /
 af-istorie/Constitutia din 1923 a contribuit la consolidarea statului roman in urma realizarii Marii uniri / Adevarat / Fals /
@@ -133,6 +163,21 @@ af-istorie/Securitatea institutiei cu rol de politie politica a fost infiintata 
 af-istorie/Capitulatie = documentul incheiat intre Tarile Romane si Imperiul Otoman care prevedea obligatiile si statutul acestora in raport cu Poarta / Adevarat / Fals /
 af-istorie/Primul domnitor care a luptat impotriva ostilor otomane pe teritoriul tarii sale a fost Mircea cel Batran / Adevarat / Fals /
 af-istorie/Stefan cel Mare a fost domnitor al Moldovei in perioada 1457 - 1501 / Fals / Adevarat /
+af-istorie/Hermann Goring este fondatorul Partidul German al Patriei, de orientare conservatoare? / Fals / Adevarat /
+af-istorie/Ludovic al III-lea nu este monarhul care a avut cea mai lunga domnie din istorie. / Adevarat / Fals /
+af-istorie/Victor Hugo este secretarul de stat american ce a elaborat planul pentru reconstructia Europei dupa cel de-al 2-lea Razboi Mondial. / Fals / Adevarat /
+af-istorie/Conferinta de la Berna este conferinta din 1945 in cadrul careia a fost stabilita linia Oder-Neisse drept granita de rasarit a Germaniei. / Fals / Adevarat /
+af-istorie/EFTA = Comunitatea Europeana a Comertului Liber. / Adevarat / Fals /
+af-istorie/Ahmad Sah Durrani s-a proclamat in anul 1747 drept rege al Indiei. / Fals / Adevarat /
+af-istorie/In anul 1889 insulele Filipine au dobandit , cu ajutor american, independenta fata de Spania. / Fals / Adevarat /
+af-istorie/RAF = Fractiunea Armata Rosie. / Adevarat / Fals /
+af-istorie/Armata Rosie este armata intemeiata si perfectionata de Lev Trotki. / Adevarat / Fals /
+af-istorie/Siria este statul persan ce a fost infiintat in anul 1747. / Fals / Adevarat /
+af-istorie/La Bucuresti a fost publicat pentru prima oara Manifestul comunist. / Fals / Adevarat /
+af-istorie/Manifestul comunist a fost publicat in anul 1848. / Adevarat / Fals /
+af-istorie/In 1914 Marea Britanie a recunoscut Afghanistanul ca fiind independent politic. / Fals / Adevarat /
+af-istorie/Tarul Alexandru al III-lea a cazut victima in anul 1881 unui atentat cu bomba pus la cale de gruparea anarhista "Vointa Poporului". / Fals / Adevarat /
+af-istorie/Hitler a ajuns la presedintia NSDAP-ului in 1929. / Fals / Adevarat /
 fast-geografie/Muntii Vosgi se afla pe teritoriul statului: / Franta / Spania / Suedia / Germania /
 fast-geografie/Pe teritoriul carui stat se afla Muntii Padurea Neagra? / Germania / Ungaria / Austria / Serbia /
 fast-geografie/In nordul carui stat se afla Campia Padului? / Italia / Romania / Polonia / Spania /

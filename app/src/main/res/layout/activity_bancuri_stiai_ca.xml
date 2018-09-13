@@ -66,10 +66,8 @@
             android:layout_alignEnd="@+id/lineImageView"
             android:layout_centerVertical="true"
             android:textColor="@color/lineColor"
-            android:textSize="20sp"
+            android:textSize="25sp"
             android:textStyle="bold" />
-
-
     </RelativeLayout>
 
     <Button
@@ -99,18 +97,12 @@
         android:id="@+id/info_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="308dp"
         android:layout_marginTop="8dp"
-        android:padding="5dp"
-        android:scrollbars="vertical"
-        android:textColor="@color/black"
-        android:textSize="15sp"
-        android:textStyle="bold"
         android:background="@drawable/style_question_box"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/forward_button" />
 
 </android.support.constraint.ConstraintLayout>
