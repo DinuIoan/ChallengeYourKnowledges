@@ -118,6 +118,7 @@
         android:id="@+id/constraint_layout_answear"
         android:layout_width="match_parent"
         android:layout_height="266dp"
+        android:isScrollContainer=""
         android:layout_marginBottom="50dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"

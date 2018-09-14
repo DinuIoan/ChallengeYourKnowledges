@@ -24,7 +24,6 @@
         <item>Istorie</item>
         <item>Geografie</item>
         <item>Economie</item>
-        <item>Biologie</item>
     </string-array>
 
     <string name="materieNeselectata">Trebuie selectata materia!</string>

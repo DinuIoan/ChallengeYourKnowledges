@@ -1,4 +1,4 @@
-1. Chestionarul trebuie personalizat, alegand numarul de intrebari la care vrem sa raspundem si domeniu din care sa fie intrebarile.
+1. Chestionarul trebuie personalizat, alegand numarul de intrebari la care vrei sa raspunzi si domeniul din care sa fie intrebarile.
 
 2. Sunt 3 tipuri de intrebari:
     - intrebari rapide - testeaza capacitatea de gandire in conditii de stress - 10 secunde per intrebare.

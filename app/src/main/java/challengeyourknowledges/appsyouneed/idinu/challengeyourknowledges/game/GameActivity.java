@@ -561,6 +561,7 @@ public class GameActivity extends AppCompatActivity {
                 .setIcon(android.R.drawable.ic_dialog_alert);
             AlertDialog alertDialog = builder.create();
             alertDialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+            alertDialog.setCanceledOnTouchOutside(false);
             alertDialog.show();
     }
 

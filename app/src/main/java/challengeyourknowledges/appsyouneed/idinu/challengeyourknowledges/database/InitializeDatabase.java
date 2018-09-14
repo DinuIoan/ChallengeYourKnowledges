@@ -43,8 +43,10 @@ public class InitializeDatabase {
                 String line;
                 while ((line = br.readLine()) != null) {
                     String[] parts = line.split("/");
-                    Question question = makeQuestion(parts);
-                    databaseHandler.addQuestion(question);
+                    if (!parts[0].contains("#")) {
+                        Question question = makeQuestion(parts);
+                        databaseHandler.addQuestion(question);
+                    }
                 }
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
