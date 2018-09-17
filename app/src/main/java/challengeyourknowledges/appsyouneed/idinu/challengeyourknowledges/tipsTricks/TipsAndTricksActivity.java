@@ -36,7 +36,6 @@ public class TipsAndTricksActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tips_tricks);
 
-        MobileAds.initialize(this, "ca-app-pub-6866181891454476~7520037577");
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);

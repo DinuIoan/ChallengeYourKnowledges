@@ -105,10 +105,12 @@ public class CountdownActivity extends AppCompatActivity {
             }
         });
 
-        this.countDownTimer = new CountDownTimer(3 * 1000, 1000) {
+        this.countDownTimer = new CountDownTimer(4000, 100) {
             public void onTick(long millisUntilFinished) {
-//                String remaining = "" + millisUntilFinished / 800;
-                countdownTextView.setText("" + count--);
+                String remaining = "" + millisUntilFinished / 1000;
+                if (!remaining.contains("0")) {
+                    countdownTextView.setText(remaining);
+                }
             }
 
             public void onFinish() {

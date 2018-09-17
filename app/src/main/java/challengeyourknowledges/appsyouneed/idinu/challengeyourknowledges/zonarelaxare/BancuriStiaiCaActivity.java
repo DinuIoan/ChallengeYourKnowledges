@@ -119,7 +119,6 @@ public class BancuriStiaiCaActivity extends AppCompatActivity {
             }
         });
 
-        MobileAds.initialize(this, "ca-app-pub-6866181891454476~7520037577");
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
