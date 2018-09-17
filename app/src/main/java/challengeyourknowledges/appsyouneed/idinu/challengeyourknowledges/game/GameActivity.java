@@ -225,6 +225,7 @@ public class GameActivity extends AppCompatActivity {
 
 
     public void reloadGame() {
+        enableButtons();
         backButton.setClickable(true);
         if (numarDeIntrebari == 0) {
             endGame();
@@ -253,6 +254,7 @@ public class GameActivity extends AppCompatActivity {
             if (!isAfQuestion) {
                 setAnswearsText(rQuestion);
                 answear1.setOnClickListener(v -> {
+                    disableButtons();
                     if (isCountDownTimerCustom) {
                         isCountDownTimerCustom = false;
                         countDownTimerCustom.cancel();
@@ -279,6 +281,7 @@ public class GameActivity extends AppCompatActivity {
                 });
 
                 answear2.setOnClickListener(v -> {
+                    disableButtons();
                     if (isCountDownTimerCustom) {
                         isCountDownTimerCustom = false;
                         countDownTimerCustom.cancel();
@@ -305,6 +308,7 @@ public class GameActivity extends AppCompatActivity {
                 });
 
                 answear3.setOnClickListener(v -> {
+                    disableButtons();
                     if (isCountDownTimerCustom) {
                         isCountDownTimerCustom = false;
                         countDownTimerCustom.cancel();
@@ -336,6 +340,7 @@ public class GameActivity extends AppCompatActivity {
                 });
 
                 answear4.setOnClickListener(v -> {
+                    disableButtons();
                     if (isCountDownTimerCustom) {
                         isCountDownTimerCustom = false;
                         countDownTimerCustom.cancel();
@@ -362,6 +367,7 @@ public class GameActivity extends AppCompatActivity {
                 });
             } else {
                 adevaratButton.setOnClickListener(v -> {
+                    disableButtons();
                     if (isCountDownTimerCustom) {
                         isCountDownTimerCustom = false;
                         countDownTimerCustom.cancel();
@@ -385,6 +391,7 @@ public class GameActivity extends AppCompatActivity {
                 });
 
                 falsButton.setOnClickListener(v -> {
+                    disableButtons();
                     if (isCountDownTimerCustom) {
                         isCountDownTimerCustom = false;
                         countDownTimerCustom.cancel();
@@ -658,6 +665,24 @@ public class GameActivity extends AppCompatActivity {
         } else {
             countDownTimer.cancel();
         }
+    }
+
+    private void disableButtons() {
+        answear1.setClickable(false);
+        answear2.setClickable(false);
+        answear3.setClickable(false);
+        answear4.setClickable(false);
+        adevaratButton.setClickable(false);
+        falsButton.setClickable(false);
+    }
+
+    private void enableButtons() {
+        answear1.setClickable(true);
+        answear2.setClickable(true);
+        answear3.setClickable(true);
+        answear4.setClickable(true);
+        adevaratButton.setClickable(true);
+        falsButton.setClickable(true);
     }
 
     @Override
