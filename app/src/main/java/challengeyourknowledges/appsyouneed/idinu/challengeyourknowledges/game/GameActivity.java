@@ -10,6 +10,7 @@ import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -18,7 +19,7 @@ import android.widget.TextView;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.InterstitialAd;
 
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.R;
 
@@ -82,6 +83,7 @@ public class GameActivity extends AppCompatActivity {
     private long secsUntilFinish = 0;
 
     private AdView mAdView;
+    private InterstitialAd mInterstitialAd;
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
@@ -100,10 +102,7 @@ public class GameActivity extends AppCompatActivity {
         setContentView(R.layout.activity_game);
         databaseHandler = new DatabaseHandler(this);
 
-        mAdView = findViewById(R.id.adView1);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
-
+        loadAds();
 
 
         numarDeIntrebari = getIntent().getIntExtra("numarIntrebari", 0);
@@ -481,9 +480,23 @@ public class GameActivity extends AppCompatActivity {
         intent.putExtra("afQuestions",afQuestions);
         intent.putExtra("afQuestionsCorrect",afQuestionsCorrect);
         intent.putExtra("materie", materie);
-        startActivity(intent);
-        finish();
+        if (mInterstitialAd.isLoaded()) {
+            if (showAds()) {
+                adEvents(intent);
+                mInterstitialAd.show();
+            } else {
+                startActivity(intent);
+                finish();
+            }
+        } else {
+            Log.d("TAG", "The interstitial wasn't loaded yet.");
+        }
 
+    }
+
+    private boolean showAds() {
+        Random rand = new Random();
+        return rand.nextInt(3) + 1 == 1;
     }
 
     public void makeWrongAnim(Button answear) {
@@ -724,6 +737,46 @@ public class GameActivity extends AppCompatActivity {
         answear4.setClickable(true);
         adevaratButton.setClickable(true);
         falsButton.setClickable(true);
+    }
+
+    private void loadAds() {
+        mAdView = findViewById(R.id.adView1);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-6866181891454476/1172745630");
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+    }
+
+    private void adEvents(Intent intent) {
+        mInterstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                // Code to be executed when an ad finishes loading.
+            }
+
+            @Override
+            public void onAdFailedToLoad(int errorCode) {
+                // Code to be executed when an ad request fails.
+            }
+
+            @Override
+            public void onAdOpened() {
+                // Code to be executed when the ad is displayed.
+            }
+
+            @Override
+            public void onAdLeftApplication() {
+                // Code to be executed when the user has left the app.
+            }
+
+            @Override
+            public void onAdClosed() {
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
     @Override
