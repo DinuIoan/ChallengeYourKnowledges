@@ -20,6 +20,10 @@ import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.reward.RewardItem;
+import com.google.android.gms.ads.reward.RewardedVideoAd;
+import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.R;
 
@@ -34,7 +38,7 @@ import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.databas
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.database.DatabaseHandler;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.Question;
 
-public class GameActivity extends AppCompatActivity {
+public class GameActivity extends AppCompatActivity implements RewardedVideoAdListener {
     private Button answear1;
     private Button answear2;
     private Button answear3;
@@ -83,7 +87,8 @@ public class GameActivity extends AppCompatActivity {
     private long secsUntilFinish = 0;
 
     private AdView mAdView;
-    private InterstitialAd mInterstitialAd;
+    private RewardedVideoAd mRewardedVideoAd;
+    private Intent gameIntent;
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
@@ -149,9 +154,17 @@ public class GameActivity extends AppCompatActivity {
         boltImage.setVisibility(View.INVISIBLE);
         numarIntrebariTextView.setText("" + numarDeIntrebari);
 
+        mRewardedVideoAd = MobileAds.getRewardedVideoAdInstance(this);
+        mRewardedVideoAd.setRewardedVideoAdListener(this);
+        loadRewardedVideoAd();
         addAdviewEvents();
         initData();
         startGame();
+    }
+
+    private void loadRewardedVideoAd() {
+        mRewardedVideoAd.loadAd("ca-app-pub-6866181891454476/9468776270",
+                new AdRequest.Builder().build());
     }
 
     public void initData() {
@@ -472,31 +485,33 @@ public class GameActivity extends AppCompatActivity {
 
     public void endGame() {
         stopCountdownTimer();
-        Intent intent = new Intent(GameActivity.this, GameOverActivity.class);
-        intent.putExtra("boltQuestions", boltQuestions);
-        intent.putExtra("boltQuestionsCorrect", boltQuestionsCorrect);
-        intent.putExtra("normalQuestions", normalQuestions);
-        intent.putExtra("normalQuestionsCorrect",normalQuestionsCorrect);
-        intent.putExtra("afQuestions",afQuestions);
-        intent.putExtra("afQuestionsCorrect",afQuestionsCorrect);
-        intent.putExtra("materie", materie);
-        if (mInterstitialAd.isLoaded()) {
+        gameIntent = new Intent(GameActivity.this, GameOverActivity.class);
+        gameIntent.putExtra("boltQuestions", boltQuestions);
+        gameIntent.putExtra("boltQuestionsCorrect", boltQuestionsCorrect);
+        gameIntent.putExtra("normalQuestions", normalQuestions);
+        gameIntent.putExtra("normalQuestionsCorrect",normalQuestionsCorrect);
+        gameIntent.putExtra("afQuestions",afQuestions);
+        gameIntent.putExtra("afQuestionsCorrect",afQuestionsCorrect);
+        gameIntent.putExtra("materie", materie);
+        if (mRewardedVideoAd.isLoaded()) {
             if (showAds()) {
-                adEvents(intent);
-                mInterstitialAd.show();
+//                adEvents(intent);
+                mRewardedVideoAd.show();
             } else {
-                startActivity(intent);
+                startActivity(gameIntent);
                 finish();
             }
         } else {
-            Log.d("TAG", "The interstitial wasn't loaded yet.");
+            Log.d("TAG", "The video reward wasn't loaded yet.");
+            startActivity(gameIntent);
+            finish();
         }
 
     }
 
     private boolean showAds() {
         Random rand = new Random();
-        return rand.nextInt(3) + 1 == 1;
+        return rand.nextInt(4) + 1 == 1;
     }
 
     public void makeWrongAnim(Button answear) {
@@ -743,41 +758,8 @@ public class GameActivity extends AppCompatActivity {
         mAdView = findViewById(R.id.adView1);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
-
-        mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId("ca-app-pub-6866181891454476/1172745630");
-        mInterstitialAd.loadAd(new AdRequest.Builder().build());
     }
 
-    private void adEvents(Intent intent) {
-        mInterstitialAd.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-                // Code to be executed when an ad finishes loading.
-            }
-
-            @Override
-            public void onAdFailedToLoad(int errorCode) {
-                // Code to be executed when an ad request fails.
-            }
-
-            @Override
-            public void onAdOpened() {
-                // Code to be executed when the ad is displayed.
-            }
-
-            @Override
-            public void onAdLeftApplication() {
-                // Code to be executed when the user has left the app.
-            }
-
-            @Override
-            public void onAdClosed() {
-                startActivity(intent);
-                finish();
-            }
-        });
-    }
 
     @Override
     public void onBackPressed() {
@@ -797,17 +779,62 @@ public class GameActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         stopCountdownTimer();
+        mRewardedVideoAd.destroy(this);
         super.onDestroy();
     }
 
     @Override
     protected void onPause() {
+        mRewardedVideoAd.pause(this);
         super.onPause();
     }
 
     @Override
     protected void onResume() {
+        mRewardedVideoAd.resume(this);
         super.onResume();
     }
 
+
+    @Override
+    public void onRewardedVideoAdLoaded() {
+
+    }
+
+    @Override
+    public void onRewardedVideoAdOpened() {
+
+    }
+
+    @Override
+    public void onRewardedVideoStarted() {
+
+    }
+
+    @Override
+    public void onRewardedVideoAdClosed() {
+        loadRewardedVideoAd();
+        startActivity(gameIntent);
+        finish();
+    }
+
+    @Override
+    public void onRewarded(RewardItem rewardItem) {
+
+    }
+
+    @Override
+    public void onRewardedVideoAdLeftApplication() {
+
+    }
+
+    @Override
+    public void onRewardedVideoAdFailedToLoad(int i) {
+
+    }
+
+    @Override
+    public void onRewardedVideoCompleted() {
+
+    }
 }
