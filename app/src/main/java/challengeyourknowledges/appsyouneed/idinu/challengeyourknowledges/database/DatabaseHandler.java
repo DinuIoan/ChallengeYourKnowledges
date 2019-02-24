@@ -13,6 +13,7 @@ import java.util.List;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.AppInfo;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.Banc;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.Game;
+import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.Nota;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.PlayerState;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.Question;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.Rankings;
@@ -20,7 +21,7 @@ import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.S
 
 public class DatabaseHandler extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "gameOfThronesDb";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     private static final String PLAYER_STATE_TABLE = "PlayerState";
     private static final String PLAYER_STATE_ID_KEY = "id";
@@ -56,6 +57,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private static final String STIAICA_TABLE = "StiaiCa";
     private static final String STIAICA_ID = "id";
     private static final String STIAICA_TEXT = "text";
+
+    private static final String NOTE_TABLE = "Note";
+    private static final String NOTE_ID = "id";
+    private static final String NOTE_NOTA = "nota";
+    private static final String NOTE_PLAYER_STATE_ID = "playerStateIdFk";
 
 
     public DatabaseHandler(Context context) {
@@ -128,14 +134,50 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("drop table if exists " + PLAYER_STATE_TABLE);
-        db.execSQL("drop table if exists " + GAMES_TABLE);
-        db.execSQL("drop table if exists " + QUESTION_TABLE);
-        db.execSQL("drop table if exists " + RANKINGS_TABLE);
-        db.execSQL("drop table if exists " + APP_INFO_TABLE);
-        db.execSQL("drop table if exists " + BANCURI_TABLE);
-        db.execSQL("drop table if exists " + STIAICA_TABLE);
-        onCreate(db);
+        if (oldVersion < 2 ) {
+            addNoteTable(db);
+        }
+    }
+
+    private void addNoteTable(SQLiteDatabase db) {
+        String CREATE_NOTE_TABLE = "create table " + NOTE_TABLE +
+                " ( "
+                + NOTE_ID + " integer primary key autoincrement, "
+                + NOTE_NOTA + " integer, "
+                + NOTE_PLAYER_STATE_ID + "integer " +
+                " ) ";
+        db.execSQL(CREATE_NOTE_TABLE);
+    }
+
+    public void addNota(Nota nota) {
+        SQLiteDatabase database = getWritableDatabase();
+        String ADD_NOTA =  "insert into " + NOTE_TABLE +
+                " values(null, '"
+                    + nota.getNota() + "', '"
+                    + nota.getPlayerStateId() +
+                "')";
+        database.execSQL(ADD_NOTA);
+        database.close();
+    }
+
+    public List<Nota> findAllNote() {
+        SQLiteDatabase database = getReadableDatabase();
+        String FIND_ALL_NOTE = "select * from " + NOTE_TABLE;
+        database.execSQL(FIND_ALL_NOTE);
+        Cursor cursor = database.rawQuery(FIND_ALL_NOTE, null);
+
+        List<Nota> notaList = new ArrayList<>();
+        while (cursor.moveToNext()) {
+            Nota nota = new Nota();
+            nota.setId(cursor.getInt(0));
+            nota.setNota(cursor.getDouble(1));
+            nota.setPlayerStateId(cursor.getInt(2));
+
+            notaList.add(nota);
+        }
+        cursor.close();
+        database.close();
+        return notaList;
     }
 
     public void addPlayerState(PlayerState playerState) {
@@ -212,7 +254,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         database.execSQL(ADD_STIAICA);
         database.close();
     }
-
 
     public void deletePlayerStateObjectFromDatabaseById(int id) {
         SQLiteDatabase database = getWritableDatabase();

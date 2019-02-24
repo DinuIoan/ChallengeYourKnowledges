@@ -5,6 +5,10 @@ public class Rankings {
     private Integer points;
     private Integer player_state_id;
 
+    public Rankings() {
+
+    }
+
     public Rankings(Integer id, Integer points, Integer player_state_id) {
         this.id = id;
         this.points = points;

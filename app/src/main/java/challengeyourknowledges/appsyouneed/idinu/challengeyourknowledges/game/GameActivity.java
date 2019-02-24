@@ -19,7 +19,6 @@ import android.widget.TextView;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.reward.RewardItem;
 import com.google.android.gms.ads.reward.RewardedVideoAd;
@@ -135,12 +134,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
 
         constraintLayoutAfAnswears.setVisibility(View.INVISIBLE);
 
-        answear1.setBackgroundResource(R.drawable.style_answear_button);
-        answear2.setBackgroundResource(R.drawable.style_answear_button);
-        answear3.setBackgroundResource(R.drawable.style_answear_button);
-        answear4.setBackgroundResource(R.drawable.style_answear_button);
-        adevaratButton.setBackgroundResource(R.drawable.style_af_answear);
-        falsButton.setBackgroundResource(R.drawable.style_af_answear);
+        initializeAnswears();
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -251,12 +245,9 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         loadQuestion();
     }
 
-    public void pauseGame() {
-
-    }
-
     public void loadQuestion() {
         if (questions.size() != 0) {
+            initializeAnswears();
             Random random = new Random();
             int maximum = questions.size();
             int randomQuestion = random.nextInt(maximum);
@@ -434,6 +425,15 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         }
     }
 
+    private void initializeAnswears() {
+        answear1.setBackgroundResource(R.drawable.style_answear_button);
+        answear2.setBackgroundResource(R.drawable.style_answear_button);
+        answear3.setBackgroundResource(R.drawable.style_answear_button);
+        answear4.setBackgroundResource(R.drawable.style_answear_button);
+        adevaratButton.setBackgroundResource(R.drawable.style_af_answear);
+        falsButton.setBackgroundResource(R.drawable.style_af_answear);
+    }
+
     private void setAnswearsText(Question rQuestion) {
         List<String> answears = new ArrayList<>();
         answears.add(rQuestion.getAnswear1());
@@ -467,8 +467,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         }
     }
 
-
-   public void wrongAnswear(Button answear) {
+    public void wrongAnswear(Button answear) {
        Handler handler = new Handler();
 
        if (answear != null && !isAfQuestion){

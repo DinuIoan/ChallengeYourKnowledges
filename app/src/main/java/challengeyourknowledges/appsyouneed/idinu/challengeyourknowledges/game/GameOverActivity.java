@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -19,6 +20,8 @@ import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.R;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.database.DatabaseData;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.database.DatabaseHandler;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.Game;
+import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.Nota;
+import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.Rankings;
 
 
 public class GameOverActivity extends AppCompatActivity {
@@ -33,13 +36,10 @@ public class GameOverActivity extends AppCompatActivity {
     private Button backButton;
     private Button incearcaDinNouButton;
     private Button meniuButton;
-    private ProgressBar fastProgressBar;
-    private ProgressBar normalProgressBar;
-    private ProgressBar afProgressBar;
     private TextView conditiiDeStresTextView;
     private TextView conditiiNormaleTextView;
     private TextView afTextView;
-    private TextView pointsTextView;
+    private TextView notaFinalaTextView;
     private DatabaseHandler databaseHandler;
 
     private AdView mAdView;
@@ -67,29 +67,15 @@ public class GameOverActivity extends AppCompatActivity {
         afQuestionsCorrect = extras.getInt("afQuestionsCorrect", 0);
         materie = extras.getString("materie","");
 
-        conditiiDeStresTextView = (TextView) findViewById(R.id.conditii_stress_textview);
-        conditiiNormaleTextView = (TextView) findViewById(R.id.conditii_normale_textview);
-        afTextView = (TextView) findViewById(R.id.adevarat_fals_textview);
+        conditiiDeStresTextView = (TextView) findViewById(R.id.conditii_de_stres_text_view);
+        conditiiNormaleTextView = (TextView) findViewById(R.id.intrebari_normale_text_view);
+        afTextView = (TextView) findViewById(R.id.adevarat_fals_text_view);
         tipulMaterieiTextView = (TextView) findViewById(R.id.tipul_materiei_text_view);
-        pointsTextView = (TextView) findViewById(R.id.points_text_view);
+        notaFinalaTextView = findViewById(R.id.nota_finala_text_view);
 
         backButton = (Button) findViewById(R.id.back_button);
         incearcaDinNouButton = (Button) findViewById(R.id.reincearca_button);
         meniuButton = (Button) findViewById(R.id.menu_button);
-
-        fastProgressBar = (ProgressBar) findViewById(R.id.progressBar_stress);
-        normalProgressBar = (ProgressBar) findViewById(R.id.progressBar_normal);
-        afProgressBar = (ProgressBar) findViewById(R.id.progressBar_adevarat_fals);
-        populateProgressBars();
-
-
-
-        if (DatabaseData.getPlayerState().getPoints() == 0) {
-            pointsTextView.setText("0");
-        } else {
-            pointsTextView.setText("" + DatabaseData.getPlayerState().getPoints());
-        }
-
 
 
         if (materie.contains("limbaromana")) {
@@ -108,7 +94,8 @@ public class GameOverActivity extends AppCompatActivity {
             DatabaseData.getPlayerState().setPoints(DatabaseData.getPlayerState().getPoints() + 1);
             databaseHandler.modifyPlayerStateObject(0, DatabaseData.getPlayerState().getPoints(), "player1");
         }
-        pointsTextView.setText("" + DatabaseData.getPlayerState().getPoints());
+
+        populateTextViews();
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -140,61 +127,28 @@ public class GameOverActivity extends AppCompatActivity {
 
     }
 
-    public void populateProgressBars() {
-        if (boltQuestions == 0) {
-            fastProgressBar.setMax(1);
-            fastProgressBar.setProgress(1);
+    private void populateTextViews() {
+        conditiiDeStresTextView.setText(boltQuestionsCorrect + "/" + boltQuestions);
+        conditiiNormaleTextView.setText(normalQuestionsCorrect+ "/" + normalQuestions);
+        afTextView.setText(afQuestionsCorrect + "/" + afQuestions);
+        double notaFinala = 0.0;
+        int correctAnswears = boltQuestionsCorrect + normalQuestionsCorrect + afQuestionsCorrect;
+        if (correctAnswears == 0 ) {
+            notaFinala = 0.0;
         } else {
-            fastProgressBar.setMax(boltQuestions);
-            fastProgressBar.setProgress(boltQuestionsCorrect);
+            notaFinala = (correctAnswears) * 10 /
+                    (boltQuestions + normalQuestions + afQuestions);
         }
-        if (normalQuestions == 0) {
-            normalProgressBar.setMax(1);
-            normalProgressBar.setProgress(1);
+        if (notaFinala < 6) {
+            notaFinalaTextView.setTextColor(getResources().getColor(R.color.wrongColorEnd));
         } else {
-            normalProgressBar.setMax(normalQuestions);
-            normalProgressBar.setProgress(normalQuestionsCorrect);
+            notaFinalaTextView.setTextColor(getResources().getColor(R.color.correctColorEnd));
         }
-        if (afQuestions == 0) {
-            afProgressBar.setMax(1);
-            afProgressBar.setProgress(1);
-        } else {
-            afProgressBar.setMax(afQuestions);
-            afProgressBar.setProgress(afQuestionsCorrect);
-        }
-
-        if (boltQuestions != 0 ) {
-            if (boltQuestionsCorrect != 0) {
-                float boltQuestionsCorrectPercent = (boltQuestionsCorrect * 100.0f) / boltQuestions;
-                conditiiDeStresTextView
-                        .setText("Conditii de stres: " + df2.format(boltQuestionsCorrectPercent) + "%");
-            } else {
-                conditiiDeStresTextView.setText("Conditii de stres: 0%");
-            }
-        } else {
-            conditiiDeStresTextView.setText("Conditii de stres: 0/0");
-        }
-        if (normalQuestions != 0 ) {
-            if ( normalQuestionsCorrect != 0) {
-                float normalQuestionsCorrectPercent = (normalQuestionsCorrect * 100.0f) / normalQuestions;
-                conditiiNormaleTextView
-                        .setText("Conditii normale: " + df2.format(normalQuestionsCorrectPercent)  + "%");
-            } else {
-                conditiiNormaleTextView.setText("Conditii normale: 0%");
-            }
-        } else {
-            conditiiNormaleTextView.setText("Conditii normale: 0/0");
-        }
-        if (afQuestions != 0) {
-            if (afQuestionsCorrect != 0) {
-                float afQuestionsCorrectPercent = (afQuestionsCorrect * 100.0f) / afQuestions;
-                afTextView.setText("Adevarat / Fals: " + df2.format(afQuestionsCorrectPercent) + "%");
-            } else {
-                afTextView.setText("Adevarat / Fals: 0%");
-            }
-        } else {
-            afTextView.setText("Adevarat / Fals: 0/0");
-        }
+        notaFinalaTextView.setText(getResources().getString(R.string.nota_finala) + " " + notaFinala);
+        Nota nota = new Nota();
+        nota.setNota(notaFinala);
+        nota.setPlayerStateId(0);
+        databaseHandler.addNota(nota);
     }
 
     private boolean isPercentAchieved() {
