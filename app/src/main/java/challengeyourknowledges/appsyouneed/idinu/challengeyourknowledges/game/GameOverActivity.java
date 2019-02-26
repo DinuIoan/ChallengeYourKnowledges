@@ -139,12 +139,7 @@ public class GameOverActivity extends AppCompatActivity {
             notaFinala = (correctAnswears) * 10 /
                     (boltQuestions + normalQuestions + afQuestions);
         }
-        if (notaFinala < 6) {
-            notaFinalaTextView.setTextColor(getResources().getColor(R.color.wrongColorEnd));
-        } else {
-            notaFinalaTextView.setTextColor(getResources().getColor(R.color.correctColorEnd));
-        }
-        notaFinalaTextView.setText(getResources().getString(R.string.nota_finala) + " " + notaFinala);
+        notaFinalaTextView.setText("" + notaFinala);
         Nota nota = new Nota();
         nota.setNota(notaFinala);
         nota.setPlayerStateId(0);

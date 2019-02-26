@@ -130,6 +130,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.execSQL(CREATE_BANCURI_TABLE);
         db.execSQL(CREATE_STIAICA_TABLE);
 
+        //Version 2 -> new users
+        addNoteTable(db);
     }
 
     @Override
