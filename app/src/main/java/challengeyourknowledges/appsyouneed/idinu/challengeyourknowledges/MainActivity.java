@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private Button playButton;
     private Button rulesButton;
     private Button zonaRelaxareButton;
+    private Button noteButton;
     private TextView pointsTextView;
     private AdView mAdView;
 
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         playButton = (Button) findViewById(R.id.button_play);
         rulesButton = (Button) findViewById(R.id.button_rules);
         zonaRelaxareButton = (Button) findViewById(R.id.button_tips_tricks);
+        noteButton = (Button) findViewById(R.id.button_note);
 
         pointsTextView = (TextView) findViewById(R.id.points_text_view);
 

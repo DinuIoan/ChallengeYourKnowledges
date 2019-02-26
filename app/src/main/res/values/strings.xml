@@ -34,5 +34,6 @@
     <string name="conditii_de_stres">Conditii de stres:</string>
     <string name="adevarat_fals">Adevarat / Fals: </string>
     <string name="nota_finala">Nota finala: </string>
+    <string name="buttonNote">Note</string>
 
 </resources>

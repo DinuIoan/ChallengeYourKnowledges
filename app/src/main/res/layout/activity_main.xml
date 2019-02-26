@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainConstraintLayout"
@@ -14,10 +14,7 @@
         android:layout_height="100dp"
         android:layout_marginBottom="8dp"
         android:padding="5dp"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        android:layout_alignParentTop="true">
 
         <ImageView
             android:id="@+id/lineImageView"
@@ -37,87 +34,98 @@
 
     </RelativeLayout>
 
-    <Button
-        android:id="@+id/button_play"
-        android:layout_width="200dp"
-        android:layout_height="84dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/style_joaca_button"
-        android:translationZ="8dp"
-        android:text="@string/butonJoaca"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button_tips_tricks"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/action_bar_relative_layout"
-        app:layout_constraintVertical_chainStyle="packed"
-        android:stateListAnimator="@animator/button_pressed_animator"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/action_bar_relative_layout"
+        android:scrollbars="vertical">
 
-    <Button
-        android:id="@+id/button_tips_tricks"
-        android:layout_width="200dp"
-        android:layout_height="84dp"
-        android:layout_marginBottom="32dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/style_joaca_button"
-        android:text="@string/buttonZonaDeRelaxare"
-        android:translationZ="8dp"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:stateListAnimator="@animator/button_pressed_animator"
-        app:layout_constraintBottom_toTopOf="@+id/button_rules"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_play" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button_rules"
-        android:layout_width="200dp"
-        android:layout_height="84dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/style_joaca_button"
-        android:text="@string/butonReguli"
-        android:translationZ="8dp"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:stateListAnimator="@animator/button_pressed_animator"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_tips_tricks"
-        app:layout_constraintVertical_bias="0.0" />
+            <Button
+                android:id="@+id/button_play"
+                android:layout_width="200dp"
+                android:layout_height="84dp"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/style_joaca_button"
+                android:translationZ="8dp"
+                android:text="@string/butonJoaca"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:stateListAnimator="@animator/button_pressed_animator"/>
 
-    <ImageView
-        android:id="@+id/star_image_view"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginBottom="427dp"
-        android:layout_marginStart="3dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/points_text_view"
-        app:layout_constraintTop_toBottomOf="@+id/action_bar_relative_layout"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/star" />
+            <Button
+                android:id="@+id/button_note"
+                android:layout_width="200dp"
+                android:layout_height="84dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/style_joaca_button"
+                android:text="@string/buttonNote"
+                android:translationZ="8dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:stateListAnimator="@animator/button_pressed_animator"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/button_play"/>
 
-    <TextView
-        android:id="@+id/points_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="300dp"
-        android:textSize="23sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/star_image_view"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/action_bar_relative_layout" />
+            <Button
+                android:id="@+id/button_tips_tricks"
+                android:layout_width="200dp"
+                android:layout_height="84dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/style_joaca_button"
+                android:text="@string/buttonZonaDeRelaxare"
+                android:translationZ="8dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:stateListAnimator="@animator/button_pressed_animator"
+                android:layout_below="@+id/button_note"
+                android:layout_centerHorizontal="true"/>
+
+            <Button
+                android:id="@+id/button_rules"
+                android:layout_width="200dp"
+                android:layout_height="84dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/style_joaca_button"
+                android:text="@string/butonReguli"
+                android:translationZ="8dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:stateListAnimator="@animator/button_pressed_animator"
+                android:layout_below="@id/button_tips_tricks"
+                android:layout_centerHorizontal="true"/>
+
+            <ImageView
+                android:id="@+id/star_image_view"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="427dp"
+                android:layout_marginStart="3dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                app:srcCompat="@drawable/star" />
+
+            <TextView
+                android:id="@+id/points_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="300dp"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                android:layout_toStartOf="@id/star_image_view" />
+
+
+        </RelativeLayout>
+    </ScrollView>
 
     <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/adView"
@@ -130,10 +138,6 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-6866181891454476/7087441666"
-        ads:layout_constraintBottom_toBottomOf="parent"
-        ads:layout_constraintEnd_toEndOf="parent"
-        ads:layout_constraintStart_toStartOf="parent"
-        ads:layout_constraintTop_toBottomOf="@+id/button_rules"/>
+        ads:adUnitId="ca-app-pub-6866181891454476/7087441666" />
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
