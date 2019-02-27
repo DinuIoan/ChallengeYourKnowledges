@@ -23,7 +23,7 @@
             android:layout_margin="5dp"
             android:layout_below="@+id/logoImageView"
             android:background="@drawable/style_line"
-            android:translationZ="10dp"/>
+            android:translationZ="5dp"/>
 
         <ImageView
             android:id="@+id/logoImageView"
@@ -63,14 +63,14 @@
                 android:stateListAnimator="@animator/button_pressed_animator"/>
 
             <Button
-                android:id="@+id/button_note"
+                android:id="@+id/button_rezultate"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 android:background="@drawable/style_main_menu_buttons"
-                android:text="@string/buttonNote"
+                android:text="@string/rezultate"
                 android:translationZ="4dp"
                 android:textColor="@color/black"
                 android:textSize="17sp"
@@ -93,7 +93,7 @@
                 android:textSize="17sp"
                 android:textStyle="bold"
                 android:stateListAnimator="@animator/button_pressed_animator"
-                android:layout_below="@+id/button_note"
+                android:layout_below="@+id/button_rezultate"
                 android:layout_centerHorizontal="true"/>
 
             <Button

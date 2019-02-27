@@ -1,35 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges">
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".note.NoteActivity"></activity>
+
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-6866181891454476~7520037577"/>
-        <activity android:name=".splash.SplashActivity"
-                    android:noHistory="true">
+            android:value="ca-app-pub-6866181891454476~7520037577" />
+
+        <activity
+            android:name=".splash.SplashActivity"
+            android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".game.GameActivity" />
-        <activity android:name=".MainActivity"
-            android:noHistory="true"/>
+        <activity
+            android:name=".MainActivity"
+            android:noHistory="true" />
         <activity android:name=".game.GameOverActivity" />
         <activity android:name=".rules.RulesActivity" />
         <activity android:name=".game.CountdownActivity" />
         <activity android:name=".tipsTricks.TipsAndTricksActivity" />
         <activity android:name=".zonarelaxare.ZonaRelaxareActivity" />
-        <activity android:name=".zonarelaxare.BancuriStiaiCaActivity"/>
+        <activity android:name=".zonarelaxare.BancuriStiaiCaActivity" />
     </application>
 
 </manifest>

@@ -7,7 +7,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.model.AppInfo;
@@ -61,6 +63,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private static final String NOTE_TABLE = "Note";
     private static final String NOTE_ID = "id";
     private static final String NOTE_NOTA = "nota";
+    private static final String NOTE_DATA = "date";
     private static final String NOTE_PLAYER_STATE_ID = "playerStateIdFk";
 
 
@@ -146,6 +149,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 " ( "
                 + NOTE_ID + " integer primary key autoincrement, "
                 + NOTE_NOTA + " integer, "
+                + NOTE_DATA + " integer, "
                 + NOTE_PLAYER_STATE_ID + "integer " +
                 " ) ";
         db.execSQL(CREATE_NOTE_TABLE);
@@ -153,9 +157,15 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     public void addNota(Nota nota) {
         SQLiteDatabase database = getWritableDatabase();
+
+        Calendar calendar = Calendar.getInstance();
+        Long timestamp = calendar.getTime().getTime();
+
+
         String ADD_NOTA =  "insert into " + NOTE_TABLE +
                 " values(null, '"
                     + nota.getNota() + "', '"
+                    + timestamp + "', '"
                     + nota.getPlayerStateId() +
                 "')";
         database.execSQL(ADD_NOTA);
@@ -165,7 +175,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public List<Nota> findAllNote() {
         SQLiteDatabase database = getReadableDatabase();
         String FIND_ALL_NOTE = "select * from " + NOTE_TABLE;
-        database.execSQL(FIND_ALL_NOTE);
         Cursor cursor = database.rawQuery(FIND_ALL_NOTE, null);
 
         List<Nota> notaList = new ArrayList<>();
@@ -173,7 +182,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             Nota nota = new Nota();
             nota.setId(cursor.getInt(0));
             nota.setNota(cursor.getDouble(1));
-            nota.setPlayerStateId(cursor.getInt(2));
+            nota.setTimestamp(cursor.getLong(2));
+            nota.setPlayerStateId(cursor.getInt(3));
 
             notaList.add(nota);
         }

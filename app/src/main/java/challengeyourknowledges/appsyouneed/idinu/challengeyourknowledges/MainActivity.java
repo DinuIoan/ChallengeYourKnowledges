@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 
@@ -17,6 +16,7 @@ import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.databas
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.database.DatabaseHandler;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.database.InitializeDatabase;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.game.CountdownActivity;
+import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.note.NoteActivity;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.rules.RulesActivity;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.zonarelaxare.ZonaRelaxareActivity;
 
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         playButton = (Button) findViewById(R.id.button_play);
         rulesButton = (Button) findViewById(R.id.button_rules);
         zonaRelaxareButton = (Button) findViewById(R.id.button_tips_tricks);
-        noteButton = (Button) findViewById(R.id.button_note);
+        noteButton = (Button) findViewById(R.id.button_rezultate);
 
         pointsTextView = (TextView) findViewById(R.id.points_text_view);
 
@@ -83,6 +83,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), ZonaRelaxareActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        noteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), NoteActivity.class);
                 startActivity(intent);
             }
         });
