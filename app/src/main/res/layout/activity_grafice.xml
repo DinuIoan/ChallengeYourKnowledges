@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/style_main_background"
-    tools:context=".rezultate.NoteActivity">
+    tools:context=".rezultate.GraficeActivity">
 
     <RelativeLayout
         android:id="@+id/action_bar_relative_layout"
@@ -41,45 +41,5 @@
             android:src="@drawable/graphic_book" />
 
     </RelativeLayout>
-
-    <LinearLayout
-        android:id="@+id/recycler_view_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@+id/action_bar_relative_layout">
-
-        <TextView
-            android:id="@+id/nota"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:text="@string/nota"
-            android:gravity="center"/>
-
-        <TextView
-            android:id="@+id/data"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:text="@string/data"
-            android:gravity="center"/>
-
-    </LinearLayout>
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/note_recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingBottom="15dp"
-        android:layout_below="@+id/recycler_view_title"
-        android:scrollbars="vertical" />
-
 
 </RelativeLayout>

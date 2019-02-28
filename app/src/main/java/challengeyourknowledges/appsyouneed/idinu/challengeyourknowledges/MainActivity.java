@@ -16,7 +16,8 @@ import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.databas
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.database.DatabaseHandler;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.database.InitializeDatabase;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.game.CountdownActivity;
-import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.note.NoteActivity;
+import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.rezultate.NoteActivity;
+import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.rezultate.RezultateActivity;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.rules.RulesActivity;
 import challengeyourknowledges.appsyouneed.idinu.challengeyourknowledges.zonarelaxare.ZonaRelaxareActivity;
 
@@ -90,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
         noteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), NoteActivity.class);
+                Intent intent = new Intent(getApplicationContext(), RezultateActivity.class);
                 startActivity(intent);
             }
         });
