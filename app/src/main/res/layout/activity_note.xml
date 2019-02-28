@@ -42,12 +42,21 @@
 
     </RelativeLayout>
 
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-6866181891454476/7087441666"
+        android:layout_below="@+id/action_bar_relative_layout"/>
+
     <LinearLayout
         android:id="@+id/recycler_view_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@+id/action_bar_relative_layout">
+        android:layout_below="@+id/adView1">
 
         <TextView
             android:id="@+id/nota"

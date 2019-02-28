@@ -37,19 +37,17 @@ public class NoteRecyclerAdapter extends RecyclerView.Adapter<NoteRecyclerAdapte
         LinearLayout v = (LinearLayout) LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.note_recycler_row, parent, false);
         MyViewHolder vh = new MyViewHolder(v);
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTimeInMillis(note.get(viewType).getTimestamp());
-        vh.notaTextView.setText("" + note.get(viewType).getNota());
-        vh.dataTextView.setText(calendar.get(Calendar.YEAR) + "-" + calendar.get(Calendar.MONTH)
-                + "-" + calendar.get(Calendar.DAY_OF_MONTH)
-                + " " + calendar.get(Calendar.HOUR_OF_DAY) + ":" + calendar.get(Calendar.MINUTE));
-
         return vh;
     }
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, final int position) {
-
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(note.get(position).getTimestamp());
+        holder.notaTextView.setText("" + note.get(position).getNota());
+        holder.dataTextView.setText(calendar.get(Calendar.YEAR) + "-" + calendar.get(Calendar.MONTH)
+                + "-" + calendar.get(Calendar.DAY_OF_MONTH)
+                + " " + calendar.get(Calendar.HOUR_OF_DAY) + ":" + calendar.get(Calendar.MINUTE));
     }
 
     @Override

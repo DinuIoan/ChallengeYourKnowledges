@@ -132,13 +132,15 @@ public class GameOverActivity extends AppCompatActivity {
         conditiiNormaleTextView.setText(normalQuestionsCorrect+ "/" + normalQuestions);
         afTextView.setText(afQuestionsCorrect + "/" + afQuestions);
         double notaFinala = 0.0;
-        int correctAnswears = boltQuestionsCorrect + normalQuestionsCorrect + afQuestionsCorrect;
+        double correctAnswears = boltQuestionsCorrect + normalQuestionsCorrect + afQuestionsCorrect;
+        double totalQuestions = boltQuestions + normalQuestions + afQuestions;
         if (correctAnswears == 0 ) {
             notaFinala = 0.0;
         } else {
             notaFinala = (correctAnswears) * 10 /
-                    (boltQuestions + normalQuestions + afQuestions);
+                    (totalQuestions);
         }
+        notaFinala = Double.parseDouble(new DecimalFormat(".##").format(notaFinala).replace(',', '.'));
         notaFinalaTextView.setText("" + notaFinala);
         Nota nota = new Nota();
         nota.setNota(notaFinala);

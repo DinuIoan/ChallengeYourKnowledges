@@ -42,4 +42,19 @@
 
     </RelativeLayout>
 
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-6866181891454476/7087441666"
+        android:layout_below="@+id/action_bar_relative_layout"/>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@+id/adView1"/>
+
 </RelativeLayout>
