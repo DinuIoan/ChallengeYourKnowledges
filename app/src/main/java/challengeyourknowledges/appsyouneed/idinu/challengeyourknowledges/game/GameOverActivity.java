@@ -41,6 +41,7 @@ public class GameOverActivity extends AppCompatActivity {
     private TextView afTextView;
     private TextView notaFinalaTextView;
     private DatabaseHandler databaseHandler;
+    private TextView starsTextView;
 
     private AdView mAdView;
 
@@ -72,10 +73,13 @@ public class GameOverActivity extends AppCompatActivity {
         afTextView = (TextView) findViewById(R.id.adevarat_fals_text_view);
         tipulMaterieiTextView = (TextView) findViewById(R.id.tipul_materiei_text_view);
         notaFinalaTextView = findViewById(R.id.nota_finala_text_view);
+        starsTextView = findViewById(R.id.points_text_view);
 
         backButton = (Button) findViewById(R.id.back_button);
         incearcaDinNouButton = (Button) findViewById(R.id.reincearca_button);
         meniuButton = (Button) findViewById(R.id.menu_button);
+
+
 
 
         if (materie.contains("limbaromana")) {
@@ -148,50 +152,9 @@ public class GameOverActivity extends AppCompatActivity {
             DatabaseData.getPlayerState().setPoints(DatabaseData.getPlayerState().getPoints() + 1);
             databaseHandler.modifyPlayerStateObject(0, DatabaseData.getPlayerState().getPoints(), "player1");
         }
-    }
 
-//    private boolean isPercentAchieved() {
-//        if (boltQuestions == 0) {
-//            if (normalQuestions == 0) {
-//                if (afQuestionsCorrect != 0 && (afQuestionsCorrect * 100.0f) / afQuestions >= 75) {
-//                    return true;
-//                }
-//            } else if (afQuestions == 0) {
-//                if (normalQuestionsCorrect != 0 && (normalQuestionsCorrect * 100.0f) / normalQuestions >= 75) {
-//                    return true;
-//                }
-//            } else {
-//                if (normalQuestionsCorrect != 0 && (normalQuestionsCorrect * 100.0f) / normalQuestions >= 75) {
-//                    if (afQuestionsCorrect != 0 && (afQuestionsCorrect * 100.0f) / afQuestions >= 75) {
-//                        return true;
-//                    }
-//                }
-//            }
-//        } else {
-//            if (normalQuestions == 0) {
-//                if (boltQuestionsCorrect != 0 && (boltQuestionsCorrect * 100.0f) / boltQuestions >= 75 ) {
-//                    if (afQuestionsCorrect != 0 && (afQuestionsCorrect * 100.0f) / afQuestions >= 75 ) {
-//                        return true;
-//                    }
-//                }
-//            } else if (afQuestions == 0) {
-//                if (boltQuestionsCorrect != 0 && (boltQuestionsCorrect * 100.0f) / boltQuestions >= 75) {
-//                    if (normalQuestionsCorrect != 0 && (normalQuestionsCorrect * 100.0f) / normalQuestions >= 75) {
-//                        return true;
-//                    }
-//                }
-//            } else {
-//                if (boltQuestionsCorrect != 0 && (boltQuestionsCorrect * 100.0f) / boltQuestions >= 75) {
-//                    if (normalQuestionsCorrect != 0 && (normalQuestionsCorrect* 100.0f) / normalQuestions>= 75 ) {
-//                        if (afQuestionsCorrect != 0 && (afQuestionsCorrect * 100.0f) / afQuestions >= 75 ) {
-//                            return true;
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//        return false;
-//    }
+        starsTextView.setText("" + DatabaseData.getPlayerState().getPoints());
+    }
 
     @Override
     public void onBackPressed() {

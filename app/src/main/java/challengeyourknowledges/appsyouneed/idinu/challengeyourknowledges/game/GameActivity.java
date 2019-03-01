@@ -142,9 +142,6 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
             }
         });
 
-//        DatabaseData.getGame().setGames_number(DatabaseData.getGame().getGames_number() - 1);
-//        databaseHandler.modifyGameObject( DatabaseData.getGame().getGames_number(), DatabaseData.getGame().getPlayer_state_id());
-
         boltImage.setVisibility(View.INVISIBLE);
         numarIntrebariTextView.setText("" + numarDeIntrebari);
 
@@ -462,6 +459,8 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
             afQuestions++;
         } else {
             normalQuestions++;
+            countDownTimerAf.cancel();
+            countDownTimerBolt.cancel();
             countDownTimer.start();
             stopAfStyle();
         }
@@ -633,6 +632,10 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         boltAnimationButton3.start();
         boltAnimationButton4.start();
         boltQuestionBoxAnim.start();
+
+        countDownTimerAf.cancel();
+        countDownTimer.cancel();
+
         countDownTimerBolt.start();
     }
 
@@ -695,6 +698,8 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
     }
 
     public void makeAfStyle() {
+        countDownTimerBolt.cancel();
+        countDownTimer.cancel();
         countDownTimerAf.start();
         clockImageview.setImageResource(R.drawable.ic_access_alarms_blue);
         constraintLayoutNormalAnswears.setVisibility(View.INVISIBLE);

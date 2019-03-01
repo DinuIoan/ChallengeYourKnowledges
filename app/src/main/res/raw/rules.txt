@@ -5,8 +5,8 @@
     - intrebari normale - 20 secunde per intrebare.
     - intrebari cu adevarat/fals - testeaza atentia - 15 secunde per intrebare.
 
-3. La finalul chestionarului, rezultatele sunt afisate sub forma de 'bara de progres'.
+3. La finalul chestionarului, nota este acordata in functie de raspunsurile corecte. Nota este de la 0 la 10.
 
-4. Steluta castigata: daca pentru fiecare intrebare, procentul raspunsurilor corecte depaseste 75%.
+4. Steluta castigata: daca pentru fiecare intrebare, procentul raspunsurilor corecte depaseste 75% (nota 7.5).
 
 5. Steluta pierduta: daca in timpul chestionarului alegi sa renunti la el.
