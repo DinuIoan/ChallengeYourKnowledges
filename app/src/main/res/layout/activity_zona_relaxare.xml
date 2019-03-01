@@ -1,75 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".zonarelaxare.ZonaRelaxareActivity"
     android:background="@drawable/style_main_background">
-
-    <LinearLayout
-        android:id="@+id/linear_layout_buttons"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/action_bar_relative_layout">
-
-        <LinearLayout
-            android:id="@+id/linear_layout_horizontal_buttons"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/button_bancuri"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="20dp"
-                android:layout_weight="1"
-                android:background="@drawable/style_joaca_button"
-                android:text="Bancuri"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:translationZ="8dp" />
-
-            <Button
-                android:id="@+id/button_stiai_ca"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="20dp"
-                android:layout_weight="1"
-                android:background="@drawable/style_joaca_button"
-                android:text="STIAI CA..."
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:translationZ="8dp" />
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/button_tips_tricks"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="100dp"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="0dp"
-            android:layout_weight="1"
-            android:background="@drawable/style_joaca_button"
-            android:text="TIPS AND TRICKS"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:translationZ="8dp" />
-
-    </LinearLayout>
 
     <RelativeLayout
         android:id="@+id/action_bar_relative_layout"
@@ -108,6 +44,74 @@
 
     </RelativeLayout>
 
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/action_bar_relative_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-6866181891454476/7087441666" />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/adView">
 
-</android.support.constraint.ConstraintLayout>
+        <Button
+            android:id="@+id/button_bancuri"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/style_main_menu_buttons"
+            android:translationZ="4dp"
+            android:text="@string/bancuri"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@animator/button_pressed_animator"/>
+
+        <Button
+            android:id="@+id/button_stiai_ca"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/style_main_menu_buttons"
+            android:text="@string/stiai_ca"
+            android:translationZ="4dp"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:stateListAnimator="@animator/button_pressed_animator"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/button_bancuri"/>
+
+        <Button
+            android:id="@+id/button_tips_tricks"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/style_main_menu_buttons"
+            android:text="@string/tips_and_tricks"
+            android:translationZ="4dp"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:stateListAnimator="@animator/button_pressed_animator"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/button_stiai_ca"/>
+
+    </RelativeLayout>
+</RelativeLayout>

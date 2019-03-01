@@ -475,6 +475,10 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
        } else if(answear != null && isAfQuestion) {
            makeWrongAfAnim(answear);
        }
+
+       if (answear == null && isBoltQuestion) {
+           boltImage.setVisibility(View.INVISIBLE);
+       }
        if (answear == null) {
            reloadGame();
        } else {

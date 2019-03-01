@@ -39,5 +39,8 @@
     <string name="grafice">Grafic</string>
     <string name="data">Data</string>
     <string name="nota">Nota</string>
+    <string name="bancuri">Bancuri</string>
+    <string name="stiai_ca">STIAI CA...</string>
+    <string name="tips_and_tricks">TIPS AND TRICKS</string>
 
 </resources>

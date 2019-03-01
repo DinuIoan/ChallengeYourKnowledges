@@ -90,10 +90,8 @@ public class GameOverActivity extends AppCompatActivity {
             tipulMaterieiTextView.setText("Biologie");
         }
 
-        if (isPercentAchieved()) {
-            DatabaseData.getPlayerState().setPoints(DatabaseData.getPlayerState().getPoints() + 1);
-            databaseHandler.modifyPlayerStateObject(0, DatabaseData.getPlayerState().getPoints(), "player1");
-        }
+//        if (isPercentAchieved()) {
+//        }
 
         populateTextViews();
 
@@ -146,50 +144,54 @@ public class GameOverActivity extends AppCompatActivity {
         nota.setNota(notaFinala);
         nota.setPlayerStateId(0);
         databaseHandler.addNota(nota);
+        if (notaFinala >= 7.49) {
+            DatabaseData.getPlayerState().setPoints(DatabaseData.getPlayerState().getPoints() + 1);
+            databaseHandler.modifyPlayerStateObject(0, DatabaseData.getPlayerState().getPoints(), "player1");
+        }
     }
 
-    private boolean isPercentAchieved() {
-        if (boltQuestions == 0) {
-            if (normalQuestions == 0) {
-                if (afQuestionsCorrect != 0 && (afQuestionsCorrect * 100.0f) / afQuestions >= 75) {
-                    return true;
-                }
-            } else if (afQuestions == 0) {
-                if (normalQuestionsCorrect != 0 && (normalQuestionsCorrect * 100.0f) / normalQuestions >= 75) {
-                    return true;
-                }
-            } else {
-                if (normalQuestionsCorrect != 0 && (normalQuestionsCorrect * 100.0f) / normalQuestions >= 75) {
-                    if (afQuestionsCorrect != 0 && (afQuestionsCorrect * 100.0f) / afQuestions >= 75) {
-                        return true;
-                    }
-                }
-            }
-        } else {
-            if (normalQuestions == 0) {
-                if (boltQuestionsCorrect != 0 && (boltQuestionsCorrect * 100.0f) / boltQuestions >= 75 ) {
-                    if (afQuestionsCorrect != 0 && (afQuestionsCorrect * 100.0f) / afQuestions >= 75 ) {
-                        return true;
-                    }
-                }
-            } else if (afQuestions == 0) {
-                if (boltQuestionsCorrect != 0 && (boltQuestionsCorrect * 100.0f) / boltQuestions >= 75) {
-                    if (normalQuestionsCorrect != 0 && (normalQuestionsCorrect * 100.0f) / normalQuestions >= 75) {
-                        return true;
-                    }
-                }
-            } else {
-                if (boltQuestionsCorrect != 0 && (boltQuestionsCorrect * 100.0f) / boltQuestions >= 75) {
-                    if (normalQuestionsCorrect != 0 && (normalQuestionsCorrect* 100.0f) / normalQuestions>= 75 ) {
-                        if (afQuestionsCorrect != 0 && (afQuestionsCorrect * 100.0f) / afQuestions >= 75 ) {
-                            return true;
-                        }
-                    }
-                }
-            }
-        }
-        return false;
-    }
+//    private boolean isPercentAchieved() {
+//        if (boltQuestions == 0) {
+//            if (normalQuestions == 0) {
+//                if (afQuestionsCorrect != 0 && (afQuestionsCorrect * 100.0f) / afQuestions >= 75) {
+//                    return true;
+//                }
+//            } else if (afQuestions == 0) {
+//                if (normalQuestionsCorrect != 0 && (normalQuestionsCorrect * 100.0f) / normalQuestions >= 75) {
+//                    return true;
+//                }
+//            } else {
+//                if (normalQuestionsCorrect != 0 && (normalQuestionsCorrect * 100.0f) / normalQuestions >= 75) {
+//                    if (afQuestionsCorrect != 0 && (afQuestionsCorrect * 100.0f) / afQuestions >= 75) {
+//                        return true;
+//                    }
+//                }
+//            }
+//        } else {
+//            if (normalQuestions == 0) {
+//                if (boltQuestionsCorrect != 0 && (boltQuestionsCorrect * 100.0f) / boltQuestions >= 75 ) {
+//                    if (afQuestionsCorrect != 0 && (afQuestionsCorrect * 100.0f) / afQuestions >= 75 ) {
+//                        return true;
+//                    }
+//                }
+//            } else if (afQuestions == 0) {
+//                if (boltQuestionsCorrect != 0 && (boltQuestionsCorrect * 100.0f) / boltQuestions >= 75) {
+//                    if (normalQuestionsCorrect != 0 && (normalQuestionsCorrect * 100.0f) / normalQuestions >= 75) {
+//                        return true;
+//                    }
+//                }
+//            } else {
+//                if (boltQuestionsCorrect != 0 && (boltQuestionsCorrect * 100.0f) / boltQuestions >= 75) {
+//                    if (normalQuestionsCorrect != 0 && (normalQuestionsCorrect* 100.0f) / normalQuestions>= 75 ) {
+//                        if (afQuestionsCorrect != 0 && (afQuestionsCorrect * 100.0f) / afQuestions >= 75 ) {
+//                            return true;
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//        return false;
+//    }
 
     @Override
     public void onBackPressed() {
